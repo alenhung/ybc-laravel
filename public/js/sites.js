@@ -1,10 +1,6 @@
 
 jQuery(function($){
-// navbar-toggle
-  $('.navbar-burger').click(function(){
-    $('.navbar-menu').toggleClass('is-active');
-      $('.navbar-menu').toggleClass('mobileNav');
-  });
+
 // navbar-toggle
   $(window).scroll(function(){
     if($(this).scrollTop() > 10)
@@ -71,3 +67,8 @@ jQuery(function($){
   });
 
 });
+// site Animation AOS
+AOS.init({
+  duration: 1200,
+});
+// site Animation AOS

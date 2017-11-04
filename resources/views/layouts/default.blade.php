@@ -17,14 +17,15 @@
     <link rel="stylesheet" href="{{ asset ('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/screen.css') }}">
     </head>
- <body>
-   <div id="app">
-     @yield('content')
-   </div>
-   <a href="#0" class="cd-top "><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-   <script src="{{ asset ('js/app.js') }}"></script>
+    <body>
+      <div id="app">
+        @yield('content')
+      </div>
+      <a href="#0" class="cd-top "><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+      <script src="{{ asset ('js/app.js') }}"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <script src="{{ asset ('js/sites.js') }}"></script>
    {{-- <script src="{{ asset ('js/onScroll.js') }}"></script> --}}
+
    </body>
  </html>

@@ -109,9 +109,24 @@ window.Vue = __webpack_require__(33);
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 
+// var app = new Vue({
+//   el: '#app',
+//   data: {}
+// });
 var app = new Vue({
   el: '#app',
-  data: {}
+  data: function data() {
+    return {
+      isActive: false,
+      isActive2: false
+    };
+  },
+  methods: {
+    openMenu: function openMenu() {
+      this.isActive = !this.isActive;
+      this.isActive2 = !this.isActive2;
+    }
+  }
 });
 
 /***/ }),
