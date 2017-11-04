@@ -13,25 +13,25 @@
         <img src="{{ asset ('images/image1.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>員邦歷程</h5>
           <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">母是行神重花，園以。</p>
+          <p class="is-hidden-touch">持續30年的優質演化</p>
       </div>
       <div class="column introContentBlock p-t-40 is-half-mobile">
         <img src="{{ asset ('images/image2.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>專業團隊</h5>
           <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">母是行神重花，園以。</p>
+          <p class="is-hidden-touch">「建設」結合「營造」之整合體系</p>
       </div>
       <div class="column introContentBlock p-t-40 is-half-mobile">
         <img src="{{ asset ('images/image3.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>在建工程</h5>
           <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">母是行神重花，園以。</p>
+          <p class="is-hidden-touch">最新建案相關一覽。</p>
       </div>
       <div class="column introContentBlock p-t-40 is-half-mobile">
         <img src="{{ asset ('images/image4.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>都市更新</h5>
           <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">母是行神重花，園以。</p>
+          <p class="is-hidden-touch">都市更新開發專業整合。</p>
       </div>
     </div>
     <div class="colums">
@@ -58,7 +58,7 @@
               <p>都美艷</p>
               <hr class="m-t-10 m-b-10">
             </div>
-            <p class="worksContentDesc">北市西區小豪宅</p>
+            <p class="worksContentDesc">Beauty All In One</p>
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
@@ -76,7 +76,7 @@
               <p>台北甜心</p>
               <hr class="m-t-10 m-b-10">
             </div>
-            <p class="worksContentDesc">新北學區宅</p>
+            <p class="worksContentDesc">4米2新甜品宅</p>
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
@@ -94,7 +94,7 @@
               <p>員邦華宴</p>
               <hr class="m-t-10 m-b-10">
             </div>
-            <p class="worksContentDesc">坐擁北市西區便利</p>
+            <p class="worksContentDesc">中華大道旁．最精采的生活饗宴</p>
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
@@ -112,7 +112,7 @@
               <p>陽明峰匯</p>
               <hr class="m-t-10 m-b-10">
             </div>
-            <p class="worksContentDesc">經典之宅．豪氣萬千</p>
+            <p class="worksContentDesc">台北門牌．山海城市</p>
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
@@ -130,7 +130,7 @@
               <p>員邦夢想家/美夢區</p>
               <hr class="m-t-10 m-b-10">
             </div>
-            <p class="worksContentDesc">經典之宅．豪氣萬千</p>
+            <p class="worksContentDesc">經典之宅．美夢成真</p>
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
@@ -148,7 +148,7 @@
               <p>員邦夢想家/圓夢區</p>
               <hr class="m-t-10 m-b-10">
             </div>
-            <p class="worksContentDesc">經典之宅．豪氣萬千</p>
+            <p class="worksContentDesc">經典之宅．美夢成真</p>
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
@@ -166,7 +166,7 @@
               <p>桂林苑</p>
               <hr class="m-t-10 m-b-10">
             </div>
-            <p class="worksContentDesc">經典之宅．豪氣萬千</p>
+            <p class="worksContentDesc">中華香榭大道．百年經典建築</p>
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
