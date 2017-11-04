@@ -8,26 +8,26 @@
 
 <seaction>
   <div class="container">
-    <div class="columns">
-      <div class="column introContentBlock p-t-40">
+    <div class="columns is-mobile is-multiline">
+      <div class="column introContentBlock p-t-40 is-half-mobile">
         <img src="{{ asset ('images/image1.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>員邦歷程</h5>
           <hr class="m-t-10 m-b-10">
           <p class="is-hidden-touch">母是行神重花，園以。</p>
       </div>
-      <div class="column introContentBlock p-t-40">
+      <div class="column introContentBlock p-t-40 is-half-mobile">
         <img src="{{ asset ('images/image2.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>專業團隊</h5>
           <hr class="m-t-10 m-b-10">
           <p class="is-hidden-touch">母是行神重花，園以。</p>
       </div>
-      <div class="column introContentBlock p-t-40">
+      <div class="column introContentBlock p-t-40 is-half-mobile">
         <img src="{{ asset ('images/image3.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>在建工程</h5>
           <hr class="m-t-10 m-b-10">
           <p class="is-hidden-touch">母是行神重花，園以。</p>
       </div>
-      <div class="column introContentBlock p-t-40">
+      <div class="column introContentBlock p-t-40 is-half-mobile">
         <img src="{{ asset ('images/image4.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
           <h5>都市更新</h5>
           <hr class="m-t-10 m-b-10">
@@ -62,7 +62,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -170,7 +170,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -188,7 +188,7 @@
             <p class="circleMore m-t-10">MORE</p>
           </div>
           <div class="worksItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('works-item')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -200,8 +200,8 @@
   <hr class="separate_lines_gery m-b-35">
   <div class="container">
 
-    <div class="columns">
-      <div class="column" data-aos="fade-in">
+    <div class="columns is-mobile is-multiline">
+      <div class="column is-half-mobile" data-aos="fade-in">
         <div class="homeFootItem">
         <img src="{{ asset ('images/footContent1.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
@@ -216,7 +216,7 @@
           </div>
         </div>
       </div>
-      <div class="column" data-aos="fade-in">
+      <div class="column is-half-mobile" data-aos="fade-in">
         <div class="homeFootItem">
         <img src="{{ asset ('images/footContent2.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
@@ -231,7 +231,7 @@
           </div>
         </div>
       </div>
-      <div class="column" data-aos="fade-in">
+      <div class="column is-half-mobile" data-aos="fade-in">
         <div class="homeFootItem">
         <img src="{{ asset ('images/footContent3.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
@@ -246,7 +246,7 @@
           </div>
         </div>
       </div>
-      <div class="column" data-aos="fade-in">
+      <div class="column is-half-mobile" data-aos="fade-in">
         <div class="homeFootItem">
         <img src="{{ asset ('images/footContent4.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">

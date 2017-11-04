@@ -1,13 +1,13 @@
 <footer class="m-t-40 p-t-30">
   <div class="container">
-    <div class="columns">
+    <div class="columns foot-left-area p-r-20 p-l-20 p-b-20">
     	<div class="column footLogo">
     		<a class="" href="#"><img class="img-responsive " src="{{ asset ('images/companyLogoFoot.png') }}" alt=""></a>
             <p>目福臺場，路維作名？的有史難上手自車念輕樂往的了馬感三車去畫像在的的小在熱性影須天</p>
     	</div>
-    	<div class="column footRightArea">
-        <div class="columns">
-          <div class="column content is-offset-2">
+    	<div class="column footRightArea p-r-20 p-l-20 p-b-20">
+        <div class="columns is-mobile">
+          <div class="column content">
       		  <h5>關於</h5>
             <hr class="footHr">
             <ul>

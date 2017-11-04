@@ -22,13 +22,13 @@
   </section>
   <section class="m-t-35">
     <div class="container">
-      <section class="m-t-40 about-content">
+      <section class="m-t-40 m-b-40">
         <div class="container">
           <div class="columns">
-            <div class="column is-5 ">
+            <div class="column is-5 m-r-20 m-l-20">
               <img src="{{ asset ('images/building/building1.jpg') }}" class="has-shadow" alt="">
             </div>
-            <div class="column content is-6 is-offset-1">
+            <div class="column content is-6 is-offset-1 m-r-20 m-l-20">
               <h2 class="ybc-title-h2">都美艷</h2>
               <hr>
               <p>擁有臺北市中心稀有3500坪（約11,550平方米）基地，緊鄰1300坪（約4,290平方米）公園、形成4800坪（約15,840平方米）森態街廓，只蓋兩棟樓，擁有奢侈的40~120米隱密棟距，中庭及公園覆土深達2米，種植300餘棵10年以上樹齡大型喬木，其中包含110棵的樟樹，環繞社區形成護城林。五指山系樹海景觀、大直水岸景觀。</p>
@@ -83,7 +83,7 @@
   </section>
   <section>
     <div class="container">
-      <a class="button is-ybc-brown-btn" style="width:100%;">返回熱銷建案</a>
+      <a href="{{route('works')}}" class="button is-ybc-brown-btn" style="width:100%;">返回熱銷建案</a>
     </div>
   </section>
   @php

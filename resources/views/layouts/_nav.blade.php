@@ -12,11 +12,11 @@
     </div>
     <div class="navbar-menu ">
       <div class="navbar-start">
-        <a class="navbar-item" href="">公司簡介</a>
-        <a class="navbar-item" href="">作品介紹</a>
+        <a class="navbar-item" href="{{route('about')}}">公司簡介</a>
+        <a class="navbar-item" href="{{route('works')}}">作品介紹</a>
         <a class="navbar-item" href="">在建工程</a>
         <a class="navbar-item" href="">都市更新</a>
-        <a class="navbar-item" href="">客戶服務</a>
+        <a class="navbar-item" href="{{route('contact')}}">客戶服務</a>
       </div>
       <div class="navbar-end is-active">
         <a class="navbar-item" href="">關係企業</a>

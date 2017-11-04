@@ -22,8 +22,8 @@
   </section>
   <section id="serviceIntro" class="m-t-35">
     <div class="container">
-      <div class="columns">
-        <div class="column">
+      <div class="columns is-mobile is-multiline">
+        <div class="column is-half-mobile p-r-20 p-l-20">
           <img src="{{asset('images/serviceImage1.jpg')}}" alt="">
           <h5 class="m-t-10 m-b-10">客戶服務</h5>
           <ul>
@@ -34,7 +34,7 @@
             <li>住戶生活使用手冊</li>
           </ul>
         </div>
-        <div class="column">
+        <div class="column is-half-mobile p-r-20 p-l-20">
           <img src="{{asset('images/serviceImage2.jpg')}}" alt="">
           <h5 class="m-t-10 m-b-10">售後服務</h5>
           <ul>
@@ -45,7 +45,7 @@
             <li>保固期內DIY活動辦理</li>
           </ul>
         </div>
-        <div class="column">
+        <div class="column is-half-mobile p-r-20 p-l-20">
           <img src="{{asset('images/serviceImage3.jpg')}}" alt="">
           <h5 class="m-t-10 m-b-10">開發洽談</h5>
           <ul>
@@ -54,7 +54,7 @@
             <li>其他合作開發</li>
           </ul>
         </div>
-        <div class="column">
+        <div class="column is-half-mobile p-r-20 p-l-20">
           <img src="{{asset('images/serviceImage4.jpg')}}" alt="">
           <h5 class="m-t-10 m-b-10">其他問題</h5>
           <ul>
@@ -67,12 +67,12 @@
   </section>
   <section id="contact-area" class="m-t-50">
     <div class="container ">
-      <div class="content">
+      <div class="content m-r-20 m-l-20">
         <h2>聯絡我們</h2>
         <hr>
       </div>
       <div class="columns">
-        <div class="column is-5">
+        <div class="column is-5 m-r-20 m-l-20">
           <p>永續經營的事業，是永不止息的馬拉松競賽。<p>
         <p>超越競爭者的勝利只在一時，穩定步伐中的挑戰極限、邁向成功，才是真正的贏家！在瞬息萬變的消費者時代，豪宅建案百家爭鳴，但是在員邦全體員工的努力下，始終以居住者的最高舒適度為第一考量，無止盡的努力不懈、堅持用心，所以才能每次推案始終領先群雄，贏得讚美和掌聲。</p>
         <br><br><br>
@@ -80,7 +80,7 @@
         <p>E-MAIL：service@yuanbang.com.tw</p>
         <p>通訊地址：台北市中華路一段90號4F</p>
         </div>
-        <div class="column is-6 is-offset-1">
+        <div class="column is-6 is-offset-1 m-r-20 m-l-20">
           <form action="POST">
             <div class="columns">
               <div class="column is-12">

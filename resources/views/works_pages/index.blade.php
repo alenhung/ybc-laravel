@@ -40,7 +40,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
@@ -130,7 +130,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
@@ -148,7 +148,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
-              <a href="#" class="info"></a>
+              <a href="{{route('works-item')}}" class="info"></a>
             </div>
           </div>
         </div>
