@@ -12,10 +12,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- MOBILE FIRST --}}
     <link rel="icon" href="{{ asset ('img/favicon.ico') }}" type="image/x-icon" />
-
     <!--載入自行設定的CSS-->
     <link rel="stylesheet" href="{{ asset ('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/screen.css') }}">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
       <div id="app">
@@ -23,8 +23,9 @@
       </div>
       <a href="#0" class="cd-top "><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
       <script src="{{ asset ('js/app.js') }}"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <script src="{{ asset ('js/sites.js') }}"></script>
+      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="{{ asset ('js/sites.js') }}"></script>
    {{-- <script src="{{ asset ('js/onScroll.js') }}"></script> --}}
 
    </body>

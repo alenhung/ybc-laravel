@@ -54,7 +54,7 @@
                 <p>台北甜心</p>
                 <hr class="m-t-10 m-b-10">
               </div>
-              <p class="worksContentDesc">新北學區宅</p>
+              <p class="worksContentDesc">4米2新甜品宅</p>
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
@@ -72,7 +72,7 @@
                 <p>員邦華宴</p>
                 <hr class="m-t-10 m-b-10">
               </div>
-              <p class="worksContentDesc">坐擁北市西區便利</p>
+              <p class="worksContentDesc">中華大道旁．最精采的生活饗宴</p>
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
@@ -90,7 +90,7 @@
                 <p>陽明峰匯</p>
                 <hr class="m-t-10 m-b-10">
               </div>
-              <p class="worksContentDesc">經典之宅．豪氣萬千</p>
+              <p class="worksContentDesc">台北門牌．山海城市</p>
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">
@@ -144,7 +144,7 @@
                 <p>桂林苑</p>
                 <hr class="m-t-10 m-b-10">
               </div>
-              <p class="worksContentDesc">經典之宅．豪氣萬千</p>
+              <p class="worksContentDesc">中華香榭大道．百年經典建築</p>
               <p class="circleMore m-t-10">MORE</p>
             </div>
             <div class="worksItemLink">

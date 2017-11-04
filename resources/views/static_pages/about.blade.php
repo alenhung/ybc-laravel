@@ -26,9 +26,9 @@
     <div class="container">
       <div class="columns">
         <div class="column is-4 is-offset-1 m-r-20 m-l-20 ">
-          <img src="{{ asset ('images/about/about2.jpg') }}" class="has-shadow" alt="">
+          <img src="{{ asset ('images/about/about2.jpg') }}" class="has-shadow" alt="" data-aos="fade-right">
         </div>
-        <div class="column content is-6 is-offset-1 m-r-20 m-l-20">
+        <div class="column content is-6 is-offset-1 m-r-20 m-l-20" data-aos="fade-left">
           <h2 class="ybc-title-h2">員邦堅持以人為本，滿足需求的主動政策</h2>
           <hr>
           <p>創立於1984年，「員邦室內裝修設計(股)公司」為一家領有各項法定證照並擁有「建築物室內裝修業登記證」的專業「室內設計裝修」服務供應商，憑藉著絕大多數來自於客戶推薦與再次委託的實績，我們已在許多不同的市場區段裡，成功發展出我們完整的競爭力，在同時藉由提供積極正面、受多方訓練的專業服務，以及誠信哲學的推廣下，我們成就了市場區段從「辦公空間」到「 健康醫療美容」，每個令人稱羨的成功案例。</p>
@@ -45,9 +45,9 @@
     <div class="container">
       <div class="columns">
         <div class="column is-4 is-offset-1 m-r-20 m-l-20 ">
-          <img src="{{ asset ('images/about/about3.jpg') }}" class="has-shadow" alt="">
+          <img src="{{ asset ('images/about/about3.jpg') }}" class="has-shadow" alt="" data-aos="fade-right">
         </div>
-        <div class="column content is-6 is-offset-1 m-r-20 m-l-20">
+        <div class="column content is-6 is-offset-1 m-r-20 m-l-20" data-aos="fade-left">
           <h2 class="ybc-title-h2">經營理念</h2>
           <hr>
           <p>企業要長久生存，並在業界樹立口碑，除需要專業的技術、優良的組織文化、盡職的維修服務外，更需要隨時戰戰兢兢地處理著客戶交代的每一個細節，因為只要有用心，只要有實力，只有效率，才能不斷地爭取更大的舞台空間。</p>
@@ -66,9 +66,9 @@
     <div class="container">
       <div class="columns">
         <div class="column is-4 is-offset-1 m-r-20 m-l-20 ">
-          <img src="{{ asset ('images/about/about4.jpg') }}" class="has-shadow" alt="">
+          <img src="{{ asset ('images/about/about4.jpg') }}" class="has-shadow" alt="" data-aos="fade-right">
         </div>
-        <div class="column content is-6 is-offset-1 m-r-20 m-l-20">
+        <div class="column content is-6 is-offset-1 m-r-20 m-l-20" data-aos="fade-left">
           <h2 class="ybc-title-h2">未來願景</h2>
           <hr>
           <p>今天，整個世界將以10倍數快速前進著，另一波網路革命熱潮正火速翻騰。如何在設計裝璜業中突破現況、超越時下;讓員邦企業的存在更有價值，對社會更有貢獻，將是末來努力的方向。</p>
@@ -86,9 +86,9 @@
     <div class="container">
       <div class="columns">
         <div class="column is-4 is-offset-1 m-r-20 m-l-20 ">
-          <img src="{{ asset ('images/about/about2.jpg') }}" class="has-shadow" alt="">
+          <img src="{{ asset ('images/about/about2.jpg') }}" class="has-shadow" alt="" data-aos="fade-right">
         </div>
-        <div class="column content is-6 is-offset-1 m-r-20 m-l-20">
+        <div class="column content is-6 is-offset-1 m-r-20 m-l-20" data-aos="fade-left">
           <h2 class="ybc-title-h2">關係企業</h2>
           <hr>
           <p>創立於1984年，「員邦室內裝修設計(股)公司」為一家領有各項法定證照並擁有「建築物室內裝修業登記證」的專業「室內設計裝修」服務供應商，憑藉著絕大多數來自於客戶推薦與再次委託的實績，我們已在許多不同的市場區段裡，成功發展出我們完整的競爭力，在同時藉由提供積極正面、受多方訓練的專業服務，以及誠信哲學的推廣下，我們成就了市場區段從「辦公空間」到「 健康醫療美容」，每個令人稱羨的成功案例。</p>
