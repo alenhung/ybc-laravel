@@ -1,0 +1,40 @@
+@media(max-width:767px) {
+    #homeHeader {
+        height: 100VH;
+    }
+    #contentHeaderBlock{
+      margin-top: 70px;
+      width: 65%;
+    }
+
+}
+
+@media(min-width:768px) {
+    #homeHeader {
+        height: 100VH;
+    }
+    #contentHeaderBlock{
+      margin-top: 80px;
+      width: 50%;
+    }
+}
+
+@media(min-width:992px) {
+    #homeHeader {
+        height: 70VH;
+    }
+    #contentHeaderBlock{
+      margin-top: 80px;
+      width: 45%;
+    }
+}
+
+@media(min-width:1200px) {
+    #homeHeader {
+      height: 70VH;
+    }
+    #contentHeaderBlock{
+      margin-top: 100px;
+      width: 35%;
+    }
+}

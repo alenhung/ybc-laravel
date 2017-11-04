@@ -1,6 +1,6 @@
 
 // Fonts
-// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 
 // Variables
@@ -14,3 +14,14 @@
 
 // Bulma Vue Modules
 @import "node_modules/buefy/src/scss/buefy";
+
+
+
+//自己寫的css
+@import "overrides";
+@import "helpers";
+@import "styles";
+//動畫相關
+@import "animation";
+//
+@import "backtoTop";

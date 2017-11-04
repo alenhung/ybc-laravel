@@ -1,0 +1,63 @@
+.cd-top {
+  color: #fff;
+  :hover,:active,:visited,:focus{
+        color: #fff;
+  }
+  background: black;
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  overflow: hidden;
+  padding-top: 6px;
+  font-size: 22px;
+  text-align: center;
+  background:   rgba(0,0,0,0.8);
+  border-radius: 50%;
+  overflow: hidden;
+  /* image replacement properties */
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 45px;
+    width: 45px;
+    right: 30px;
+    bottom: 30px;
+  }
+}

@@ -1,0 +1,153 @@
+
+.worksItem {
+    img {
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    .worksContentmask {
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    .worksContentTitle {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    .worksContentDesc {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    .circleMore {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    a.info {
+        opacity:0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+        filter:alpha(opacity=0);
+    }
+}
+.worksItem:hover {
+    img {
+        -moz-transform: scale(1.05, 1.05);
+        -ms-transform: scale(1.05, 1.05);
+        -webkit-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05);
+    }
+    .worksContentmask {
+        opacity:0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    .worksContentTitle {
+        -moz-transform: translateY(-500px);
+        -ms-transform: translateY(-500px);
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        opacity:0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    .worksContentDesc,
+    .circleMore {
+        -moz-transform: translateY(500px);
+        -ms-transform: translateY(500px);
+        -webkit-transform: translateY(500px);
+        transform: translateY(500px);
+        opacity:0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    a.info {
+        opacity:1;
+        -moz-opacity:1;
+        -khtml-opacity: 1;
+        filter:alpha(opacity=100);
+    }
+}
+
+
+/**/
+.homeFootItem {
+    img {
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    .homeFootContentmask {
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    .homeFootContentTitle {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    .homeFootContentDesc {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    .circleMore {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    a.info {
+        opacity:1;
+        -moz-opacity:1;
+        -khtml-opacity: 1;
+        filter:alpha(opacity=100);
+    }
+}
+
+.homeFootItem:hover {
+    img {
+        -moz-transform: scale(1.05, 1.05);
+        -ms-transform: scale(1.05, 1.05);
+        -webkit-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05);
+    }
+    .homeFootContentmask {
+        opacity:0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    .homeFootContentTitle {
+        -moz-transform: translateY(500px);
+        -ms-transform: translateY(500px);
+        -webkit-transform: translateY(500px);
+        transform: translateY(500px);
+        opacity:0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    .homeFootContentDesc,.circleMore {
+        -moz-transform: translateY(500px);
+        -ms-transform: translateY(500px);
+        -webkit-transform: translateY(500px);
+        transform: translateY(500px);
+        opacity:0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+        filter:alpha(opacity=0);
+    }
+    a.info {
+        opacity:1;
+        -moz-opacity:1;
+        -khtml-opacity: 1;
+        filter:alpha(opacity=100);
+    }
+}
+/*End animation*/

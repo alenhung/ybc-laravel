@@ -1,4 +1,15 @@
+$theme-color: rgba(185, 200, 50, 1);
+$theme-color-darker: rgba(165, 180, 40, 1);
+$theme-color-brown: rgba(110, 105, 95, 1);
+$theme-color-brown-darker: rgba(110, 90, 70, 1);
+// Navbar
+$navbar-background-color: rgba(0,0,0,0.4);
+$navbar-item-color: white;
+$navbar-item-hover-color: white;
+$navbar-item-hover-background-color: rgba(0,0,0,0.4);
+//is tab
 
+$box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
 // Body
 $body-bg: #f5f8fa;
 
@@ -23,8 +34,7 @@ $font-size-base: 14px;
 $line-height-base: 1.6;
 $text-color: #636b6f;
 
-// Navbar
-$navbar-default-bg: #fff;
+
 
 // Buttons
 $btn-default-color: $text-color;
