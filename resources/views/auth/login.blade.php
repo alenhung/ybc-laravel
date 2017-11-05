@@ -1,10 +1,10 @@
-@extends('layouts.app')
-
+@extends('layouts.admin_default')
 @section('content')
   <div class="columns">
     <div class="column is-one-third is-offset-one-third m-t-100">
       <div class="card">
         <div class="card-content">
+          <h1 class="title is-3">管理者登入</h1>
           <form action="{{route('login')}}" method="POST" role="form">
             {{csrf_field()}}
             <div class="field">
@@ -26,7 +26,7 @@
               @endif
             </div>
             <b-checkbox name="remember" class="m-t-20">記得我</b-checkbox>
-            <button class="button is-fullwidth m-t-30">登入</button>
+            <button class="button is-link is-outlined is-fullwidth m-t-30">登入</button>
           </form>
         </div> <!-- end of .card-content -->
       </div> <!-- end of .card -->
