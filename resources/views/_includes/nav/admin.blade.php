@@ -68,13 +68,15 @@
             <div class="navbar-item">
               <a href="{{route('logout')}}" onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
-                  <span class="icon">
-                    <i class="fa fa-fw fa-sign-out m-r-5"></i>
-                  </span>
-                  Logout
+                <span class="icon">
+                  <i class="fa fa-fw fa-sign-out m-r-5"></i>
+                </span>
+                Logout
+              </a>
             </div>
           </div>
           @endif
+          @include('_includes.forms.logout')
         </div>
       </div>
     </div>

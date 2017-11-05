@@ -17,5 +17,10 @@ Route::get('/works', 'WorksPagesController@index')->name('works');
 Route::get('/works-item', 'WorksPagesController@item')->name('works-item');
 Route::get('/contact', 'ServicePagesController@contact')->name('contact');
 Auth::routes();
+Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function () {
+  Route::get('/', 'ManageController@index');
+  Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/SiteAdmin', 'SiteAdminController@SiteAdmin')->name('SiteAdmin');

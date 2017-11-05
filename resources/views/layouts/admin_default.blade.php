@@ -14,8 +14,8 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
+  @include('_includes.nav.admin')
     <div id="app">
-      @include('_includes.nav.admin')
       @yield('content')
     </div>
 
