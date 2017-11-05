@@ -1,8 +1,8 @@
-// require('./bootstrap');
+require('./bootstrap');
 
 window.Vue = require('vue');
+import Buefy from 'buefy';
 
-import Buefy from 'buefy'
 Vue.use(Buefy);
 
 
@@ -10,22 +10,10 @@ Vue.use(Buefy);
 //   el: '#app',
 //   data: {}
 // });
-var app = new Vue({
-  el: '#app',
-  data:function(){
-    return{
-      isActive: false,
-      isActive2: false
-    }
-  },
-  methods:{
-    openMenu:function(){
-      this.isActive = !this.isActive;
-      this.isActive2 = !this.isActive2;
-    }
-  }
-});
-jQuery(function($){
+
+
+
+$(document).ready(function(){
   $( ".has-dropdown" ).hover(
     function() {
       $( this ).addClass( "is-active" );

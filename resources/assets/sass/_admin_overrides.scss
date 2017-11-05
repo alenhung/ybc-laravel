@@ -5,14 +5,21 @@ nav{
   z-index: 999;
 }
 .side-menu {
-  height: 100vh;
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
   width: 200px;
   background-color: white;
-}
-.is-muted {
-  color: $grey-light !important;
+  overflow-y: scroll;
 }
 
-a.is-muted:hover{
-  color: $grey !important;
+.management-area {
+  position: absolute;
+  top: 4rem;
+  left: 200px;
+  right: 0;
+}
+
+.flex-container {
+  margin: 10px 25px;
 }

@@ -15,13 +15,15 @@
 </head>
 <body>
   @include('_includes.nav.admin')
-    <div id="app">
+  @include('_includes.nav.manage')
+    <div class="management-area" id="app">
       @yield('content')
     </div>
 
     <!-- Scripts -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <script src="{{ asset('js/admin.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>
