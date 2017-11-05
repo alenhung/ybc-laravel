@@ -22,11 +22,8 @@
         @yield('content')
       </div>
       <a href="#0" class="cd-top "><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-      <script src="{{ asset ('js/app.js') }}"></script>
       <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="{{ asset ('js/sites.js') }}"></script>
-   {{-- <script src="{{ asset ('js/onScroll.js') }}"></script> --}}
-
+      <script src="{{ asset ('js/app.js') }}"></script>
    </body>
  </html>

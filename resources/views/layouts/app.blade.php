@@ -8,73 +8,101 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}-網站管理端</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+      <nav class="navbar has-shadow">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="{{ route('index') }}">
+              <h2>{{ config('app.name', 'Laravel') }}-網站管理端</h2>
+            </a>
+            <div class="navbar-burger burger" v-on:click="openMenu" v-bind:class="{ 'is-active': isActive,'is-active2': isActive2}">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-        </nav>
+          </div>
+          <div class="navbar-menu" v-bind:class="{ 'is-active': isActive,'mobileNav': isActive2 }">
+            <div class="navbar-start">
+            @if (Auth::guest())
+            @else
+              <a class="navbar-item is-tab" href="#">熱銷建案</a>
+              <a class="navbar-item is-tab" href="#">在建工程</a>
+              <a class="navbar-item is-tab" href="#">都市更新</a>
+              <a class="navbar-item is-tab" href="#">客戶服務</a>
+              <div class="navbar-item has-dropdown" >
+                <a class="navbar-link">客戶服務</a>
+                <div class="navbar-dropdown is-left">
+                  <a class="navbar-item">
+                    <span class="icon"><i class="fa fa-fw fa-user-circle-o m-r-5"></i></span>
+                    選單
+                  </a>
+                  <a class="navbar-item">
+                    <span class="icon"><i class="fa fa-fw fa-bell m-r-5"></i></span>
+                    選單
+                  </a>
+                  <a class="navbar-item">
+                    <span class="icon"><i class="fa fa-fw fa-cog m-r-5"></i></span>
+                    選單
+                  </a>
+                  <hr class="navbar-divider">
+                  <div class="navbar-item">
+                    選單三
+                  </div>
+                </div>
+              </div>
+            @endif
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item has-dropdown" >
 
+                  @if (Auth::guest())
+                  <a class="navbar-link">請先登入管理者帳戶</a>
+                  @else
+                  <a class="navbar-link">Hey {{ Auth::user()->name }}</a>
+                <div class="navbar-dropdown is-right">
+                  <a class="navbar-item">
+                    <span class="icon">
+                      <i class="fa fa-fw fa-user-circle-o m-r-5"></i>
+                        </span>Profile
+                  </a>
+                  <a class="navbar-item">
+                    <span class="icon">
+                          <i class="fa fa-fw fa-bell m-r-5"></i>
+                        </span>Notifications
+                  </a>
+                  <a class="navbar-item">
+                    <span class="icon">
+                          <i class="fa fa-fw fa-cog m-r-5"></i>
+                        </span>Settings
+                  </a>
+                  <hr class="navbar-divider">
+                  <div class="navbar-item">
+                    <a href="{{route('logout')}}" onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                        <span class="icon">
+                          <i class="fa fa-fw fa-sign-out m-r-5"></i>
+                        </span>
+                        Logout
+                  </div>
+                </div>
+                @endif
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
         @yield('content')
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ asset('js/admin.js') }}"></script>
 </body>
 </html>
