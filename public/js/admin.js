@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -91,130 +91,8 @@ module.exports = g;
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(2);
-__webpack_require__(8);
-__webpack_require__(9);
-module.exports = __webpack_require__(10);
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_buefy__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_buefy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_buefy__);
-
-
-// require('./bootstrap');
-
-window.Vue = __webpack_require__(3);
-
-
-Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
-
-// var app = new Vue({
-//   el: '#app',
-//   data: {}
-// });
-var app = new Vue({
-  el: '#app',
-  data: function data() {
-    return {
-      isActive: false,
-      isActive2: false
-    };
-  },
-  methods: {
-    openMenu: function openMenu() {
-      this.isActive = !this.isActive;
-      this.isActive2 = !this.isActive2;
-    }
-  }
-});
-
-jQuery(function ($) {
-  // navbar-toggle
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 10) {
-      $('.navbar').css({ "background": "rgba(0, 0, 0, 0.9)" });
-    } else {
-      $('.navbar').css({ "background": "rgba(0, 0, 0, 0.4)" });
-    }
-  });
-  $(".has-dropdown").hover(function () {
-    $(this).addClass("is-active");
-  }, function () {
-    $(this).removeClass("is-active");
-  });
-  //
-  // browser window scroll (in pixels) after which the "back to top" link is shown
-  var offset = 300,
-
-  //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-  offset_opacity = 1200,
-
-  //duration of the top scrolling animation (in ms)
-  scroll_top_duration = 700,
-
-  //grab the "back to top" link
-  $back_to_top = $('.cd-top');
-  //hide or show the "back to top" link
-  $(window).scroll(function () {
-    $(this).scrollTop() > offset ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-    if ($(this).scrollTop() > offset_opacity) {
-      $back_to_top.addClass('cd-fade-out');
-    }
-  });
-
-  //smooth scroll to top
-  $back_to_top.on('click', function (event) {
-    event.preventDefault();
-    $('body,html').animate({
-      scrollTop: 0
-    }, scroll_top_duration);
-  });
-  //
-  // about Page use
-  var $pageSelect = $("#pageNav li");
-  var $showContent = $(".about-content");
-  var $nextButton = $(".about-content a");
-  $showContent.hide();
-  $($showContent[0]).fadeIn();
-  $pageSelect.each(function (n) {
-    $(this).click(function () {
-      console.log(n);
-      $pageSelect.removeClass();
-      $(this).addClass("is-active");
-      $showContent.hide();
-      $($showContent[n]).fadeIn();
-    });
-  });
-  $nextButton.each(function (i) {
-    $(this).click(function () {
-      $showContent.hide();
-      $pageSelect.removeClass();
-      if (i <= 2) {
-        $($showContent[i + 1]).fadeIn();
-        $($pageSelect[i + 1]).addClass("is-active");
-      } else {
-        $($showContent[0]).fadeIn();
-        $($pageSelect[0]).addClass("is-active");
-      }
-    });
-  });
-});
-// site Animation AOS
-AOS.init({
-  duration: 1200
-});
-// site Animation AOS
-
-/***/ }),
+/* 1 */,
+/* 2 */,
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11233,22 +11111,56 @@ process.umask = function() { return 0; };
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports) {
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+module.exports = __webpack_require__(12);
 
-/***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports) {
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_buefy__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_buefy___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_buefy__);
+// require('./bootstrap');
+
+window.Vue = __webpack_require__(3);
+
+
+Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
+
+// var app = new Vue({
+//   el: '#app',
+//   data: {}
+// });
+var app = new Vue({
+  el: '#app',
+  data: function data() {
+    return {
+      isActive: false,
+      isActive2: false
+    };
+  },
+  methods: {
+    openMenu: function openMenu() {
+      this.isActive = !this.isActive;
+      this.isActive2 = !this.isActive2;
+    }
+  }
+});
+jQuery(function ($) {
+  $(".has-dropdown").hover(function () {
+    $(this).addClass("is-active");
+  }, function () {
+    $(this).removeClass("is-active");
+  });
+});
 
 /***/ })
 /******/ ]);
