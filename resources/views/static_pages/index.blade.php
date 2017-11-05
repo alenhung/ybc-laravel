@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
   <header id="homeHeader" style="background-image: url({{ asset ('images/style2-1.jpg') }})">
-@include('layouts._nav')
+@include('_includes.nav.main')
   <img src="{{ asset ('images/intro-2-L-G.png') }}" class="headerImage is-hidden-touch" alt="" data-aos="zoom-in">
   <img src="{{ asset ('images/intro-2-S-G.png') }}" class="headerImage is-hidden-desktop" alt="" data-aos="zoom-in">
 </header>
@@ -264,5 +264,4 @@
     </div>
   </div>
 </section>
-@include('layouts._foot')
 @stop

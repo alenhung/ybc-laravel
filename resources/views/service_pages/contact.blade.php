@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
   <section id="contentHeader" style="background: url({{ asset ('images/serviceBackground.jpg') }})">
-    @include('layouts._nav')
+    @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
         <h2>客戶服務</h2>
@@ -129,5 +129,4 @@
       </div>
     </div>
   </section>
-@include('layouts._foot')
 @stop

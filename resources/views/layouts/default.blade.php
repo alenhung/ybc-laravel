@@ -20,6 +20,7 @@
     <body>
       <div id="app">
         @yield('content')
+        @include('_includes.foot.main')
       </div>
       <a href="#0" class="cd-top "><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
       <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>

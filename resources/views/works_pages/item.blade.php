@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
   <section id="contentHeader" style="background: url({{ asset ('images/worksBackground3.jpg') }})">
-    @include('layouts._nav')
+    @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
         <h2>熱銷建案</h2>
@@ -172,6 +172,4 @@
     */
     google.maps.event.addDomListener(window, 'load', init_map);
 </script>
-
-@include('layouts._foot')
 @stop
