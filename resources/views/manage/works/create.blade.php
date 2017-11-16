@@ -8,7 +8,7 @@
       </div>
     </div>
     <hr class="m-t-0">
-    <form action="{{route('users.store')}}" method="POST">
+    <form action="{{route('works.store')}}" method="POST">
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
@@ -18,54 +18,37 @@
               <input type="text" class="input" name="title" id="title" placeholder="建案名稱">
             </p>
           </div>
-
           <div class="field">
             <label for="slogan" class="label">建案標語</label>
             <p class="control">
               <input type="text" class="input" name="slogan" id="slogan" placeholder="建案標語">
             </p>
           </div>
-
-
-
-
           <div class="field">
             <label for="description" class="label">建案描述</label>
             <p class="control">
               <textarea type="text" class="textarea" name="description" id="description" placeholder="建案描述內容...." rows="5"></textarea>
             </p>
           </div>
-
-
-
           <div class="field">
             <label for="service_location" class="label">接待中心</label>
             <p class="control">
               <input type="text" class="input" name="service_location" id="service_location" placeholder="接待中心">
             </p>
           </div>
-
-
-
           <div class="field">
             <label for="location" class="label">基地位置</label>
             <p class="control">
               <input type="text" class="input" name="location" id="location" placeholder="基地位置">
             </p>
           </div>
-
-
           <div class="field">
             <label for="land_plan" class="label">建設規劃</label>
             <p class="control">
               <input type="text" class="input" name="land_plan" id="land_plan" placeholder="建設規劃">
             </p>
           </div>
-
       </div>
-
-
-
         <div class="column">
           <div class="columns">
             <div class="column">
@@ -123,8 +106,6 @@
           </div>
         </div>
       </div> <!-- end of .column -->
-
-
        <!-- end of .columns for forms -->
       <div class="columns">
         <div class="column">
