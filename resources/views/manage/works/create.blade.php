@@ -104,6 +104,26 @@
               </div>
             </div>
           </div>
+          <div class="columns">
+            <div class="column">
+              <div class="file has-name is-fullwidth">
+                <label class="file-label">
+                  <input class="file-input" type="file" name="project_image" id="fileInput">
+                  <span class="file-cta">
+                    <span class="file-icon">
+                      <i class="fa fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                      請選擇一張建案的相片（限*.jpg）
+                    </span>
+                  </span>
+                  <span class="file-name" id="file-name">
+
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
       </div> <!-- end of .column -->
        <!-- end of .columns for forms -->
@@ -115,15 +135,17 @@
       </div>
     </form>
   </div> <!-- end of .flex-container -->
+
 @endsection
 
 @section('scripts')
   <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-
-      }
-    });
+  var file = document.getElementById("fileInput");
+    file.onchange = function(){
+        if(file.files.length > 0)
+        {
+          document.getElementById('file-name').innerHTML =file.files[0].name;
+        }
+    };
   </script>
 @endsection
