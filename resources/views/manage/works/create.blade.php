@@ -114,7 +114,7 @@
                       <i class="fa fa-upload"></i>
                     </span>
                     <span class="file-label">
-                      請選擇一張建案的相片（限*.jpg）
+                      請選擇建案的相片（限*.jpg）
                     </span>
                   </span>
                   <span class="file-name" id="file-name">
@@ -122,6 +122,11 @@
                   </span>
                 </label>
               </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+            <img class="image is-320x320" id="blah" src="#" alt="" />
             </div>
           </div>
         </div>
@@ -147,5 +152,18 @@
           document.getElementById('file-name').innerHTML =file.files[0].name;
         }
     };
+    function readURL(input) {
+
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $('#blah').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    $("#fileInput").change(function() {
+      readURL(this);
+    });
   </script>
 @endsection
