@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Work;
+use App\Role;
 use DB;
 use Session;
 use Input;
@@ -19,7 +20,8 @@ class WorkController extends Controller
      */
     public function index()
     {
-        //
+      $works = Work::orderBy('id', 'desc')->paginate(10);
+      return view('manage.works.index')->withWorks($works);
     }
 
     /**
@@ -29,7 +31,8 @@ class WorkController extends Controller
      */
     public function create()
     {
-        return view('manage.works.create');
+      $roles = Role::all();
+      return view('manage.works.create');
     }
 
     /**
@@ -41,6 +44,7 @@ class WorkController extends Controller
     public function store(Request $request)
     {
         //
+        $roles = Role::all();
         $this->validate($request, [
           'title' => 'required|max:255',
           'slogan' => 'sometimes|max:255',
@@ -54,14 +58,13 @@ class WorkController extends Controller
           'public_ratio' => 'sometimes|max:255',
           'tall' => 'sometimes|max:255',
           'completion_date' => 'sometimes|max:255',
-          'public_ratio' => 'sometimes|max:255',
-          
+          'public_ratio' => 'sometimes|max:255'
 
         ]);
         if($request->hasFile('project_image')){
             $project_image = $request->file('project_image');
             $filename = time() . '.' . $project_image->getClientOriginalExtension();
-            Image::make($project_image)->resize(300, 300)->save( public_path('/uploads/' . $filename ) );
+            Image::make($project_image)->save( public_path('/uploads/' . $filename ) );
 
             $work = new Work();
             $work->title = $request->title;
@@ -79,7 +82,7 @@ class WorkController extends Controller
             $work->project_image = $filename;
             $work->save();
             Session::flash('success', 'Successfully created the new '. $work->title . ' role in the database.');
-            return redirect()->route('user.show', $role->id);
+            return redirect()->route('works.show', $work->id);
         }
     }
 
