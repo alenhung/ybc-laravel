@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Works;
+use App\Work;
 use DB;
 use Session;
 use Input;
@@ -55,13 +55,13 @@ class WorkController extends Controller
           'tall' => 'sometimes|max:255',
           'completion_date' => 'sometimes|max:255',
           'public_ratio' => 'sometimes|max:255',
-          'confirmed' => 'required',
+          
 
         ]);
         if($request->hasFile('project_image')){
             $project_image = $request->file('project_image');
             $filename = time() . '.' . $project_image->getClientOriginalExtension();
-            Image::make($project_image)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
+            Image::make($project_image)->resize(300, 300)->save( public_path('/uploads/' . $filename ) );
 
             $work = new Work();
             $work->title = $request->title;
@@ -78,6 +78,8 @@ class WorkController extends Controller
             $work->completion_date = $request->completion_date;
             $work->project_image = $filename;
             $work->save();
+            Session::flash('success', 'Successfully created the new '. $work->title . ' role in the database.');
+            return redirect()->route('user.show', $role->id);
         }
     }
 
