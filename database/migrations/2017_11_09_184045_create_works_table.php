@@ -27,7 +27,7 @@ class CreateWorksTable extends Migration
             $table->string('public_ratio')->nullable()->Comment('公設比');
             $table->string('tall')->nullable()->Comment('樓高');
             $table->string('completion_date')->nullable()->Comment('完工日期');
-            $table->string('project_image')->default('project_image,jpg')->Comment('專案圖片');
+            $table->string('project_image')->default('project_image.jpg')->Comment('專案圖片');
             $table->boolean('confirmed')->Comment('預設顯示');
             $table->timestamps();
         });
