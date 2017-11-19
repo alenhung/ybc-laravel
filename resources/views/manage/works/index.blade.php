@@ -20,7 +20,7 @@
                 <th>建案名稱</th>
                 <th>基地位置</th>
                 <th>建立日期</th>
-                <th>功能</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>

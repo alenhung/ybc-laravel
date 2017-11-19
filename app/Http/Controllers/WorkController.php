@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Work;
 use App\Role;
 use DB;
@@ -94,7 +93,8 @@ class WorkController extends Controller
      */
     public function show($id)
     {
-        //
+      $work = Work::where('id', $id)->with('roles')->first();
+      return view("manage.works.show")->withWork($work);
     }
 
     /**

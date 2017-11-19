@@ -25732,3 +25732,9 @@ nav {
   margin: 10px 25px;
 }
 
+table,
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
