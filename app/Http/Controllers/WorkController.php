@@ -64,25 +64,24 @@ class WorkController extends Controller
             $project_image = $request->file('project_image');
             $filename = time() . '.' . $project_image->getClientOriginalExtension();
             Image::make($project_image)->save( public_path('/uploads/' . $filename ) );
-
-            $work = new Work();
-            $work->title = $request->title;
-            $work->slogan = $request->slogan;
-            $work->description = $request->description;
-            $work->service_location = $request->service_location;
-            $work->location = $request->location;
-            $work->land_plan = $request->land_plan;
-            $work->land_size = $request->land_size;
-            $work->households = $request->households;
-            $work->unit_area = $request->unit_area;
-            $work->public_ratio = $request->public_ratio;
-            $work->tall = $request->tall;
-            $work->completion_date = $request->completion_date;
-            $work->project_image = $filename;
-            $work->save();
-            Session::flash('success', 'Successfully created the new '. $work->title . ' role in the database.');
-            return redirect()->route('works.show', $work->id);
         }
+        $work = new Work();
+        $work->title = $request->title;
+        $work->slogan = $request->slogan;
+        $work->description = $request->description;
+        $work->service_location = $request->service_location;
+        $work->location = $request->location;
+        $work->land_plan = $request->land_plan;
+        $work->land_size = $request->land_size;
+        $work->households = $request->households;
+        $work->unit_area = $request->unit_area;
+        $work->public_ratio = $request->public_ratio;
+        $work->tall = $request->tall;
+        $work->completion_date = $request->completion_date;
+        $work->project_image = $filename;
+        $work->save();
+        Session::flash('success', 'Successfully created the new '. $work->title . ' role in the database.');
+        return redirect()->route('works.show', $work->id);
     }
 
     /**
@@ -106,6 +105,9 @@ class WorkController extends Controller
     public function edit($id)
     {
         //
+        $roles = Role::all();
+        $work = Work::where('id', $id)->with('roles')->first();
+        return view("manage.works.edit")->withWork($work)->withRoles($roles);
     }
 
     /**
@@ -118,6 +120,50 @@ class WorkController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $roles = Role::all();
+        $this->validate($request, [
+          'title' => 'required|max:255',
+          'slogan' => 'sometimes|max:255',
+          'description' => 'sometimes|max:255',
+          'location' => 'required|max:255',
+          'service_location' => 'sometimes|max:255',
+          'land_plan' => 'sometimes|max:255',
+          'land_size' => 'sometimes|max:255',
+          'households' => 'sometimes|max:255',
+          'unit_area' => 'sometimes|max:255',
+          'public_ratio' => 'sometimes|max:255',
+          'tall' => 'sometimes|max:255',
+          'completion_date' => 'sometimes|max:255',
+          'public_ratio' => 'sometimes|max:255'
+
+        ]);
+        $work = Work::findOrFail($id);
+        if($request->hasFile('project_image')){
+            $project_image = $request->file('project_image');
+            $filename = time() . '.' . $project_image->getClientOriginalExtension();
+            Image::make($project_image)->save( public_path('/uploads/' . $filename ) );
+            $work->project_image = $filename;
+        }else{
+            $work->project_image = $request->old_image;
+        }
+
+        $work->title = $request->title;
+        $work->slogan = $request->slogan;
+        $work->description = $request->description;
+        $work->service_location = $request->service_location;
+        $work->location = $request->location;
+        $work->land_plan = $request->land_plan;
+        $work->land_size = $request->land_size;
+        $work->households = $request->households;
+        $work->unit_area = $request->unit_area;
+        $work->public_ratio = $request->public_ratio;
+        $work->tall = $request->tall;
+        $work->completion_date = $request->completion_date;
+
+        $work->save();
+        Session::flash('success', '成功建立了 '. $work->title . ' 熱銷建案於資料庫內');
+        return redirect()->route('works.show', $work->id);
+
     }
 
     /**

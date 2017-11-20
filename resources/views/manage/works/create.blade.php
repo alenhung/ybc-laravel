@@ -15,13 +15,13 @@
           <div class="field">
             <label for="title" class="label">建案名稱：</label>
             <p class="control">
-              <input type="text" class="input" name="title" id="title" placeholder="建案名稱">
+              <input type="text" class="input" name="title" id="title" placeholder="請輸入建案名稱">
             </p>
           </div>
           <div class="field">
             <label for="slogan" class="label">建案標語：</label>
             <p class="control">
-              <input type="text" class="input" name="slogan" id="slogan" placeholder="建案標語">
+              <input type="text" class="input" name="slogan" id="slogan" placeholder="請輸入建案標語">
             </p>
           </div>
           <div class="field">
@@ -33,19 +33,19 @@
           <div class="field">
             <label for="service_location" class="label">接待中心：</label>
             <p class="control">
-              <input type="text" class="input" name="service_location" id="service_location" placeholder="接待中心">
+              <input type="text" class="input" name="service_location" id="service_location" placeholder="請輸入接待中心地址">
             </p>
           </div>
           <div class="field">
             <label for="location" class="label">基地位置：</label>
             <p class="control">
-              <input type="text" class="input" name="location" id="location" placeholder="基地位置">
+              <input type="text" class="input" name="location" id="location" placeholder="請輸入基地位置">
             </p>
           </div>
           <div class="field">
             <label for="land_plan" class="label">建設規劃：</label>
             <p class="control">
-              <input type="text" class="input" name="land_plan" id="land_plan" placeholder="建設規劃">
+              <input type="text" class="input" name="land_plan" id="land_plan" placeholder="請輸入建設規劃">
             </p>
           </div>
       </div>
@@ -55,7 +55,7 @@
               <div class="field">
                 <label for="land_size" class="label">基地面積：</label>
                 <p class="control">
-                  <input type="text" class="input" name="land_size" id="land_size" placeholder="基地面積">
+                  <input type="text" class="input" name="land_size" id="land_size" placeholder="請輸入基地面積">
                 </p>
               </div>
             </div>
@@ -63,7 +63,7 @@
               <div class="field">
                 <label for="households" class="label">總戶數：</label>
                 <p class="control">
-                  <input type="text" class="input" name="households" id="households" placeholder="總戶數">
+                  <input type="text" class="input" name="households" id="households" placeholder="請輸入總戶數">
                 </p>
               </div>
             </div>
@@ -73,7 +73,7 @@
               <div class="field">
                 <label for="unit_area" class="label">坪數／格局：</label>
                 <p class="control">
-                  <input type="text" class="input" name="unit_area" id="unit_area" placeholder="坪數／格局">
+                  <input type="text" class="input" name="unit_area" id="unit_area" placeholder="請輸入坪數／格局">
                 </p>
               </div>
             </div>
@@ -81,32 +81,25 @@
               <div class="field">
                 <label for="public_ratio" class="label">公設比：</label>
                 <p class="control">
-                  <input type="text" class="input" name="public_ratio" id="public_ratio" placeholder="公設比">
+                  <input type="text" class="input" name="public_ratio" id="public_ratio" placeholder="請輸入公設比">
                 </p>
               </div>
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <!--
               <div class="field">
-                <label for="completion_date" class="label">完工日期</label>
+                <label for="completion_date" class="label">完工日期:</label>
                 <p class="control">
-                  <input type="text" class="input" name="completion_date" id="completion_date" placeholder="完工日期">
+                  <input type="text" class="input" name="completion_date" id="completion_date" placeholder="完工日期 EX:2019年底">
                 </p>
-              -->
-              <b-field label="預定完工日期：">
-                  <b-datepicker
-                      placeholder="選擇預定日期" icon="calendar-today" name="completion_date" id="completion_date">
-                  </b-datepicker>
-              </b-field>
-
+              </div>
             </div>
             <div class="column">
               <div class="field">
                 <label for="tall" class="label">樓高：</label>
                 <p class="control">
-                  <input type="text" class="input" name="tall" id="tall" placeholder="樓高">
+                  <input type="text" class="input" name="tall" id="tall" placeholder="請輸入樓高">
                 </p>
               </div>
             </div>
@@ -184,8 +177,7 @@
    var app = new Vue({
      el: '#app',
      data: {
-       files: [],
-       isSwitchedCustom: '發佈'
+       files: []
      }
    });
    </script>

@@ -14,7 +14,23 @@
       <div class="navbar-start">
       @if (Auth::guest())
       @else
-        <a class="navbar-item is-tab" href="#">熱銷建案</a>
+        <div class="navbar-item has-dropdown" >
+          <a class="navbar-link">熱銷建案</a>
+          <div class="navbar-dropdown is-left">
+            <a href="{{route('works.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-user-circle-o m-r-5"></i></span>
+              新增建案
+            </a>
+            <a href="{{route('works.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-bell m-r-5"></i></span>
+              建案列表
+            </a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">
+              前往網站頁面
+            </div>
+          </div>
+        </div>
         <a class="navbar-item is-tab" href="#">在建工程</a>
         <a class="navbar-item is-tab" href="#">都市更新</a>
         <a class="navbar-item is-tab" href="#">客戶服務</a>

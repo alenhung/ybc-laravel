@@ -11,37 +11,63 @@
       </div>
     </div>
     <hr class="m-t-0">
+  </div>
+
     <div class="columns">
-      <div class="column">
-        <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="{{$work->project_image}}" class="image is-64x64">
+      <div class="column is-two-fifths">
+        <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="{{$work->project_image}}" class="image">
       </div>
       <div class="column">
-        <label for="title" class="label">建案名稱：</label>
-        <pre>{{$work->title}}</pre>
-        <label for="slogan" class="label">建案標語：</label>
-        <pre>{{$work->slogan}}</pre>
-        <label for="description" class="label">建案描述：</label>
-        <pre>{{$work->description}}</pre>
-        <label for="service_location" class="label">接待中心：</label>
-        <pre>{{$work->service_location}}</pre>
-        <label for="location" class="label">基地位置：</label>
-        <pre>{{$work->location}}</pre>
-        <label for="land_plan" class="label">建設規劃：</label>
-        <pre>{{$work->land_plan}}</pre>
-        <label for="land_size" class="label">基地面積：</label>
-        <pre>{{$work->land_size}}</pre>
-        <label for="households" class="label">總戶數：</label>
-        <pre>{{$work->households}}</pre>
-        <label for="unit_area" class="label">坪數／格局：</label>
-        <pre>{{$work->unit_area}}</pre>
-        <label for="public_ratio" class="label">公設比：</label>
-        <pre>{{$work->public_ratio}}</pre>
-        <label for="completion_date" class="label">完工日期：</label>
-        <pre>{{$work->completion_date}}</pre>
-        <label for="tall" class="label">樓高：</label>
-        <pre>{{$work->tall}}</pre>
+        <div class="field">
+          <label for="title" class="label">建案名稱：</label>
+          <p>{{$work->title}}</p>
+        </div>
+        <div class="field">
+          <label for="slogan" class="label">建案標語：</label>
+          <p>{{$work->slogan}}</p>
+        </div>
+        <div class="field">
+          <label for="description" class="label">建案描述：</label>
+          <p>{{$work->description}}</p>
+        </div>
+        <div class="field">
+          <label for="service_location" class="label">接待中心：</label>
+          <p>{{$work->service_location}}</p>
+        </div>
+        <div class="field">
+          <label for="location" class="label">基地位置：</label>
+          <p>{{$work->location}}</p>
+        </div>
+        <div class="field">
+          <label for="land_plan" class="label">建設規劃：</label>
+          <p>{{$work->land_plan}}</p>
+        </div>
+        <div class="field">
+          <label for="land_size" class="label">基地面積：</label>
+          <p>{{$work->land_size}}</p>
+        </div>
+        <div class="field">
+          <label for="tall" class="label">樓高：</label>
+          <p>{{$work->tall}}</p>
+        </div>
+        <div class="field">
+          <label for="households" class="label">總戶數：</label>
+          <p>{{$work->households}}</p>
+        </div>
+        <div class="field">
+          <label for="unit_area" class="label">坪數／格局：</label>
+          <p>{{$work->unit_area}}</p>
+        </div>
+        <div class="field">
+          <label for="public_ratio" class="label">公設比：</label>
+          <p>{{$work->public_ratio}}</p>
+        </div>
+        <div class="field">
+          <label for="completion_date" class="label">完工日期：</label>
+          <p>{{$work->completion_date}}</p>
+        </div>
       </div>
-    </div>
+
 
   </div> <!-- end of .flex-container -->
 

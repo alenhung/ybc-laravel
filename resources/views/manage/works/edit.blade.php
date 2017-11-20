@@ -4,48 +4,49 @@
   <div class="flex-container">
     <div class="columns m-t-10">
       <div class="column">
-        <h1 class="title">建立 － 熱銷建案</h1>
+        <h1 class="title">修改 － 熱銷建案</h1>
       </div>
     </div>
     <hr class="m-t-0">
-    <form action="{{route('works.store')}}" enctype="multipart/form-data" method="POST">
+    <form action="{{route('works.update',$work->id)}}" enctype="multipart/form-data" method="POST">
+      {{method_field('PUT')}}
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
           <div class="field">
             <label for="title" class="label">建案名稱：</label>
             <p class="control">
-              <input type="text" class="input" name="title" id="title" placeholder="建案名稱">
+              <input type="text" class="input" name="title" id="title" value="{{$work->title}}">
             </p>
           </div>
           <div class="field">
             <label for="slogan" class="label">建案標語：</label>
             <p class="control">
-              <input type="text" class="input" name="slogan" id="slogan" placeholder="建案標語">
+              <input type="text" class="input" name="slogan" id="slogan" value="{{$work->slogan}}">
             </p>
           </div>
           <div class="field">
             <label for="description" class="label">建案描述：</label>
             <p class="control">
-              <textarea type="text" class="textarea" name="description" id="description" placeholder="建案描述內容...." rows="5"></textarea>
+              <textarea type="text" class="textarea" name="description" id="description" rows="5">{{$work->description}}</textarea>
             </p>
           </div>
           <div class="field">
             <label for="service_location" class="label">接待中心：</label>
             <p class="control">
-              <input type="text" class="input" name="service_location" id="service_location" placeholder="接待中心">
+              <input type="text" class="input" name="service_location" id="service_location" value="{{$work->service_location}}">
             </p>
           </div>
           <div class="field">
             <label for="location" class="label">基地位置：</label>
             <p class="control">
-              <input type="text" class="input" name="location" id="location" placeholder="基地位置">
+              <input type="text" class="input" name="location" id="location" value="{{$work->location}}">
             </p>
           </div>
           <div class="field">
             <label for="land_plan" class="label">建設規劃：</label>
             <p class="control">
-              <input type="text" class="input" name="land_plan" id="land_plan" placeholder="建設規劃">
+              <input type="text" class="input" name="land_plan" id="land_plan" value="{{$work->land_plan}}">
             </p>
           </div>
       </div>
@@ -55,7 +56,7 @@
               <div class="field">
                 <label for="land_size" class="label">基地面積：</label>
                 <p class="control">
-                  <input type="text" class="input" name="land_size" id="land_size" placeholder="基地面積">
+                  <input type="text" class="input" name="land_size" id="land_size" value="{{$work->land_size}}">
                 </p>
               </div>
             </div>
@@ -63,7 +64,7 @@
               <div class="field">
                 <label for="households" class="label">總戶數：</label>
                 <p class="control">
-                  <input type="text" class="input" name="households" id="households" placeholder="總戶數">
+                  <input type="text" class="input" name="households" id="households" value="{{$work->households}}">
                 </p>
               </div>
             </div>
@@ -73,7 +74,7 @@
               <div class="field">
                 <label for="unit_area" class="label">坪數／格局：</label>
                 <p class="control">
-                  <input type="text" class="input" name="unit_area" id="unit_area" placeholder="坪數／格局">
+                  <input type="text" class="input" name="unit_area" id="unit_area" value="{{$work->unit_area}}">
                 </p>
               </div>
             </div>
@@ -81,32 +82,25 @@
               <div class="field">
                 <label for="public_ratio" class="label">公設比：</label>
                 <p class="control">
-                  <input type="text" class="input" name="public_ratio" id="public_ratio" placeholder="公設比">
+                  <input type="text" class="input" name="public_ratio" id="public_ratio" value="{{$work->public_ratio}}">
                 </p>
               </div>
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <!--
               <div class="field">
-                <label for="completion_date" class="label">完工日期</label>
+                <label for="completion_date" class="label">完工日期:</label>
                 <p class="control">
-                  <input type="text" class="input" name="completion_date" id="completion_date" placeholder="完工日期">
+                  <input type="text" class="input" name="completion_date" id="completion_date" value="{{$work->completion_date}}">
                 </p>
-              -->
-              <b-field label="預定完工日期：">
-                  <b-datepicker
-                      placeholder="選擇預定日期" icon="calendar-today" name="completion_date" id="completion_date">
-                  </b-datepicker>
-              </b-field>
-
+              </div>
             </div>
             <div class="column">
               <div class="field">
                 <label for="tall" class="label">樓高：</label>
                 <p class="control">
-                  <input type="text" class="input" name="tall" id="tall" placeholder="樓高">
+                  <input type="text" class="input" name="tall" id="tall" value="{{$work->tall}}">
                 </p>
               </div>
             </div>
@@ -133,8 +127,8 @@
           </div>
           <div class="columns">
             <div class="column">
-            <img class="image is-320x320" id="blah" src="#" alt="" />
-
+            <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="{{$work->project_image}}" class="image">
+            <input type="hidden" name="old_image" value="{{$work->project_image}}" />
             </div>
           </div>
         </div>
@@ -148,7 +142,7 @@
           @{{ isSwitchedCustom }}
         </b-switch>
      --}}
-          <button class="button is-primary is-pulled-right" style="width: 250px;">建立</button>
+          <button class="button is-primary is-pulled-right" style="width: 250px;">修改</button>
         </div>
       </div>
     </form>
@@ -185,7 +179,7 @@
      el: '#app',
      data: {
        files: [],
-       isSwitchedCustom: '發佈'
+       date: new Date()
      }
    });
    </script>
