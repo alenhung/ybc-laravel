@@ -1027,6 +1027,10 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
+bulma-start@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/bulma-start/-/bulma-start-0.0.2.tgz#472507881b1b27af29e009c8599503e1462d2031"
+
 bulma@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.6.1.tgz#5f21a77c0c06f7d80051c06628c23516081bd649"
@@ -3831,6 +3835,10 @@ micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
+mid@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/mid/-/mid-0.0.1.tgz#a9439131a28148bd5e61d733105f300180578a19"
+
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -6028,14 +6036,6 @@ vue-hot-reload-api@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.0.tgz#9a21b35ced3634434a43ee80efb7350ea8fb206d"
 
-vue-img-inputer@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/vue-img-inputer/-/vue-img-inputer-1.1.5.tgz#196dc33624c9cd92907b991e1cf92cd32a21beee"
-  dependencies:
-    node-sass "^4.5.3"
-    sass-loader "^6.0.5"
-    vue "^2.3.3"
-
 vue-loader@^13.0.5:
   version "13.3.0"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-13.3.0.tgz#3bf837d490ba5dea6fc07e0835ffa6c688c8af33"
@@ -6076,7 +6076,7 @@ vue@^2.1.10:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.2.tgz#fd367a87bae7535e47f9dc5c9ec3b496e5feb5a4"
 
-vue@^2.3.3, vue@^2.5.2:
+vue@^2.5.2:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.5.tgz#cc3cd9b2a4f1d7356861ae0f71da0e6beb091910"
 

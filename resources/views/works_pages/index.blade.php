@@ -27,6 +27,24 @@
           <hr>
       </div>
       <div class="columns is-multiline">
+        @foreach ($works as $work)
+          <div class="column is-one-quarter" data-aos="fade-in">
+            <div class="worksItem">
+             <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="">
+              <div class="worksContentmask">
+                <div class="worksContentTitle m-t-100">
+                  <p>{{$work->title}}</p>
+                  <hr class="m-t-10 m-b-10">
+                </div>
+                <p class="worksContentDesc">{{$work->slogan}}</p>
+                <p class="circleMore m-t-10">MORE</p>
+              </div>
+              <div class="worksItemLink">
+                <a href="{{route('works-item')}}" class="info"></a>
+              </div>
+            </div>
+          </div>
+        @endforeach
         {{-- works item --}}
         <div class="column is-one-quarter" data-aos="fade-in">
           <div class="worksItem">
