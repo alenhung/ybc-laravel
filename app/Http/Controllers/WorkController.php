@@ -174,6 +174,10 @@ class WorkController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $work = Work::findOrFail($id);
+
+      $work->delete();
+      Session::flash('success', '成功刪除了 '. $work->title);
+      return redirect()->route('works.index');
     }
 }

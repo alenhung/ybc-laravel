@@ -135,17 +135,23 @@
       </div> <!-- end of .column -->
        <!-- end of .columns for forms -->
       <div class="columns">
-
         <div class="column">
           <hr />
         {{-- <b-switch v-model="isSwitchedCustom" :value="true" true-value="發佈" false-value="隱藏" name="confirmed" native-value="true">
           @{{ isSwitchedCustom }}
         </b-switch>
      --}}
+
           <button class="button is-primary is-pulled-right" style="width: 250px;">修改</button>
         </div>
       </div>
     </form>
+    <form action="{{ route('works.destroy', $work->id) }}" method="post">
+      {{ csrf_field() }}
+      {{ method_field('DELETE') }}
+  		<button type="submit" class="button is-danger is-pulled-right m-t-20" style="width: 250px;">刪除</button>
+		</form>
+
   </div> <!-- end of .flex-container -->
 
 @endsection
