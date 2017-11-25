@@ -1,5 +1,4 @@
 @extends('layouts.admin_default')
-
 @section('content')
     <div class="flex-container">
       <div class="columns m-t-10">
@@ -7,7 +6,7 @@
           <h1 class="title">熱銷建案資料管理</h1>
         </div>
         <div class="column">
-          <a href="{{route('works.create')}}" class="button is-primary is-pulled-right"><i class="fa fa-user-plus m-r-10"></i> 新增建案資料</a>
+          <a href="{{route('works.create')}}" class="button is-primary is-pulled-right"><i class="fa fa-file-text-o m-r-10"></i> 新增建案資料</a>
         </div>
       </div>
       <hr class="m-t-0">
@@ -40,4 +39,5 @@
 
       {{$works->links()}}
     </div>
+
 @endsection

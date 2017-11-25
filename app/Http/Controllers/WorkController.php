@@ -57,7 +57,8 @@ class WorkController extends Controller
           'public_ratio' => 'sometimes|max:255',
           'tall' => 'sometimes|max:255',
           'completion_date' => 'sometimes|max:255',
-          'public_ratio' => 'sometimes|max:255'
+          'public_ratio' => 'sometimes|max:255',
+          'site_url' => 'sometimes|max:255'
 
         ]);
         if($request->hasFile('project_image')){
@@ -78,6 +79,7 @@ class WorkController extends Controller
         $work->public_ratio = $request->public_ratio;
         $work->tall = $request->tall;
         $work->completion_date = $request->completion_date;
+        $work->site_url = $request->site_url;
         $work->project_image = $filename;
         $work->save();
         Session::flash('success', 'Successfully created the new '. $work->title . ' role in the database.');
@@ -124,7 +126,7 @@ class WorkController extends Controller
         $this->validate($request, [
           'title' => 'required|max:255',
           'slogan' => 'sometimes|max:255',
-          'description' => 'sometimes|max:255',
+          'description' => 'sometimes|max:1000',
           'location' => 'required|max:255',
           'service_location' => 'sometimes|max:255',
           'land_plan' => 'sometimes|max:255',
@@ -134,7 +136,8 @@ class WorkController extends Controller
           'public_ratio' => 'sometimes|max:255',
           'tall' => 'sometimes|max:255',
           'completion_date' => 'sometimes|max:255',
-          'public_ratio' => 'sometimes|max:255'
+          'public_ratio' => 'sometimes|max:255',
+          'site_url' => 'sometimes|max:255'
 
         ]);
         $work = Work::findOrFail($id);
@@ -158,6 +161,7 @@ class WorkController extends Controller
         $work->unit_area = $request->unit_area;
         $work->public_ratio = $request->public_ratio;
         $work->tall = $request->tall;
+        $work->site_url = $request->site_url;
         $work->completion_date = $request->completion_date;
 
         $work->save();

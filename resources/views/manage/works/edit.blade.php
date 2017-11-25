@@ -1,11 +1,19 @@
 @extends('layouts.admin_default')
 
 @section('content')
+
   <div class="flex-container">
     <div class="columns m-t-10">
       <div class="column">
         <h1 class="title">修改 － 熱銷建案</h1>
       </div>
+    <div class="column">
+      <form action="{{ route('works.destroy', $work->id) }}" method="post">
+        {{ csrf_field() }}
+        {{ method_field('DELETE') }}
+        <a class="is-pulled-right" style="width: 250px;"><i class="fa fa-trash"></i>刪除</a>
+      </form>
+    </div>
     </div>
     <hr class="m-t-0">
     <form action="{{route('works.update',$work->id)}}" enctype="multipart/form-data" method="POST">
@@ -104,17 +112,26 @@
                 </p>
               </div>
             </div>
-
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="site_url" class="label">銷售網站網址：</label>
+                <p class="control">
+                  <input type="text" class="input" name="site_url" id="site_url" value="{{$work->site_url}}">
+                </p>
+              </div>
+            </div>
           </div>
           <div class="columns">
             <div class="column">
                 <b-field>
                   <b-upload v-model="files" name="project_image" id="fileInput">
-                      <a class="button is-primary">
+                      <a class="button is-info">
                         <span class="file-icon">
                           <i class="fa fa-upload"></i>
                         </span>
-                          <span>請選擇建案的相片</span>
+                          <span>請選擇新建案相片（如不需更新</span>
                       </a>
                   </b-upload>
                   <div v-if="files && files.length">
@@ -127,7 +144,8 @@
           </div>
           <div class="columns">
             <div class="column">
-            <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="{{$work->project_image}}" class="image">
+              <p class="is-small">目前顯示的建案相片： </p>
+            <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="{{$work->project_image}}" class="image preview_image m-t-10">
             <input type="hidden" name="old_image" value="{{$work->project_image}}" />
             </div>
           </div>
@@ -137,20 +155,11 @@
       <div class="columns">
         <div class="column">
           <hr />
-        {{-- <b-switch v-model="isSwitchedCustom" :value="true" true-value="發佈" false-value="隱藏" name="confirmed" native-value="true">
-          @{{ isSwitchedCustom }}
-        </b-switch>
-     --}}
-
-          <button class="button is-primary is-pulled-right" style="width: 250px;">修改</button>
+          <button class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-check-square m-r-10"></i>確認修改</button>
         </div>
       </div>
-    </form>
-    <form action="{{ route('works.destroy', $work->id) }}" method="post">
-      {{ csrf_field() }}
-      {{ method_field('DELETE') }}
-  		<button type="submit" class="button is-danger is-pulled-right m-t-20" style="width: 250px;">刪除</button>
-		</form>
+</form>
+
 
   </div> <!-- end of .flex-container -->
 

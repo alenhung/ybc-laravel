@@ -6,7 +6,7 @@ nav{
 }
 .side-menu {
   position: absolute;
-  top: 4rem;
+  top: 3rem;
   bottom: 0;
   width: 200px;
   background-color: white;
@@ -25,7 +25,14 @@ nav{
 }
 
 table,.table td, .table th{
-  
+
     vertical-align: middle;
 
+}
+.preview_image{
+  height: 400px;
+}
+.works-table{
+  font-size: 1em;
+  width: 80%;
 }

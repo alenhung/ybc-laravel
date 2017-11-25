@@ -14,15 +14,12 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
-  @include('_includes.nav.admin')
-  @include('_includes.nav.manage')
-    <div class="management-area" id="app">
+      @include('_includes.nav.admin')
+      @include('_includes.nav.manage_works')
+        <div class="management-area" id="app">
       @yield('content')
-    </div>
-
+      </div>
     <!-- Scripts -->
-
-
     <script src="{{ asset('js/admin.js') }}"></script>
     @yield('scripts')
 </body>

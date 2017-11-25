@@ -1,5 +1,4 @@
 @extends('layouts.admin_default')
-
 @section('content')
   <div class="flex-container">
     <div class="columns m-t-10">
@@ -103,13 +102,22 @@
                 </p>
               </div>
             </div>
-
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="site_url" class="label">銷售網站網址：</label>
+                <p class="control">
+                  <input type="text" class="input" name="site_url" id="site_url" placeholder="輸入代銷提供的網址">
+                </p>
+              </div>
+            </div>
           </div>
           <div class="columns">
             <div class="column">
                 <b-field>
                   <b-upload v-model="files" name="project_image" id="fileInput">
-                      <a class="button is-primary">
+                      <a class="button is-info">
                         <span class="file-icon">
                           <i class="fa fa-upload"></i>
                         </span>
@@ -141,7 +149,7 @@
           @{{ isSwitchedCustom }}
         </b-switch>
      --}}
-          <button class="button is-primary is-pulled-right" style="width: 250px;">建立</button>
+          <button class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-plus-square m-r-10"></i>新增建立</button>
         </div>
       </div>
     </form>
