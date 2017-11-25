@@ -71,7 +71,13 @@
                   <td>{{$work->completion_date}}</td>
                 </tr>
               </table>
-              <a class="button is-ybc-btn">了解更多？前往專屬網站</a>
+              @php
+                if ($work->site_url ==""){
+                  echo "";
+                }else{
+                  echo '<a class="button is-ybc-btn is-pulled-right" href="'.$work->site_url.'">了解更多？前往專屬網站</a>';
+                }
+              @endphp
             </div>
           </div>
         </div>

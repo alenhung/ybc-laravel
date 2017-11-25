@@ -1,24 +1,24 @@
 <div class="side-menu">
+  @if (Auth::guest())
+  @else
   <aside class="menu m-t-30 m-l-10">
+    <hr>
     <p class="menu-label">
-      General
+      熱銷建案－管理端
     </p>
     <ul class="menu-list">
-      <li><a href="{{route('manage.dashboard')}}">Dashboard</a></li>
+      <li><a href="{{route('works.index')}}">熱銷建案列表</a></li>
+      <li><a href="{{route('works.create')}}">新增熱銷建案</a></li>
     </ul>
-
+    <hr>
     <p class="menu-label">
-      Administration
+      在建工程－管理端
     </p>
     <ul class="menu-list">
-      <li><a href="{{route('users.index')}}">Manage Users</a></li>
-      <li>
-        <a href="{{route('permissions.index')}}">Roles &amp; Permissions</a>
-        <ul>
-          <li><a href="{{route('roles.index')}}">Roles</a></li>
-          <li><a href="{{route('permissions.index')}}">Permissions</a></li>
-        </ul>
-      </li>
+      <li><a href="{{route('works.index')}}">在建工程列表</a></li>
+      <li><a href="{{route('works.create')}}">新增在建工程</a></li>
     </ul>
+    <hr>
   </aside>
+  @endif
 </div>
