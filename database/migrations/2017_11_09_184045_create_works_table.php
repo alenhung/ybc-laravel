@@ -15,20 +15,20 @@ class CreateWorksTable extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->Comment('案件標題');
-            $table->string('slogan')->Comment('案件標語');
-            $table->string('description')->nullable()->Comment('案件描述');
-            $table->string('location')->nullable()->Comment('基地位置');
-            $table->string('service_location')->nullable()->Comment('接待中心');
-            $table->string('land_plan')->nullable()->Comment('建設規劃');
-            $table->string('land_size')->nullable()->Comment('基地面積');
-            $table->string('households')->nullable()->Comment('總戶數');
-            $table->string('unit_area')->nullable()->Comment('坪數／格局');
-            $table->string('public_ratio')->nullable()->Comment('公設比');
-            $table->string('tall')->nullable()->Comment('樓高');
-            $table->string('completion_date')->nullable()->Comment('完工日期');
-            $table->string('project_image')->default('project_image.jpg')->Comment('專案圖片');
-            $table->string('site_url')->nullable()->Comment('代銷網站');
+            $table->string('title')->comment('案件標題');
+            $table->string('slogan')->comment('案件標語');
+            $table->text('description')->nullable()->comment('案件描述');
+            $table->string('location')->nullable()->comment('基地位置');
+            $table->string('service_location')->nullable()->comment('接待中心');
+            $table->string('land_plan')->nullable()->comment('建設規劃');
+            $table->string('land_size')->nullable()->comment('基地面積');
+            $table->string('households')->nullable()->comment('總戶數');
+            $table->string('unit_area')->nullable()->comment('坪數／格局');
+            $table->string('public_ratio')->nullable()->comment('公設比');
+            $table->string('tall')->nullable()->comment('樓高');
+            $table->string('completion_date')->nullable()->comment('完工日期');
+            $table->string('project_image')->default('project_image.jpg')->comment('專案圖片');
+            $table->string('site_url', 255)->nullable()->comment('代銷網站');
             $table->timestamps();
         });
     }
