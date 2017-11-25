@@ -8,14 +8,14 @@ use DB;
 use Image;
 class WorksPagesController extends Controller
 {
-
   public function index()
   {
     $works = Work::orderBy('id', 'desc')->paginate(8);
     return view('works_pages/index')->withWorks($works);
   }
-  public function item()
+  public function item($id)
   {
-    return view('works_pages/item');
+    $work = Work::where('id', $id)->first();
+    return view("works_pages/item")->withWork($work);
   }
 }
