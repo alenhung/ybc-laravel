@@ -15,8 +15,8 @@
       在建工程－管理端
     </p>
     <ul class="menu-list">
-      <li><a href="{{route('works.index')}}">在建工程列表</a></li>
-      <li><a href="{{route('works.create')}}">新增在建工程</a></li>
+      <li><a href="{{route('workings.index')}}">在建工程列表</a></li>
+      <li><a href="{{route('workings.create')}}">新增在建工程</a></li>
     </ul>
     <hr>
   </aside>
