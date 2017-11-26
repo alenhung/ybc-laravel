@@ -3,6 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\WorkPhotos;
+use App\Working;
+use App\Role;
+use DB;
+use Session;
+use Input;
+use Image;
 
 class WorkingPhotosController extends Controller
 {
@@ -14,6 +21,9 @@ class WorkingPhotosController extends Controller
     public function index()
     {
         //
+        $workings = Working::all();
+        $workingphotos = WorkingPhotos::orderBy('id', 'desc')->paginate(10);
+        return view('manage.working_photos.index')->withWorkings($workings)->withWorkingPhotos($workingphotos);
     }
 
     /**
@@ -24,6 +34,9 @@ class WorkingPhotosController extends Controller
     public function create()
     {
         //
+        $roles = Role::all();
+        $workings = Working::all();
+        return view('manage.working_photos.create')->withWorkings($workings);
     }
 
     /**

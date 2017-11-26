@@ -25,6 +25,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
   Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
   Route::resource('/works', 'WorkController');
   Route::resource('/workings', 'WorkingController');
+  Route::resource('/working_photos', 'WorkingPhotosController');
 });
 
 
