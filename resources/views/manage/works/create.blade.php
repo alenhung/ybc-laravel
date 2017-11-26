@@ -113,31 +113,30 @@
               </div>
             </div>
           </div>
+          {{-- image upload --}}
           <div class="columns">
             <div class="column">
-                <b-field>
-                  <b-upload v-model="files" name="project_image" id="fileInput">
-                      <a class="button is-info">
-                        <span class="file-icon">
-                          <i class="fa fa-upload"></i>
-                        </span>
-                          <span>請選擇建案的相片</span>
-                      </a>
-                  </b-upload>
-                  <div v-if="files && files.length">
-                      <span class="file-name">
-                          @{{ files[0].name }}
-                      </span>
-                  </div>
-              </b-field>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column">
-            <img class="image is-320x320" id="blah" src="#" alt="" />
+              <div class="file file-upload-form is-primary has-name">
+                <label class="file-label">
+                  <input class="file-input " type="file" name="project_image" id="project_image" @change="previewImage" accept="image/*">
+                  <span class="file-cta">
+                    <span class="file-icon">
+                      <i class="fa fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                      請選擇建案的相片
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <div class="image-preview m-t-10" v-if="imageData.length > 0">
+                  <img class="preview" :src="imageData">
+              </div>
 
             </div>
           </div>
+        {{--end image upload --}}
+
         </div>
       </div> <!-- end of .column -->
        <!-- end of .columns for forms -->
@@ -145,10 +144,6 @@
 
         <div class="column">
           <hr />
-        {{-- <b-switch v-model="isSwitchedCustom" :value="true" true-value="發佈" false-value="隱藏" name="confirmed" native-value="true">
-          @{{ isSwitchedCustom }}
-        </b-switch>
-     --}}
           <button class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-plus-square m-r-10"></i>新增建立</button>
         </div>
       </div>
@@ -158,35 +153,31 @@
 @endsection
 
 @section('scripts')
-  {{-- <script>
-  var file = document.getElementById("fileInput");
-    file.onchange = function(){
-        if(file.files.length > 0)
-        {
-          document.getElementById('file-name').innerHTML =file.files[0].name;
-        }
-    };
-    function readURL(input) {
-
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-          $('#blah').attr('src', e.target.result);
-        }
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
-    $("#fileInput").change(function() {
-      readURL(this);
-    });
+  <script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+       imageData: ""  // we will store base64 format of image in this string
+   },
+   methods: {
+       previewImage: function(event) {
+           // Reference to the DOM input element
+           var input = event.target;
+           // Ensure that you have a file before attempting to read it
+           if (input.files && input.files[0]) {
+               // create a new FileReader to read this image and convert to base64 format
+               var reader = new FileReader();
+               // Define a callback function to run, when FileReader finishes its job
+               reader.onload = (e) => {
+                   // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
+                   // Read image as base64 and set to imageData
+                   this.imageData = e.target.result;
+               }
+               // Start the reader job - read file as a data url (base64 format)
+               reader.readAsDataURL(input.files[0]);
+           }
+       }
+   }
+  });
   </script>
-   --}}
-   <script>
-   var app = new Vue({
-     el: '#app',
-     data: {
-       files: []
-     }
-   });
-   </script>
 @endsection

@@ -21,3 +21,4 @@ Homestead.json
 
 /public/images
 *.DS_Store
+/public/uploads
