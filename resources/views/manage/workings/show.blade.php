@@ -34,6 +34,10 @@
             <td >{{$working->description}}</td>
           </tr>
           <tr>
+            <td >起造人：</td>
+            <td >{{$working->bulider}}</td>
+          </tr>
+          <tr>
             <td >基地位置：</td>
             <td >{{$working->location}}</td>
           </tr>

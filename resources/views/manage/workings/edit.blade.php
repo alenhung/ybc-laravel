@@ -8,7 +8,7 @@
         <h1 class="title">修改 － 在建工程</h1>
       </div>
     <div class="column">
-      <form action="{{ route('workings.destroy', $work->id) }}" method="post">
+      <form action="{{ route('workings.destroy', $work->id) }}" enctype="multipart/form-data" method="post">
         {{ csrf_field() }}
         {{ method_field('DELETE') }}
         <a class="is-pulled-right" style="width: 250px;"><i class="fa fa-trash"></i>刪除</a>
@@ -16,7 +16,7 @@
     </div>
     </div>
     <hr class="m-t-0">
-    <form action="{{route('workings.update',$work->id)}}" enctype="multipart/form-data" method="POST">
+    <form action="{{route('workings.update',$working->id)}}" enctype="multipart/form-data" method="POST">
       {{method_field('PUT')}}
       {{csrf_field()}}
       <div class="columns">
@@ -109,6 +109,16 @@
                 <label for="tall" class="label">樓高：</label>
                 <p class="control">
                   <input type="text" class="input" name="tall" id="tall" value="{{$work->tall}}">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="builder" class="label">起造人：</label>
+                <p class="control">
+                  <input type="text" class="input" name="builder" id="builder" value="{{$work->builder}}">
                 </p>
               </div>
             </div>

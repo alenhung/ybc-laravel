@@ -106,6 +106,16 @@
           <div class="columns">
             <div class="column">
               <div class="field">
+                <label for="builder" class="label">起造人：</label>
+                <p class="control">
+                  <input type="text" class="input" name="builder" id="builder" placeholder="起造人">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
                 <label for="site_url" class="label">銷售網站網址：</label>
                 <p class="control">
                   <input type="text" class="input" name="site_url" id="site_url" placeholder="輸入代銷提供的網址">
@@ -116,7 +126,7 @@
           <div class="columns">
             <div class="column">
                 <b-field>
-                  <b-upload v-model="files" name="project_image" id="fileInput">
+                  <b-upload v-model="files" name="project_image" id="project_image">
                       <a class="button is-info">
                         <span class="file-icon">
                           <i class="fa fa-upload"></i>
@@ -149,7 +159,7 @@
           @{{ isSwitchedCustom }}
         </b-switch>
      --}}
-          <button class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-plus-square m-r-10"></i>新增建立</button>
+          <button type="submit" class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-plus-square m-r-10"></i>新增建立</button>
         </div>
       </div>
     </form>
@@ -166,16 +176,6 @@
           document.getElementById('file-name').innerHTML =file.files[0].name;
         }
     };
-    function readURL(input) {
-
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-          $('#blah').attr('src', e.target.result);
-        }
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
     $("#fileInput").change(function() {
       readURL(this);
     });

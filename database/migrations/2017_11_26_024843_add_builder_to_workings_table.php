@@ -13,9 +13,10 @@ class AddBuilderToWorkingsTable extends Migration
      */
     public function up()
     {
-        Schema::table('working', function (Blueprint $table) {
+        Schema::table('workings', function (Blueprint $table) {
             //
-            $table->string('builder', 255)->nullable()->comment('起造人');
+
+            $table->string('builder',255)->nullable()->comment('起造人');
         });
     }
 
@@ -26,7 +27,7 @@ class AddBuilderToWorkingsTable extends Migration
      */
     public function down()
     {
-        Schema::table('working', function (Blueprint $table) {
+        Schema::table('workings', function (Blueprint $table) {
             //
         });
     }

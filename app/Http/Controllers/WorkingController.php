@@ -9,6 +9,7 @@ use DB;
 use Session;
 use Input;
 use Image;
+
 class WorkingController extends Controller
 {
     /**
@@ -20,7 +21,7 @@ class WorkingController extends Controller
     {
         //
         $workings = Working::orderBy('id', 'desc')->paginate(10);
-        return view('manage.workings.index')->withWorks($workings);
+        return view('manage.workings.index')->withWorkings($workings);
     }
 
     /**
@@ -59,7 +60,8 @@ class WorkingController extends Controller
           'tall' => 'sometimes|max:255',
           'completion_date' => 'sometimes|max:255',
           'public_ratio' => 'sometimes|max:255',
-          'site_url' => 'sometimes|max:255'
+          'site_url' => 'sometimes|max:255',
+          'builder' => 'sometimes|max:255'
 
         ]);
         if($request->hasFile('project_image')){
@@ -81,6 +83,7 @@ class WorkingController extends Controller
         $working->tall = $request->tall;
         $working->completion_date = $request->completion_date;
         $working->site_url = $request->site_url;
+        $working->builder = $request->builder;
         $working->project_image = $filename;
         $working->save();
         Session::flash('success', 'Successfully created the new '. $working->title . ' role in the database.');
@@ -96,7 +99,7 @@ class WorkingController extends Controller
     public function show($id)
     {
       $working = Working::where('id', $id)->with('roles')->first();
-      return view("manage.workings.show")->withWork($working);
+      return view("manage.workings.show")->withWorking($working);
     }
 
     /**
@@ -110,7 +113,7 @@ class WorkingController extends Controller
       //
       $roles = Role::all();
       $working = Working::where('id', $id)->with('roles')->first();
-      return view("manage.workings.edit")->withWork($working)->withRoles($roles);
+      return view("manage.workings.edit")->withWorking($working)->withRoles($roles);
     }
 
     /**

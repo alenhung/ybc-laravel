@@ -8,6 +8,5 @@ use Laratrust\Traits\LaratrustUserTrait;
 class work extends Model
 {
     //
-
     use LaratrustUserTrait;
 }
