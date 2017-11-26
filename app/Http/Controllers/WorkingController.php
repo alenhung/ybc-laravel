@@ -140,7 +140,8 @@ class WorkingController extends Controller
         'tall' => 'sometimes|max:255',
         'completion_date' => 'sometimes|max:255',
         'public_ratio' => 'sometimes|max:255',
-        'site_url' => 'sometimes|max:255'
+        'site_url' => 'sometimes|max:255',
+        'builder' => 'sometimes|max:255'
 
       ]);
       $working = Working::findOrFail($id);
@@ -165,6 +166,7 @@ class WorkingController extends Controller
       $working->public_ratio = $request->public_ratio;
       $working->tall = $request->tall;
       $working->site_url = $request->site_url;
+      $working->builder = $request->builder;
       $working->completion_date = $request->completion_date;
 
       $working->save();

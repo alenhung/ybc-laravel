@@ -22,60 +22,63 @@
       <div class="column">
         <table class="workings-table table is-hoverable is-narrow is-fullwidth">
           <tr>
-            <td >建案名稱：</td>
-            <td >{{$working->title}}</td>
+            <td>建案名稱：</td>
+            <td>{{$working->title}}</td>
           </tr>
           <tr>
             <td>建案標語：</td>
             <td>{{$working->slogan}}</td>
           </tr>
           <tr>
-            <td >建案描述：</td>
-            <td >{{$working->description}}</td>
+            <td>建案描述：</td>
+            <td>{{$working->description}}</td>
           </tr>
           <tr>
-            <td >起造人：</td>
-            <td >{{$working->bulider}}</td>
+            <td>起造人：</td>
+            <td>{{$working->bulider}}</td>
           </tr>
           <tr>
-            <td >基地位置：</td>
-            <td >{{$working->location}}</td>
+            <td>基地位置：</td>
+            <td>{{$working->location}}</td>
           </tr>
           <tr>
-            <td >建設規劃：</td>
-            <td >{{$working->land_plan}}</td>
+            <td>建設規劃：</td>
+            <td>{{$working->land_plan}}</td>
           </tr>
           <tr>
-            <td >基地面積：</td>
-            <td >{{$working->land_size}}</td>
+            <td>基地面積：</td>
+            <td>{{$working->land_size}}</td>
           </tr>
           <tr>
-            <td >總戶數：</td>
-            <td >{{$working->households}}</td>
+            <td>總戶數：</td>
+            <td>{{$working->households}}</td>
           </tr>
           <tr>
-            <td >坪數/格局：</td>
-            <td >{{$working->unit_area}}</td>
+            <td>坪數/格局：</td>
+            <td>{{$working->unit_area}}</td>
           </tr>
           <tr>
-            <td >公設比：</td>
-            <td >{{$working->public_ratio}}</td>
+            <td>公設比：</td>
+            <td>{{$working->public_ratio}}</td>
           </tr>
           <tr>
-            <td >樓高：</td>
-            <td >{{$working->tall}}</td>
+            <td>樓高：</td>
+            <td>{{$working->tall}}</td>
           </tr>
           <tr>
-            <td >接待中心：</td>
-            <td >{{$working->service_location}}</td>
+            <td>接待中心：</td>
+            <td>{{$working->service_location}}</td>
           </tr>
           <tr>
-            <td >完工日期：</td>
-            <td >{{$working->completion_date}}</td>
+            <td>完工日期：</td>
+            <td>{{$working->completion_date}}</td>
+          <tr>
+            <td>起造人:</td>
+            <td>{{$working->builder}}</td>
           </tr>
           <tr>
-            <td >代銷網站：</td>
-            <td >{{$working->site_url}} <br> <button class="button is-info" href="{{$working->site_url}}" target="_blank">前往網站</button></td>
+            <td>代銷網站：</td>
+            <td>{{$working->site_url}} <br> <button class="button is-info" href="{{$working->site_url}}" target="_blank">前往網站</button></td>
           </tr>
         </table>
       </div>
