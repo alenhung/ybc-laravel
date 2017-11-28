@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\WorkPhotos;
+use App\WorkingPhotos;
 use App\Working;
 use App\Role;
 use DB;
@@ -48,6 +48,24 @@ class WorkingPhotosController extends Controller
     public function store(Request $request)
     {
         //
+        // return $request->all();
+
+        if($request->hasFile('file')){
+
+          foreach ($request->file as $file) {
+
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            Image::make($file)->save( public_path('/uploads/' . $filename ) );
+
+            $workingsPotos = new WorkingPhotos();
+            $workingsPotos->workings_id = $request->working_id;
+            $workingsPotos->workings_image = $filename;
+            $workingsPotos->save();
+            Session::flash('success', 'Successfully created the new   role in the database.');
+            return redirect()->route('workings.show');
+
+          }
+        }
     }
 
     /**
@@ -59,6 +77,7 @@ class WorkingPhotosController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
