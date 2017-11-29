@@ -8,7 +8,7 @@
 
     </div>
     <hr class="m-t-0">
-    <form id="myAwesomeDropzone"  action="{{route('working_photos.store')}}" enctype="multipart/form-data" method="POST">
+    <form action="{{route('working_photos.store')}}" enctype="multipart/form-data" method="POST">
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
@@ -38,7 +38,7 @@
       <div class="columns">
         <div class="column">
           <hr>
-          <input type="file" name="file[]" multiple>
+          <input type="file" name="file[]" multiple="multiple">
         </div>
       </div>
        <!-- end of .columns for forms -->
@@ -46,17 +46,7 @@
     </form>
   </div> <!-- end of .flex-container -->
 @endsection
-<script src="{{ asset('js/dropzone.js') }}"></script>
 
 @section('scripts')
-   <script>
-   Dropzone.options.myAwesomeDropzone = {
-     dictDefaultMessage:"把檔案拖進來或者點一下（可多選）！",
-     dictFileTooBig:"上傳的圖片檔案太大！",
-     dictCancelUploadConfirmation:"確定取消上傳？",
-     dictRemoveFile:"移除這個圖片？",
-     dictMaxFilesExceeded:"超過一次批次上傳數量！",
-     uploadMultiple:true
-   };
-   </script>
+
 @endsection

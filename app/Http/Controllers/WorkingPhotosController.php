@@ -21,9 +21,6 @@ class WorkingPhotosController extends Controller
     public function index()
     {
         //
-        $workings = Working::all();
-        $workingphotos = WorkingPhotos::orderBy('id', 'desc')->paginate(10);
-        return view('manage.working_photos.index')->withWorkings($workings)->withWorkingPhotos($workingphotos);
     }
 
     /**
@@ -33,10 +30,9 @@ class WorkingPhotosController extends Controller
      */
     public function create()
     {
-        //
-        $roles = Role::all();
-        $workings = Working::all();
-        return view('manage.working_photos.create')->withWorkings($workings);
+      $roles = Role::all();
+      $workings = Working::all();
+      return view('manage.working_photos.create')->withWorkings($workings);
     }
 
     /**
@@ -47,24 +43,23 @@ class WorkingPhotosController extends Controller
      */
     public function store(Request $request)
     {
+        $roles = Role::all();
         //
-        // return $request->all();
-
         if($request->hasFile('file')){
 
           foreach ($request->file as $file) {
 
-            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $filename = time().str_random(10) . '.' . $file->getClientOriginalExtension();
+
+
+            $workingsPhotos = new WorkingPhotos();
+            $workingsPhotos->working_id = $request->working_id;
+            $workingsPhotos->working_images = $filename;
             Image::make($file)->save( public_path('/uploads/' . $filename ) );
-
-            $workingsPotos = new WorkingPhotos();
-            $workingsPotos->workings_id = $request->working_id;
-            $workingsPotos->workings_image = $filename;
-            $workingsPotos->save();
-            Session::flash('success', 'Successfully created the new   role in the database.');
-            return redirect()->route('workings.show');
-
+            $workingsPhotos->save();
           }
+          Session::flash('success', 'Successfully created the new   role in the database.');
+          return redirect()->route('working_photos.show', $workingsPhotos->working_id);
         }
     }
 
@@ -77,7 +72,11 @@ class WorkingPhotosController extends Controller
     public function show($id)
     {
         //
-
+        $workingPhotos = WorkingPhotos::where('working_id', $id)->orderBy('id', 'desc')
+                 ->take(10)->with('roles')->get();
+        $workings = Working::where('id', $id)->first();
+        // return $workingPhotos;
+        return view("manage.working_photos.show")->with('workingPhotos', $workingPhotos)->with('workings',$workings);
     }
 
     /**

@@ -9,4 +9,5 @@ class WorkingPhotos extends Model
 {
     //
     use LaratrustUserTrait;
+    protected $table = 'WorkingPhotos';
 }
