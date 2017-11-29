@@ -26,6 +26,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
   Route::resource('/works', 'WorkController');
   Route::resource('/workings', 'WorkingController');
   Route::resource('/working_photos', 'WorkingPhotosController');
+  Route::get('/working_photos/{id?}/{count?}', 'WorkingPhotosController@editDesc')->name('working_photos.editDesc');
 });
 
 

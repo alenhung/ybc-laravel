@@ -46,23 +46,31 @@ class WorkingPhotosController extends Controller
         $roles = Role::all();
         //
         if($request->hasFile('file')){
-
           foreach ($request->file as $file) {
-
             $filename = time().str_random(10) . '.' . $file->getClientOriginalExtension();
-
-
             $workingsPhotos = new WorkingPhotos();
             $workingsPhotos->working_id = $request->working_id;
             $workingsPhotos->working_images = $filename;
             Image::make($file)->save( public_path('/uploads/' . $filename ) );
             $workingsPhotos->save();
           }
+          $count = count($request->file);
           Session::flash('success', 'Successfully created the new   role in the database.');
-          return redirect()->route('working_photos.show', $workingsPhotos->working_id);
+          return redirect()->route('working_photos.editDesc', $workingsPhotos->working_id.'/'.$count);
         }
     }
 
+
+    //
+    public function editDesc($id, $count)
+    {
+        //
+        $workingPhotos = WorkingPhotos::where('working_id', $id)->orderBy('id', 'desc')
+                 ->take($count)->with('roles')->get();
+        $workings = Working::where('id', $id)->first();
+        // return $workingPhotos;
+        return view("manage.working_photos.editDesc")->with('workingPhotos', $workingPhotos)->with('workings',$workings);
+    }
     /**
      * Display the specified resource.
      *
@@ -74,11 +82,10 @@ class WorkingPhotosController extends Controller
         //
         $workingPhotos = WorkingPhotos::where('working_id', $id)->orderBy('id', 'desc')
                  ->take(10)->with('roles')->get();
-        $workings = Working::where('id', $id)->first();
+        $workings = Working::where('id', $id)->with('roles')->first();
         // return $workingPhotos;
         return view("manage.working_photos.show")->with('workingPhotos', $workingPhotos)->with('workings',$workings);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
