@@ -43,6 +43,7 @@ class WorkingPhotosController extends Controller
      */
     public function store(Request $request)
     {
+      return $request->all();
         $roles = Role::all();
         //
         if($request->hasFile('file')){

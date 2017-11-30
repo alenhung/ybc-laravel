@@ -33,7 +33,7 @@
           </div>
           <div class="file is-boxed is-primary is-centered">
             <label class="file-label">
-              <input class="file-input" type="file" name="file[]" multiple="multiple">
+              <input class="file-input" type="file" name="file[]" @change="imagesAdd" multiple="multiple" >
               <span class="file-cta">
                 <span class="file-icon">
                   <i class="fa fa-upload"></i>
@@ -44,6 +44,12 @@
               </span>
             </label>
           </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column" v-for="(img, key) in image">
+          <img class="" :src="img">
+          <a v-show="image" @click="removeImage(key)">移除</a>
         </div>
       </div>
       <div class="columns">
@@ -59,5 +65,45 @@
 @endsection
 
 @section('scripts')
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    file: {},
+    image: [],
+    postFormData: new FormData()
+ },
+ methods: {
+    imagesAdd(e){
+    var files = e.target.files || e.dataTransfer.files;
+    this.file = [];
+    Array.prototype.push.apply(this.file, files);
+    if (!this.file.length)
+              return;
+      this.createImage(this.file);
+      console.log(this.file);
 
+    },
+    createImage(file){
+      for (var i = 0; i < file.length; i++) {
+        var reader = new FileReader();
+        var vm = this;
+        reader.onload = (e) => {
+          vm.image.push(e.target.result);
+
+        };
+        reader.readAsDataURL(file[i]);
+      }
+    },
+    removeImage(key){
+      this.image.splice(key, 1);
+      this.file.splice(key, 1);
+      if(!this.image.length){
+        this.$refs.im.value = '';
+      }
+
+    }
+  }
+});
+</script>
 @endsection
