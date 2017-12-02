@@ -69,13 +69,14 @@
 var app = new Vue({
   el: '#app',
   data: {
-    file: {},
+    file: [],
     image: [],
     postFormData: new FormData()
  },
  methods: {
     imagesAdd(e){
     var files = e.target.files || e.dataTransfer.files;
+    this.image= [];
     this.file = [];
     Array.prototype.push.apply(this.file, files);
     if (!this.file.length)
@@ -101,7 +102,7 @@ var app = new Vue({
       if(!this.image.length){
         this.$refs.im.value = '';
       }
-
+      console.log(this.file);
     }
   }
 });
