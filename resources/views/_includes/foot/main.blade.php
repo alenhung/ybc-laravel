@@ -11,20 +11,20 @@
       		  <h5>關於</h5>
             <hr class="footHr">
             <ul>
-              <li><a href="#">公司簡介</a></li>
+              <li><a href="{{route('about')}}">公司簡介</a></li>
               <li><a href="#">發展歷程</a></li>
-              <li><a href="#">企業新聞</a></li>
+              <li><a href="＃">企業新聞</a></li>
               <li><a href="#">住戶心得</a></li>
               <li><a href="#">關係企業</a></li>
-              <li><a href="#">人才招募</a></li>
+              <li><a href="{{route('jobs')}}">人才招募</a></li>
             </ul>
           </div>
           <div class="column content">
             <h5>作品</h5>
             <hr class="footHr">
             <ul>
-              <li><a href="#">熱銷建案</a></li>
-              <li><a href="#">工程進度</a></li>
+              <li><a href="{{route('works')}}">熱銷建案</a></li>
+              <li><a href="{{route('workings')}}">在建工程</a></li>
             </ul>
           </div>
           <div class="column content">
@@ -32,14 +32,13 @@
             <hr class="footHr">
             <ul>
               <li><a href="#">都市更新</a></li>
-              <li><a href="#">廠辦建案</a></li>
             </ul>
           </div>
           <div class="column content">
             <h5>服務</h5>
             <hr class="footHr">
             <ul>
-              <li><a href="#">聯絡我們</a></li>
+              <li><a href="{{route('contact')}}">聯絡我們</a></li>
               <li><a href="#">售前服務</a></li>
               <li><a href="#">售後服務</a></li>
             </ul>

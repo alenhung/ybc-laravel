@@ -20,7 +20,7 @@
       </div>
       <div class="navbar-end">
         <a class="navbar-item" href="">關係企業</a>
-        <a class="navbar-item" href="">人才招募</a>
+        <a class="navbar-item" href="{{route('jobs')}}">人才招募</a>
       </div>
     </div>
   </div>

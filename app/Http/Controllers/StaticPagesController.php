@@ -20,4 +20,7 @@ class StaticPagesController extends Controller
     {
       return view('static_pages/about');
     }
+    public function jobs(){
+      return view('static_pages/jobs');
+    }
 }

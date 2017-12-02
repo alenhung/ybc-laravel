@@ -13,6 +13,7 @@
 
 Route::get('/', 'StaticPagesController@index')->name('index');
 Route::get('/about', 'StaticPagesController@about')->name('about');
+Route::get('/jobs', 'StaticPagesController@jobs')->name('jobs');
 Route::get('/works', 'WorksPagesController@index')->name('works');
 Route::get('/works-item/{id?}', 'WorksPagesController@item')->name('works-item/');
 Route::get('/workings', 'WorkingsPagesController@index')->name('workings');
