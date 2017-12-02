@@ -63,7 +63,7 @@ class WorkController extends Controller
         ]);
         if($request->hasFile('project_image')){
             $project_image = $request->file('project_image');
-            $filename = time() . '.' . $project_image->getClientOriginalExtension();
+            $filename = 'works-'.time() . '.' . $project_image->getClientOriginalExtension();
             Image::make($project_image)->save( public_path('/uploads/' . $filename ) );
         }
         $work = new Work();
@@ -143,7 +143,7 @@ class WorkController extends Controller
         $work = Work::findOrFail($id);
         if($request->hasFile('project_image')){
             $project_image = $request->file('project_image');
-            $filename = time() . '.' . $project_image->getClientOriginalExtension();
+            $filename = 'works-'.time() . '.' . $project_image->getClientOriginalExtension();
             Image::make($project_image)->save( public_path('/uploads/' . $filename ) );
             $work->project_image = $filename;
         }else{

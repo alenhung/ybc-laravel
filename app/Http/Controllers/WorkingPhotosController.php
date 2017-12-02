@@ -48,7 +48,7 @@ class WorkingPhotosController extends Controller
         //
         if($request->hasFile('file')){
           foreach ($request->file as $file) {
-            $filename = time().str_random(10) . '.' . $file->getClientOriginalExtension();
+            $filename = 'working-'.time().'.' . $file->getClientOriginalExtension();
             $workingsPhotos = new WorkingPhotos();
             $workingsPhotos->working_id = $request->working_id;
             $workingsPhotos->working_images = $filename;
