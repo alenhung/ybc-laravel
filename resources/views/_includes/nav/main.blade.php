@@ -14,7 +14,7 @@
       <div class="navbar-start">
         <a class="navbar-item" href="{{route('about')}}">公司簡介</a>
         <a class="navbar-item" href="{{route('works')}}">熱銷建案</a>
-        <a class="navbar-item" href="">在建工程</a>
+        <a class="navbar-item" href="{{route('workings')}}">在建工程</a>
         <a class="navbar-item" href="">都市更新</a>
         <a class="navbar-item" href="{{route('contact')}}">客戶服務</a>
       </div>

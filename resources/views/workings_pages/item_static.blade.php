@@ -14,8 +14,8 @@
     <div class="container">
       <div class="tabs">
         <ul>
-          <li class="is-active"><a href="{{route('works')}}">熱銷建案</a></li>
-          <li><a href="{{route('workings')}}">在建工程</a></li>
+          <li class="is-active"><a>熱銷建案</a></li>
+          <li><a>在建工程</a></li>
         </ul>
       </div>
     </div>
@@ -26,58 +26,52 @@
         <div class="container">
           <div class="columns">
             <div class="column is-5 m-r-20 m-l-20">
-              <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="{{$work->project_image}}" class="has-shadow">
+              <img src="{{ asset ('images/building/building1.jpg') }}" class="has-shadow" alt="">
             </div>
             <div class="column content is-6 is-offset-1 m-r-20 m-l-20">
-              <h2 class="ybc-title-h2">{{$work->title}} <small>{{$work->slogan}}</small></h2>
+              <h2 class="ybc-title-h2">都美艷</h2>
               <hr>
-              <p>{{$work->description}}</p>
+              <p>擁有臺北市中心稀有3500坪（約11,550平方米）基地，緊鄰1300坪（約4,290平方米）公園、形成4800坪（約15,840平方米）森態街廓，只蓋兩棟樓，擁有奢侈的40~120米隱密棟距，中庭及公園覆土深達2米，種植300餘棵10年以上樹齡大型喬木，其中包含110棵的樟樹，環繞社區形成護城林。五指山系樹海景觀、大直水岸景觀。</p>
               <hr>
               <table class="works-table">
                 <tr>
                   <td>基地位置：</td>
-                  <td>{{$work->location}}</td>
+                  <td>台北市萬華區桂林西昌路口</td>
                 </tr>
                 <tr>
                   <td>建設規劃：</td>
-                  <td>{{$work->land_plan}}</td>
+                  <td>Ａ棟－地上23樓 / 地下5樓、B棟－地上15樓</td>
                 </tr>
                 <tr>
                   <td>基地面積：</td>
-                  <td>{{$work->land_size}}</td>
+                  <td>418坪</td>
                 </tr>
                 <tr>
                   <td>總戶數：</td>
-                  <td>{{$work->households}}</td>
+                  <td>188戶</td>
                 </tr>
                 <tr>
                   <td>坪數/格局：</td>
-                  <td>{{$work->unit_area}}</td>
+                  <td>16~43坪 / 1~3房</td>
                 </tr>
                 <tr>
                   <td>公設比：</td>
-                  <td>{{$work->public_ratio}}</td>
+                  <td>33%</td>
                 </tr>
                 <tr>
                   <td>樓高：</td>
-                  <td>{{$work->tall}}</td>
+                  <td>一樓大廳4米2、住家3米3</td>
                 </tr>
                 <tr>
                   <td>接待中心：</td>
-                  <td>{{$work->service_location}}</td>
+                  <td>台北市萬華區西昌街134號</td>
                 </tr>
                 <tr>
                   <td>完工日期：</td>
-                  <td>{{$work->completion_date}}</td>
+                  <td>預定2019年</td>
                 </tr>
               </table>
-              @php
-                if ($work->site_url ==""){
-                  echo "";
-                }else{
-                  echo '<a class="button is-ybc-btn is-pulled-right" href="'.$work->site_url.'">了解更多？前往專屬網站</a>';
-                }
-              @endphp
+              <a class="button is-ybc-btn">了解更多？前往專屬網站</a>
             </div>
           </div>
         </div>
@@ -93,8 +87,8 @@
     </div>
   </section>
   @php
-        $case_name = $work->title;
-        $set_address= $work->location; //填寫所要的地址，Example地址為勤美綠園道
+        $case_name = "都美艷";
+        $set_address="台北市萬華區西昌街134號"; //填寫所要的地址，Example地址為勤美綠園道
         $data_array = geocode($set_address);
         $latitude = $data_array[0];
         $longitude = $data_array[1];

@@ -4,9 +4,9 @@
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
-        <h2>熱銷建案</h2>
+        <h2>在建工程</h2>
         <hr>
-        <p>works for YuanBang</p>
+        <p>Construction In Progress for YuanBang</p>
       </div>
     </div>
   </section>
@@ -14,8 +14,8 @@
     <div class="container">
       <div class="tabs">
         <ul>
-          <li class="is-active"><a href="{{route('works')}}">熱銷建案</a></li>
-          <li><a href="{{route('workings')}}">在建工程</a></li>
+          <li><a href="{{route('works')}}">熱銷建案</a></li>
+          <li class="is-active"><a href="{{route('workings')}}">在建工程</a></li>
         </ul>
       </div>
     </div>
@@ -23,24 +23,24 @@
   <section class="m-t-40">
     <div class="container">
       <div class="content">
-          <h2 class="ybc-title-h2">熱銷建案</h2>
+          <h2 class="ybc-title-h2">在建工程</h2>
           <hr>
       </div>
       <div class="columns is-multiline">
-        @foreach ($works as $work)
+        @foreach ($workings as $working)
           <div class="column is-one-quarter" data-aos="fade-in">
             <div class="worksItem">
-             <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="">
+             <img src="{{asset ('uploads').'/'.$working->project_image}}" alt="">
               <div class="worksContentmask">
                 <div class="worksContentTitle m-t-100">
-                  <p>{{$work->title}}</p>
+                  <p>{{$working->title}}</p>
                   <hr class="m-t-10 m-b-10">
                 </div>
-                <p class="worksContentDesc">{{$work->slogan}}</p>
+                <p class="worksContentDesc">{{$working->slogan}}</p>
                 <p class="circleMore m-t-10">MORE</p>
               </div>
               <div class="worksItemLink">
-                <a href="{{route('works-item/', $work->id)}}" class="info"></a>
+                <a href="{{route('workings-item/', $working->id)}}" class="info"></a>
               </div>
             </div>
           </div>

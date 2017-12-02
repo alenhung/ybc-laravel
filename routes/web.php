@@ -15,6 +15,8 @@ Route::get('/', 'StaticPagesController@index')->name('index');
 Route::get('/about', 'StaticPagesController@about')->name('about');
 Route::get('/works', 'WorksPagesController@index')->name('works');
 Route::get('/works-item/{id?}', 'WorksPagesController@item')->name('works-item/');
+Route::get('/workings', 'WorkingsPagesController@index')->name('workings');
+Route::get('/workings-item/{id?}', 'WorkingsPagesController@item')->name('workings-item/');
 Route::get('/contact', 'ServicePagesController@contact')->name('contact');
 Auth::routes();
 Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function () {

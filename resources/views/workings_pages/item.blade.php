@@ -4,9 +4,9 @@
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
-        <h2>熱銷建案</h2>
+        <h2>在建工程</h2>
         <hr>
-        <p>works for YuanBang</p>
+        <p>Construction In Progress for YuanBang</p>
       </div>
     </div>
   </section>
@@ -14,8 +14,8 @@
     <div class="container">
       <div class="tabs">
         <ul>
-          <li class="is-active"><a href="{{route('works')}}">熱銷建案</a></li>
-          <li><a href="{{route('workings')}}">在建工程</a></li>
+          <li><a href="{{route('works')}}">熱銷建案</a></li>
+          <li class="is-active"><a href="{{route('workings')}}">在建工程</a></li>
         </ul>
       </div>
     </div>
@@ -26,56 +26,56 @@
         <div class="container">
           <div class="columns">
             <div class="column is-5 m-r-20 m-l-20">
-              <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="{{$work->project_image}}" class="has-shadow">
+              <img src="{{asset ('uploads').'/'.$working->project_image}}" alt="{{$working->project_image}}" class="has-shadow">
             </div>
             <div class="column content is-6 is-offset-1 m-r-20 m-l-20">
-              <h2 class="ybc-title-h2">{{$work->title}} <small>{{$work->slogan}}</small></h2>
+              <h2 class="ybc-title-h2">{{$working->title}} <small>{{$working->slogan}}</small></h2>
               <hr>
-              <p>{{$work->description}}</p>
+              <p>{{$working->description}}</p>
               <hr>
               <table class="works-table">
                 <tr>
                   <td>基地位置：</td>
-                  <td>{{$work->location}}</td>
+                  <td>{{$working->location}}</td>
                 </tr>
                 <tr>
                   <td>建設規劃：</td>
-                  <td>{{$work->land_plan}}</td>
+                  <td>{{$working->land_plan}}</td>
                 </tr>
                 <tr>
                   <td>基地面積：</td>
-                  <td>{{$work->land_size}}</td>
+                  <td>{{$working->land_size}}</td>
                 </tr>
                 <tr>
                   <td>總戶數：</td>
-                  <td>{{$work->households}}</td>
+                  <td>{{$working->households}}</td>
                 </tr>
                 <tr>
                   <td>坪數/格局：</td>
-                  <td>{{$work->unit_area}}</td>
+                  <td>{{$working->unit_area}}</td>
                 </tr>
                 <tr>
                   <td>公設比：</td>
-                  <td>{{$work->public_ratio}}</td>
+                  <td>{{$working->public_ratio}}</td>
                 </tr>
                 <tr>
                   <td>樓高：</td>
-                  <td>{{$work->tall}}</td>
+                  <td>{{$working->tall}}</td>
                 </tr>
                 <tr>
                   <td>接待中心：</td>
-                  <td>{{$work->service_location}}</td>
+                  <td>{{$working->service_location}}</td>
                 </tr>
                 <tr>
                   <td>完工日期：</td>
-                  <td>{{$work->completion_date}}</td>
+                  <td>{{$working->completion_date}}</td>
                 </tr>
               </table>
               @php
-                if ($work->site_url ==""){
+                if ($working->site_url ==""){
                   echo "";
                 }else{
-                  echo '<a class="button is-ybc-btn is-pulled-right" href="'.$work->site_url.'">了解更多？前往專屬網站</a>';
+                  echo '<a class="button is-ybc-btn is-pulled-right" href="'.$working->site_url.'">了解更多？前往專屬網站</a>';
                 }
               @endphp
             </div>
@@ -89,12 +89,12 @@
   </section>
   <section>
     <div class="container">
-      <a href="{{route('works')}}" class="button is-ybc-brown-btn" style="width:100%;">返回熱銷建案</a>
+      <a href="{{route('workings')}}" class="button is-ybc-brown-btn" style="width:100%;">返回熱銷建案</a>
     </div>
   </section>
   @php
-        $case_name = $work->title;
-        $set_address= $work->location; //填寫所要的地址，Example地址為勤美綠園道
+        $case_name = $working->title;
+        $set_address= $working->location; //填寫所要的地址，Example地址為勤美綠園道
         $data_array = geocode($set_address);
         $latitude = $data_array[0];
         $longitude = $data_array[1];
