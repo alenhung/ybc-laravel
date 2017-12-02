@@ -4,6 +4,13 @@
   <aside class="menu m-t-30 m-l-10">
     <hr>
     <p class="menu-label">
+      首頁資訊－管理端
+    </p>
+    <ul class="menu-list">
+      <li><a href="{{route('index_info.index')}}"><i class="fa fa-list-ul m-r-10" aria-hidden="true"></i>首頁資訊列表</a></li>
+    </ul>
+    <hr>
+    <p class="menu-label">
       熱銷建案－管理端
     </p>
     <ul class="menu-list">

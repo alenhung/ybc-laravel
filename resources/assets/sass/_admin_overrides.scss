@@ -37,3 +37,12 @@ table,.table td, .table th{
   font-size: 1em;
   width: 80%;
 }
+.introContentImage{
+  border: 1px solid #EFEFEF;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+.img-circle {
+    border-radius: 50%;
+}

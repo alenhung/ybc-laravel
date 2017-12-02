@@ -9,30 +9,14 @@
 <seaction>
   <div class="container">
     <div class="columns is-mobile is-multiline">
-      <div class="column introContentBlock p-t-40 is-half-mobile">
-        <img src="{{ asset ('images/image1.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
-          <h5>員邦歷程</h5>
-          <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">持續30年的優質演化</p>
-      </div>
-      <div class="column introContentBlock p-t-40 is-half-mobile">
-        <img src="{{ asset ('images/image2.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
-          <h5>專業團隊</h5>
-          <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">「建設」結合「營造」之整合體系</p>
-      </div>
-      <div class="column introContentBlock p-t-40 is-half-mobile">
-        <img src="{{ asset ('images/image3.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
-          <h5>在建工程</h5>
-          <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">最新建案相關一覽。</p>
-      </div>
-      <div class="column introContentBlock p-t-40 is-half-mobile">
-        <img src="{{ asset ('images/image4.jpg')}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
-          <h5>都市更新</h5>
-          <hr class="m-t-10 m-b-10">
-          <p class="is-hidden-touch">都市更新開發專業整合。</p>
-      </div>
+      @foreach ($indexInfos as $indexInfo)
+        <div class="column introContentBlock p-t-40 is-half-mobile">
+          <img src="{{ asset ('uploads').'/'.$indexInfo->image}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
+            <h5>{{$indexInfo->title}}</h5>
+            <hr class="m-t-10 m-b-10">
+            <p class="is-hidden-touch">{{$indexInfo->slogan}}</p>
+        </div>
+      @endforeach
     </div>
     <div class="colums">
       <div class="column is-12 has-text-centered">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Work;
+use App\IndexInfo;
 use DB;
 use Image;
 
@@ -11,8 +12,9 @@ class StaticPagesController extends Controller
 {
     public function index()
     {
+      $indexInfos = IndexInfo::orderBy('id', 'asc')->paginate(8);
       $works = Work::orderBy('id', 'desc')->paginate(8);
-      return view('static_pages/index')->withWorks($works);
+      return view('static_pages/index')->withWorks($works)->withIndexInfos($indexInfos);
     }
     public function about()
     {

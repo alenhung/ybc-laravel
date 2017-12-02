@@ -25743,6 +25743,16 @@ table,
   width: 80%;
 }
 
+.introContentImage {
+  border: 1px solid #EFEFEF;
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
 @-webkit-keyframes passing-through {
   0% {
     opacity: 0;
