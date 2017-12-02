@@ -29,7 +29,7 @@
                   <th>{{$working->title}}</th>
                   <td>{{$working->location}}</td>
                   <td>{{$working->created_at->toFormattedDateString()}}</td>
-                  <td class="has-text-right"><a class="button is-outlined m-r-5" href="{{route('workings.show', $working->id)}}">檢視</a><a class="button is-light" href="{{route('workings.edit', $working->id)}}">編輯</a></td>
+                  <td class="has-text-right"><a class="button is-outlined m-r-5" href="{{route('workings.show', $working->id)}}">檢視</a><a class="button is-light is-info" href="{{route('workings.edit', $working->id)}}"><i class="fa fa-pencil m-r-10" aria-hidden="true">編輯</a></td>
                 </tr>
               @endforeach
             </tbody>
