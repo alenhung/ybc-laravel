@@ -17,6 +17,6 @@ class NewsPagesController extends Controller
     public function item($id)
     {
       $news = News::where('id', $id)->first();
-      return view("news_pages/item")->withWorking($news);
+      return view("news_pages/item")->withNews($news);
     }
 }

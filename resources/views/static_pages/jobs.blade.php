@@ -5,7 +5,7 @@
     <div class="container">
       <div id="contentHeaderBlock" class="content">
         <h2>人才招募</h2>
-        <hr>
+        <hr class=" m-t-10 m-b-10">
         <p>Jobs of YuanBang Land</p>
       </div>
     </div>
@@ -24,7 +24,7 @@
       <div class="columns">
         <div class="column content">
           <h2 class="ybc-title-h2">土建工程人員</h2>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>各工種之施工檢查、校對、計價</li>
             <li>依據圖面進行工程檢討、控管施工進度與品質</li>
@@ -33,7 +33,7 @@
             <li>具大樓營建經驗者優先錄取</li>
             <li>需出差，一年累積時間未定</li>
           </ul>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>工作經歷：3年以上</li>
             <li>學歷要求：高中以上</li>
@@ -44,14 +44,14 @@
         </div>
         <div class="column content">
           <h2 class="ybc-title-h2">工務</h2>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>工地現場監造及工程進度掌控</li>
             <li>工班協調與施工品質監控</li>
             <li>配合外地駐場</li>
             <li>需出差，一年累積時間未定</li>
           </ul>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>工作經歷：3年以上</li>
             <li>學歷要求：高中以上</li>
@@ -62,14 +62,14 @@
         </div>
         <div class="column content">
           <h2 class="ybc-title-h2">工程鑑定助理</h2>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>房屋現況鑑定(含拍照、調查、測量等現場工作)</li>
             <li>鑑定平面圖CAD繪製 </li>
             <li>鑑定報告書編製</li>
             <li>需出差，一年累積時間未定</li>
           </ul>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>工作經歷：3年以上</li>
             <li>學歷要求：專科、大學、碩士</li>
@@ -81,7 +81,7 @@
         </div>
         <div class="column content">
           <h2 class="ybc-title-h2">建築設計助理</h2>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>熟練Auto CAD、Sketch up</li>
             <li>具備建築設計圖說之識圖能力</li>
@@ -89,7 +89,7 @@
             <li>協助相關建築事務</li>
             <li>需出差，一年累積時間未定</li>
           </ul>
-          <hr>
+          <hr class=" m-t-10 m-b-10">
           <ul>
             <li>工作經歷：3年以上</li>
             <li>學歷要求：高中、專科、大學</li>
@@ -102,7 +102,7 @@
         <div class="column">
           <article class="message">
             <div class="message-body">
-              請您下載附件履歷表，填寫完成後寄送至此電子信箱。附件：履歷表
+              請您下載附件履歷表，填寫完成後寄送至此<a href="mailto:alenhung@gmail.com">電子信箱</a>。附件：<a href="{{asset ('file').'/resume.doc'}}" target="_blank">履歷表</a>
             </div>
           </article>
         </div>

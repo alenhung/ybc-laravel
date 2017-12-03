@@ -260,6 +260,12 @@ footer{
     border:1px solid  #ccc;
   }
 }
+#jobs{
+  font-size: 0.9em;
+  .message{
+    font-size: 0.9em;
+  }
+}
 .card{
   .card-image{
     overflow: hidden;
@@ -275,4 +281,7 @@ footer{
   .news-more{
     text-align: right;
   }
+}
+.news-time{
+  text-align: right;
 }

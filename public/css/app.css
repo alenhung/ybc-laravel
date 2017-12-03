@@ -17159,6 +17159,14 @@ footer .footCopyright {
   border: 1px solid  #ccc;
 }
 
+#jobs {
+  font-size: 0.9em;
+}
+
+#jobs .message {
+  font-size: 0.9em;
+}
+
 .card .card-image {
   overflow: hidden;
   height: 160px;
@@ -17174,6 +17182,10 @@ footer .footCopyright {
 }
 
 .card-content .news-more {
+  text-align: right;
+}
+
+.news-time {
   text-align: right;
 }
 
