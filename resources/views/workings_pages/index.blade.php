@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/worksBackground3.jpg') }})">
+  <section id="contentHeader" style="background: url({{ asset ('images/workingsBackground.jpg') }})">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">

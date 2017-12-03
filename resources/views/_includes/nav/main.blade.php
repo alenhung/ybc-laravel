@@ -19,7 +19,7 @@
         <a class="navbar-item" href="{{route('contact')}}">客戶服務</a>
       </div>
       <div class="navbar-end">
-        <a class="navbar-item" href="">關係企業</a>
+        <a class="navbar-item" href="{{route('affiliated')}}">關係企業</a>
         <a class="navbar-item" href="{{route('jobs')}}">人才招募</a>
       </div>
     </div>

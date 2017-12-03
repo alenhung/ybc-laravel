@@ -26,5 +26,8 @@ class StaticPagesController extends Controller
     public function redevelopment(){
       return view('static_pages/redevelopment');
     }
+    public function affiliated(){
+      return view('static_pages/affiliated');
+    }
 
 }
