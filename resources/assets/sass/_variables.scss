@@ -46,3 +46,16 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+//pagination
+$pagination-current-background-color: $theme-color;
+$pagination-current-border-color: $theme-color-darker;
+$pagination-active-color: $theme-color;
+$pagination-active-border-color: $theme-color-darker;
+$pagination-focus-color: $theme-color;
+$pagination-focus-border-color: $theme-color-darker;
+.pagination{
+  a{
+    color: $theme-color;
+  }
+}

@@ -168,7 +168,6 @@
         infowindow = new google.maps.InfoWindow({
             content: "<?php echo $data_address; ?>"
         });
-
         infowindow.open(map, marker);
         /*所查詢位置詳細資料 End*/
     }

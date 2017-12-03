@@ -22,10 +22,10 @@
   </section>
   <section class="m-t-40">
     <div class="container">
-      <div class="content">
+      {{-- <div class="content">
           <h2 class="ybc-title-h2">熱銷建案</h2>
           <hr>
-      </div>
+      </div> --}}
       <div class="columns is-multiline">
         @foreach ($works as $work)
           <div class="column is-one-quarter" data-aos="fade-in">
@@ -46,6 +46,7 @@
           </div>
         @endforeach
       </div>
+      {{$works->links()}}
     </div>
   </section>
 

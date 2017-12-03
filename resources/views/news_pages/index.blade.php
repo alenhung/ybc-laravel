@@ -14,18 +14,13 @@
     <div class="container">
       <div class="tabs">
         <ul>
-          <li class="is-active"><a href="{{route('news')}}">在建工程</a></li>
+          <li class="is-active"><a href="{{route('news')}}">近期新聞</a></li>
         </ul>
       </div>
     </div>
   </section>
   <section class="m-t-40">
     <div class="container">
-      <div class="content">
-          <h2 class="ybc-title-h2">近期新聞</h2>
-          <hr>
-      </div>
-
       <div class="columns is-multiline">
         @foreach ($newss as $news)
           <div class="column is-one-quarter">
@@ -56,6 +51,7 @@
           </div>
         @endforeach
       </div>
+      {{$newss->links()}}
     </div>
   </section>
 
