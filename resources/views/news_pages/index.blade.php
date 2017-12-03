@@ -30,27 +30,24 @@
           <div class="column is-one-quarter" data-aos="fade-in">
             <div class="card">
               <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="{{asset ('uploads').'/'.$news->news_image}}" alt="">
+                <figure>
+                  <img class="news-image" src="{{asset ('uploads').'/'.$news->news_image}}" alt="">
                 </figure>
-              </div
+              </div>
               <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4 m-t-5 m-b-5 m-l-10 m-r-10">{{$news->title}}</p>
-                    <time class="is-small m-t-5 m-b-5 m-l-10 m-r-10">{{$news->created_at->toFormattedDateString()}}</time>
+                <div class="media-content">
+                  <p class="title is-5 m-t-5 m-b-5">{{$news->title}}</p>
+                  <p class="news-time is-small m-t-5 m-b-5">{{$news->created_at->toFormattedDateString()}}</p>
+                </div>
+                <div class="content">
+                  {{str_limit($news->description,100)}}
+                  <div class="news-more">
+                    <a href="{{route('news-item/', $news->id)}}" class="button is-ybc-brown-btn">詳細內容</a>
                   </div>
                 </div>
 
-                <div class="content m-t-10 m-b-10 m-l-10 m-r-10">
-                  {{$news->description}}
-                </div>
-                <div >
-                  <a href="{{route('news-item/', $news->id)}}" class="info">詳細內容</a>
-                </div>
               </div>
             </div>
-
           </div>
         @endforeach
       </div>

@@ -260,3 +260,19 @@ footer{
     border:1px solid  #ccc;
   }
 }
+.card{
+  .card-image{
+    overflow: hidden;
+    height: 160px;
+  }
+}
+.card-content{
+  font-size: 0.9em;
+  .news-time{
+    color:$theme-color-brown;
+    text-align: right;
+  }
+  .news-more{
+    text-align: right;
+  }
+}

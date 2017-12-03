@@ -17159,6 +17159,24 @@ footer .footCopyright {
   border: 1px solid  #ccc;
 }
 
+.card .card-image {
+  overflow: hidden;
+  height: 160px;
+}
+
+.card-content {
+  font-size: 0.9em;
+}
+
+.card-content .news-time {
+  color: #6e695f;
+  text-align: right;
+}
+
+.card-content .news-more {
+  text-align: right;
+}
+
 /*
 This .scss loop will create "margin helpers" and "padding helpers" for use in your web projects.
 It will generate several classes such as:
