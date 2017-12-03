@@ -261,11 +261,71 @@ footer{
   }
 }
 #jobs{
-  font-size: 0.9em;
-  .message{
+  p,ul,li{
     font-size: 0.9em;
   }
+  .job-inro-text{
+    margin: 0 auto;
+    width: 600px;
+    p{
+      margin-top: 15px;
+      line-height: 35px;
+    }
+  }
 }
+
+.job-intro{
+  h2{
+    font-size: 1.5em;
+  }
+  text-align: center;
+  hr{
+    width: 5%;
+    margin:0 auto;
+  }
+
+}
+.jobs-card{
+  margin-top: 80px;
+  background: white;
+  .card-title{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  hr{
+    width: 20%;
+    margin: 0 auto;
+  }
+  .content{
+    text-align:left;
+  }
+}
+#new-jobs{
+  p,ul,li{
+    font-size: 0.9em;
+  }
+  .message{
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+}
+.job-map{
+  text-align: center;
+  h2{
+    font-size: 1.5em;
+  }
+  p{
+    font-size: 0.9em;
+  }
+  hr{
+    width: 5%;
+    margin: 0 auto;
+  }
+}
+//news
 .card{
   .card-image{
     overflow: hidden;
@@ -274,6 +334,7 @@ footer{
 }
 .card-content{
   font-size: 0.9em;
+
   .news-time{
     color:$theme-color-brown;
     text-align: right;
@@ -284,4 +345,83 @@ footer{
 }
 .news-time{
   text-align: right;
+}
+//redevelopment
+.redevelopment-intro{
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  hr{
+    width: 10%;
+    margin: 0 auto;
+  }
+  p,dl{
+    margin-top: 15px;
+    line-height: 24px;
+  }
+  p,dt,dd{
+    font-size: 0.9em;
+  }
+  dd{
+    margin-left: 3em;
+  }
+}
+.redevelopment-intro-image{
+  margin-top: 40px;
+  h2{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+  }
+  hr{
+    width: 5%;
+    margin: 0 auto;
+  }
+  .law-content{
+    margin-bottom: 60px;
+    margin-top: 30px;
+    color: white;
+    border-left: 1px solid $theme-color-light-white;
+    // background: $theme-color-morelight-white;
+    border-radius: 8px;
+    h3{
+      font-size: 1.2em;
+    }
+    p,li{
+      line-height: 30px;
+      font-size: 0.9em;
+      a{
+        color: white;
+        &:hover,&:active,&:visited,&:focus{
+          color: white;
+        }
+      }
+    }
+    .dark-hr{
+      width: 10%;
+      margin-left: 0;
+    }
+  }
+}
+.redevelopment-process{
+  margin-top: 40px;
+  text-align: center;
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  p{
+    font-size: 0.9em;
+    line-height: 30px;
+  }
+  hr{
+    width: 5%;
+    margin: 0 auto;
+  }
+  .redevelopment-block{
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
 }

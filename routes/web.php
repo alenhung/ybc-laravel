@@ -14,6 +14,7 @@
 Route::get('/', 'StaticPagesController@index')->name('index');
 Route::get('/about', 'StaticPagesController@about')->name('about');
 Route::get('/jobs', 'StaticPagesController@jobs')->name('jobs');
+Route::get('/redevelopment', 'StaticPagesController@redevelopment')->name('redevelopment');
 Route::get('/news', 'NewsPagesController@index')->name('news');
 Route::get('/news-item/{id?}', 'NewsPagesController@item')->name('news-item/');
 Route::get('/works', 'WorksPagesController@index')->name('works');

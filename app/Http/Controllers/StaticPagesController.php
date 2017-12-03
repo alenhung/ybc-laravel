@@ -23,4 +23,8 @@ class StaticPagesController extends Controller
     public function jobs(){
       return view('static_pages/jobs');
     }
+    public function redevelopment(){
+      return view('static_pages/redevelopment');
+    }
+
 }

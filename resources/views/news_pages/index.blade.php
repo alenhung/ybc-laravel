@@ -35,8 +35,8 @@
               <div class="card-content">
                 <div class="media-content">
                   <p class="title is-5 m-t-5 m-b-5">{{$news->title}}</p>
-                  <p class="news-time is-small m-t-5 m-b-5">{{$news->created_at->toFormattedDateString()}}</p>
                   <hr class="m-t-10 m-b-10">
+                  <p class="news-time m-t-5 m-b-5"><small>{{$news->created_at->toFormattedDateString()}}</small></p>
                 </div>
                 <div class="content">
                   {{str_limit($news->description,100)}}

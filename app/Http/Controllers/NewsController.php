@@ -45,7 +45,7 @@ class NewsController extends Controller
       $roles = Role::all();
       $this->validate($request, [
         'title' => 'required|max:255',
-        'description' => 'sometimes|max:255'
+        'description' => 'sometimes'
       ]);
       if($request->hasFile('news_image')){
           $news_image = $request->file('news_image');
@@ -100,7 +100,7 @@ class NewsController extends Controller
         $roles = Role::all();
         $this->validate($request, [
           'title' => 'required|max:255',
-          'description' => 'sometimes|max:255'
+          'description' => 'sometimes'
 
         ]);
         $news = News::findOrFail($id);
