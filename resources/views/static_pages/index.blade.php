@@ -61,7 +61,9 @@
     <div class="columns is-mobile is-multiline">
       <div class="column is-half-mobile" data-aos="fade-in">
         <div class="homeFootItem">
-        <img src="{{ asset ('images/footContent1.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
+
+          <img src="{{ asset ('images/footContent1.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
+
           <div class="homeFootContentmask">
             <div class="homeFootContentTitle">
               <p>企業新聞</p>
@@ -70,7 +72,7 @@
             <p class="homeFootContentDesc">Recent news</p>
           </div>
           <div class="homeFootItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('news')}}" class="info"></a>
           </div>
         </div>
       </div>

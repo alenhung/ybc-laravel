@@ -13,7 +13,7 @@
             <ul>
               <li><a href="{{route('about')}}">公司簡介</a></li>
               <li><a href="#">發展歷程</a></li>
-              <li><a href="＃">企業新聞</a></li>
+              <li><a href="{{route('news')}}">企業新聞</a></li>
               <li><a href="#">住戶心得</a></li>
               <li><a href="#">關係企業</a></li>
               <li><a href="{{route('jobs')}}">人才招募</a></li>

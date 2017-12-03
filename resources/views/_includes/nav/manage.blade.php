@@ -11,6 +11,14 @@
     </ul>
     <hr>
     <p class="menu-label">
+      企業新聞－管理端
+    </p>
+    <ul class="menu-list">
+      <li><a href="{{route('news.index')}}"><i class="fa fa-list-ul m-r-10" aria-hidden="true"></i>企業新聞列表</a></li>
+      <li><a href="{{route('news.create')}}"><i class="fa fa-plus-square m-r-10" aria-hidden="true"></i>新增企業新聞</a></li>
+    </ul>
+    <hr>
+    <p class="menu-label">
       熱銷建案－管理端
     </p>
     <ul class="menu-list">
