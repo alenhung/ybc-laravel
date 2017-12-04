@@ -16,10 +16,6 @@ class StaticPagesController extends Controller
       $works = Work::orderBy('id', 'desc')->paginate(8);
       return view('static_pages/index')->withWorks($works)->withIndexInfos($indexInfos);
     }
-    public function about()
-    {
-      return view('static_pages/about');
-    }
     public function jobs(){
       return view('static_pages/jobs');
     }

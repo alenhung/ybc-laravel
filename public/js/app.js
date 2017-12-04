@@ -11205,34 +11205,7 @@ jQuery(function ($) {
     }, scroll_top_duration);
   });
   //
-  // about Page use
-  var $pageSelect = $("#pageNav li");
-  var $showContent = $(".about-content");
-  var $nextButton = $(".about-content a");
-  $showContent.hide();
-  $($showContent[0]).fadeIn();
-  $pageSelect.each(function (n) {
-    $(this).click(function () {
-      console.log(n);
-      $pageSelect.removeClass();
-      $(this).addClass("is-active");
-      $showContent.hide();
-      $($showContent[n]).fadeIn();
-    });
-  });
-  $nextButton.each(function (i) {
-    $(this).click(function () {
-      $showContent.hide();
-      $pageSelect.removeClass();
-      if (i <= 2) {
-        $($showContent[i + 1]).fadeIn();
-        $($pageSelect[i + 1]).addClass("is-active");
-      } else {
-        $($showContent[0]).fadeIn();
-        $($pageSelect[0]).addClass("is-active");
-      }
-    });
-  });
+
 });
 // site Animation AOS
 AOS.init({

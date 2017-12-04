@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'StaticPagesController@index')->name('index');
-Route::get('/about', 'StaticPagesController@about')->name('about');
+Route::get('/about', 'AboutController@view')->name('about');
 Route::get('/jobs', 'StaticPagesController@jobs')->name('jobs');
 Route::get('/redevelopment', 'StaticPagesController@redevelopment')->name('redevelopment');
 Route::get('/affiliated', 'StaticPagesController@affiliated')->name('affiliated');
@@ -34,6 +34,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
   Route::resource('/workings', 'WorkingController');
   Route::resource('/index_info', 'IndexInfoController');
   Route::resource('/news', 'NewsController');
+  Route::resource('/about', 'AboutController');
   Route::resource('/working_photos', 'WorkingPhotosController');
   Route::get('/working_photos/{id?}/{count?}', 'WorkingPhotosController@editDesc')->name('working_photos.editDesc');
 });

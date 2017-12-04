@@ -11,6 +11,13 @@
     </ul>
     <hr>
     <p class="menu-label">
+      公司簡介－管理端
+    </p>
+    <ul class="menu-list">
+      <li><a href="{{route('about.index')}}"><i class="fa fa-list-ul m-r-10" aria-hidden="true"></i>公司簡介列表</a></li>
+    </ul>
+    <hr>
+    <p class="menu-label">
       企業新聞－管理端
     </p>
     <ul class="menu-list">
