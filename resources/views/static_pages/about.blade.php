@@ -33,7 +33,7 @@
         <div class="column content is-6 is-offset-1 m-r-20 m-l-20" >
           <h2 class="ybc-title-h2">{{$about->title}}</h2>
           <hr>
-          <p>{{$about->description}}</p>
+          {!!$about->description!!}
           <br>
           <br>
           <a class="button is-ybc-brown-btn m-b-20">{{$about->button_text}}</a>
@@ -41,6 +41,8 @@
       </div>
     </div>
   </section>
+
+  @endforeach
   <section class="m-t-40 about-content">
     <div class="container">
       <div class="columns">
@@ -65,8 +67,6 @@
     </div>
 
   </section>
-  @endforeach
-
 
 
 @section('scripts')

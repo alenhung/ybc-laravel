@@ -35,7 +35,7 @@
           </tr>
           <tr>
             <td >內容：</td>
-            <td >{{$about->description}}</td>
+            <td >{!!$about->description!!}</td>
           </tr>
         </table>
       </div>

@@ -152,4 +152,27 @@ class AboutController extends Controller
         $abouts = About::orderBy('id', 'asc')->paginate(10);
         return view('static_pages/about')->withAbouts($abouts);
     }
+    public function uploadImage(Request $request)
+    {
+        // 初始化返回数据，默认是失败的
+        $data = [
+            'success'   => false,
+            'msg'       => '上傳失敗!',
+            'file_path' => ''
+        ];
+        if($file = $request->upload_file){
+
+            $filename = 'about-'.time() . '.' . $file->getClientOriginalExtension();
+            Image::make($file)->save( public_path('/uploads/' . $filename ) );
+            $result = url('/uploads/' . $filename);
+
+            if ($result) {
+                $data['file_path'] = $result;
+                $data['msg']       = "上傳成功!";
+                $data['success']   = true;
+            }
+        }
+        return $data;
+
+    }
 }

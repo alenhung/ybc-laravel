@@ -10,7 +10,7 @@
     <form action="{{route('news.store')}}" enctype="multipart/form-data" method="POST">
       {{csrf_field()}}
       <div class="columns">
-        <div class="column">
+        <div class="column is-two-thirds">
           <div class="field">
             <label for="title" class="label">新聞標題：</label>
             <p class="control">
@@ -63,9 +63,9 @@
   </div> <!-- end of .flex-container -->
 
 @endsection
-@section('styles')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
-@stop
+
+<link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
+
 
 @section('scripts')
     <script type="text/javascript"  src="{{ asset('js/module.js') }}"></script>
@@ -75,14 +75,21 @@
 
     <script>
     $(document).ready(function(){
-        var editor = new Simditor({
-            textarea: $('#editor'),
-        });
+      var editor = new Simditor({
+          textarea: $('#editor'),
+          upload: {
+              url: '{{ route('news.upload_image') }}',
+              params: { _token: '{{ csrf_token() }}' },
+              fileKey: 'upload_file',
+              connectionCount: 3,
+              leaveConfirm: '文件上传中，关闭此页面将取消上传。'
+          },
+          pasteImage: true,
+      });
     });
     </script>
 
-@stop
-@section('scripts')
+
   <script>
   var app = new Vue({
     el: '#app',

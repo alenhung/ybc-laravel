@@ -31,7 +31,7 @@
               <h2 class="ybc-title-h2">{{$news->title}}</h2>
               <hr>
               <p class="news-time"><small>新聞發布日期：{{$news->created_at->toFormattedDateString()}}</small></p>
-              <p>{{$news->description}}</p>
+              {!!$news->description!!}
               <div>
                 <a href="{{route('news')}}" class="button is-ybc-brown-btn">返回企業新聞</a>
               </div>

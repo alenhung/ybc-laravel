@@ -94,7 +94,30 @@
 
 @endsection
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
+
+
 @section('scripts')
+    <script type="text/javascript"  src="{{ asset('js/module.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/hotkeys.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/uploader.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/simditor.js') }}"></script>
+
+    <script>
+    $(document).ready(function(){
+      var editor = new Simditor({
+          textarea: $('#description'),
+          upload: {
+              url: '{{ route('about.upload_image') }}',
+              params: { _token: '{{ csrf_token() }}' },
+              fileKey: 'upload_file',
+              connectionCount: 3,
+              leaveConfirm: '文件上傳中，如果離開會取消上傳。'
+          },
+          pasteImage: true,
+      });
+    });
+    </script>
   <script>
   var app = new Vue({
     el: '#app',

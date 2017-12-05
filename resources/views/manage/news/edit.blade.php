@@ -30,7 +30,7 @@
           <div class="field">
             <label for="description" class="label">新聞內容：</label>
             <p class="control">
-              <textarea type="text" class="textarea" name="description" id="description" rows="5">{{$news->description}}</textarea>
+              <textarea type="text" class="textarea" name="description" id="editor" rows="5">{{$news->description}}</textarea>
             </p>
           </div>
         </div>
@@ -82,7 +82,30 @@
 
 @endsection
 
+<link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
+
+
 @section('scripts')
+    <script type="text/javascript"  src="{{ asset('js/module.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/hotkeys.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/uploader.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/simditor.js') }}"></script>
+
+<script>
+$(document).ready(function(){
+  var editor = new Simditor({
+      textarea: $('#editor'),
+      upload: {
+          url: '{{ route('news.upload_image') }}',
+          params: { _token: '{{ csrf_token() }}' },
+          fileKey: 'upload_file',
+          connectionCount: 3,
+          leaveConfirm: '文件上傳中，如果離開會取消上傳'
+      },
+      pasteImage: true,
+  });
+});
+</script>
   <script>
   var app = new Vue({
     el: '#app',

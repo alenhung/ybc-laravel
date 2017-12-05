@@ -27,7 +27,9 @@
           </tr>
           <tr>
             <td >新聞內容：</td>
-            <td >{{$news->description}}</td>
+            <td >
+              {!!$news->description!!} 
+            </td>
           </tr>
         </table>
       </div>

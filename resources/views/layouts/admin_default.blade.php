@@ -9,10 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}-網站管理端</title>
-
     <!-- Styles -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-
 </head>
 <body>
       @include('_includes.nav.admin')
@@ -22,7 +20,7 @@
       </div>
     <!-- Scripts -->
     <script src="{{ asset('js/admin.js') }}"></script>
-    @yield('style')
+
     @yield('scripts')
 
 </body>

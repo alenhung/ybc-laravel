@@ -225,8 +225,9 @@ footer{
     box-shadow: $box-shadow;
     border-radius:8px;
   }
-  p{
+  p,ul{
     font-size: 0.9em;
+    line-height: 30px;
   }
   a{
     float: right;
@@ -332,6 +333,7 @@ footer{
     height: 160px;
   }
 }
+
 .card-content{
   font-size: 0.9em;
 

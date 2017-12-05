@@ -39,8 +39,12 @@
                   <p class="news-time m-t-5 m-b-5"><small>{{$news->created_at->toFormattedDateString()}}</small></p>
                 </div>
                 <div class="content">
-                  {{str_limit($news->description,100)}}
 
+                  @php
+                  $content = $news->description;
+                  $content = preg_replace("/<img[^>]+\>/i", "", $content);
+                  @endphp
+                  {!!str_limit($content,100)!!}
                   <div class="news-more">
                     <a href="{{route('news-item/', $news->id)}}" class="button is-ybc-brown-btn">詳細內容</a>
                   </div>

@@ -17125,8 +17125,10 @@ footer .footCopyright {
   border-radius: 8px;
 }
 
-.about-content p {
+.about-content p,
+.about-content ul {
   font-size: 0.9em;
+  line-height: 30px;
 }
 
 .about-content a {
