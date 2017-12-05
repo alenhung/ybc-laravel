@@ -41,6 +41,30 @@
       </div>
     </div>
   </section>
+  <section class="m-t-40 about-content">
+    <div class="container">
+      <div class="columns">
+        <div class="column  is-4 is-offset-1 m-r-20 m-l-20 ">
+          <ul>
+            <li><span>1982年</span>成立員邦裝潢工程行</li>
+            <li><span>1984年</span>員邦裝潢更名為員邦企業股份有限公司</li>
+            <li><span>1988年</span>成立中邦工程有限公司（中區分公司）</li>
+            <li><span>1989年</span>成立奇特室內裝修工程有限公司（南區分公司）</li>
+            <li><span>2004年</span>成立英德利室內裝修設計股份有限公司</li>
+            <li><span>2004年</span>搬遷至現址擴大營業</li>
+            <li><span>2006年</span>成立員邦建設股份有限公司</li>
+            <li><span>2007年</span>成立員邦大都會酒店</li>
+            <li><span>2009年</span>成立翡翠灣生技股份有限公司</li>
+            <li><span>2010年</span>成立員邦室內裝修設計股份有限公司</li>
+            <li><span>2011年</span>成立員旺建設股份有限公司</li>
+            <li><span>2016年</span>成立峻佳工程有限公司（輕鋼架）</li>
+            <li><span>2017年</span>成立旺邦營造有限公司</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
   @endforeach
 
 

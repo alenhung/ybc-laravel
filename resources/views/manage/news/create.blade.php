@@ -20,7 +20,7 @@
           <div class="field">
             <label for="description" class="label">新聞內容：</label>
             <p class="control">
-              <textarea type="text" class="textarea" name="description" id="description" placeholder="新聞內容...." rows="5"></textarea>
+              <textarea type="text" class="textarea" name="description" id="editor" placeholder="新聞內容...." rows="5" autofocus></textarea>
             </p>
           </div>
         </div>
@@ -63,7 +63,25 @@
   </div> <!-- end of .flex-container -->
 
 @endsection
+@section('styles')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
+@stop
 
+@section('scripts')
+    <script type="text/javascript"  src="{{ asset('js/module.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/hotkeys.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/uploader.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/simditor.js') }}"></script>
+
+    <script>
+    $(document).ready(function(){
+        var editor = new Simditor({
+            textarea: $('#editor'),
+        });
+    });
+    </script>
+
+@stop
 @section('scripts')
   <script>
   var app = new Vue({
