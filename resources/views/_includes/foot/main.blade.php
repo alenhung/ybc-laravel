@@ -3,7 +3,8 @@
     <div class="columns foot-left-area p-r-20 p-l-20 p-b-20">
     	<div class="column footLogo">
     		<a class="" href="#"><img class="img-responsive " src="{{ asset ('images/companyLogoFoot.png') }}" alt=""></a>
-            <p>目福臺場，路維作名？的有史難上手自車念輕樂往的了馬感三車去畫像在的的小在熱性影須天</p>
+            <p>4F., No.90, Sec. 1, Zhonghua Rd., Wanhua Dist., Taipei City 108, Taiwan (R.O.C.)</p>
+            <p>TEL: (02)2381-8666 | FAX: (02)2371-5661</p>
     	</div>
     	<div class="column footRightArea p-r-20 p-l-20 p-b-20">
         <div class="columns is-mobile">
