@@ -23,46 +23,13 @@
   <section id="serviceIntro" class="m-t-35">
     <div class="container">
       <div class="columns is-mobile is-multiline">
+        @foreach ($serviceInfos as $serviceInfo)
         <div class="column is-half-mobile p-r-20 p-l-20">
-          <img src="{{asset('images/serviceImage1.jpg')}}" alt="">
-          <h5 class="m-t-10 m-b-10">客戶服務</h5>
-          <ul>
-            <li>線上工程進度照片每月更新瀏覽</li>
-            <li>客戶變更作業</li>
-            <li>發送簡訊關懷</li>
-            <li>發送問候卡片</li>
-            <li>住戶生活使用手冊</li>
-          </ul>
+          <img src="{{('uploads').'/'.$serviceInfo->serviceInfo_image}}" alt="">
+          <h5 class="m-t-10 m-b-10">{{$serviceInfo->title}}</h5>
+          {!!$serviceInfo->description!!}
         </div>
-        <div class="column is-half-mobile p-r-20 p-l-20">
-          <img src="{{asset('images/serviceImage2.jpg')}}" alt="">
-          <h5 class="m-t-10 m-b-10">售後服務</h5>
-          <ul>
-            <li>房屋保固服務</li>
-            <li>保固期後修繕服務及優良廠商提供</li>
-            <li>水錶、電錶之過戶處理</li>
-            <li>保固期滿年度社區公設健檢</li>
-            <li>保固期內DIY活動辦理</li>
-          </ul>
-        </div>
-        <div class="column is-half-mobile p-r-20 p-l-20">
-          <img src="{{asset('images/serviceImage3.jpg')}}" alt="">
-          <h5 class="m-t-10 m-b-10">開發洽談</h5>
-          <ul>
-            <li>都市更新相關開發</li>
-            <li>合建案相關開發</li>
-            <li>其他合作開發</li>
-          </ul>
-        </div>
-        <div class="column is-half-mobile p-r-20 p-l-20">
-          <img src="{{asset('images/serviceImage4.jpg')}}" alt="">
-          <h5 class="m-t-10 m-b-10">其他問題</h5>
-          <ul>
-            <li>預約賞屋</li>
-            <li>其他問題諮詢</li>
-          </ul>
-        </div>
-      </div>
+        @endforeach
     </div>
   </section>
   <section id="contact-area" class="m-t-50">

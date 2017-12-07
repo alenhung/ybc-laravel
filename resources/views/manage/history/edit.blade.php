@@ -5,25 +5,38 @@
   <div class="flex-container">
     <div class="columns m-t-10">
       <div class="column">
-        <h1 class="title">修改 － 企業新聞</h1>
+        <h1 class="title">修改 － 歷史沿革說明</h1>
       </div>
     </div>
     <hr class="m-t-0">
-    <form action="{{route('news.update',$news->id)}}" enctype="multipart/form-data" method="POST">
+    <form action="{{route('history.update',$history->id)}}" enctype="multipart/form-data" method="POST">
       {{method_field('PUT')}}
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
           <div class="field">
-            <label for="title" class="label">新聞標題：</label>
+            <label for="year" class="label">歷史年份</label>
             <p class="control">
-              <input type="text" class="input" name="title" id="title" value="{{$news->title}}">
+              <input type="text" class="input" name="year" id="year" value="{{$history->year}}">
             </p>
           </div>
           <div class="field">
-            <label for="description" class="label">新聞內容：</label>
+            <label for="title" class="label">歷史事件標題</label>
             <p class="control">
-              <textarea type="text" class="textarea" name="description" id="editor" rows="5">{{$news->description}}</textarea>
+              <input type="text" class="input" name="title" id="title" value="{{$history->title}}">
+            </p>
+          </div>
+          <div class="field">
+            <label for="description" class="label">歷史內容：（選填）</label>
+            <p class="control">
+              <textarea type="text" class="textarea" name="description" id="editor" rows="5">{{$history->description}}</textarea>
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="url" class="label">相關連結：（選填）</label>
+            <p class="control">
+              <input type="text" class="input" name="url" id="url" value="{{$history->url}}">
             </p>
           </div>
         </div>
@@ -33,26 +46,26 @@
             <div class="column">
               <div class="file file-upload-form is-primary has-name">
                 <label class="file-label">
-                  <input class="file-input " type="file" name="news_image" id="news_image" @change="previewImage" accept="image/*">
+                  <input class="file-input " type="file" name="history_image" id="history_image" @change="previewImage" accept="image/*">
                   <span class="file-cta">
                     <span class="file-icon">
                       <i class="fa fa-upload"></i>
                     </span>
                     <span class="file-label">
-                      請選擇新聞代表圖片
+                      請選擇歷史代表圖片
                     </span>
                   </span>
                 </label>
               </div>
               <div class="image-preview m-t-10" v-if="imageData.length > 0">
-                  <p class="is-small">更新的相片： </p>
+                  <p class="is-small">更新的圖片： </p>
                   <img class="preview" :src="imageData">
               </div>
               <div v-else>
-                <p class="is-small">目前顯示的新聞代表圖： </p>
-                <img src="{{asset ('uploads').'/'.$news->news_image}}" alt="{{$news->news_image}}" class="image preview_image m-t-10">
+                <p class="is-small">目前顯示的歷史沿革代表圖： </p>
+                <img src="{{asset ('uploads').'/'.$history->history_image}}" alt="{{$history->history_image}}" class="image preview_image m-t-10">
               </div>
-              <input type="hidden" name="old_image" value="{{$news->news_image}}" />
+              <input type="hidden" name="old_image" value="{{$history->history_image}}" />
 
             </div>
           </div>
@@ -70,7 +83,7 @@
       </div>
       <div class="columns">
         <div class="column">
-          <form action="{{ route('news.destroy', $news->id) }}" method="post">
+          <form action="{{ route('history.destroy', $history->id) }}" method="post">
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
               <button class="button is-danger is-pulled-left" style="width: 250px;"><i class="fa fa-trash m-r-10"></i>刪除</button>
@@ -81,6 +94,9 @@
 
 @endsection
 
+
+
+
 <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
 
 
@@ -90,21 +106,21 @@
     <script type="text/javascript"  src="{{ asset('js/uploader.js') }}"></script>
     <script type="text/javascript"  src="{{ asset('js/simditor.js') }}"></script>
 
-<script>
-$(document).ready(function(){
-  var editor = new Simditor({
-      textarea: $('#editor'),
-      upload: {
-          url: '{{ route('news.upload_image') }}',
-          params: { _token: '{{ csrf_token() }}' },
-          fileKey: 'upload_file',
-          connectionCount: 3,
-          leaveConfirm: '文件上傳中，如果離開會取消上傳'
-      },
-      pasteImage: true,
-  });
-});
-</script>
+    <script>
+    $(document).ready(function(){
+      var editor = new Simditor({
+          textarea: $('#editor'),
+          upload: {
+              url: '{{ route('history.upload_image') }}',
+              params: { _token: '{{ csrf_token() }}' },
+              fileKey: 'upload_file',
+              connectionCount: 3,
+              leaveConfirm: '文件上傳中，關閉會取消上傳。'
+          },
+          pasteImage: true,
+      });
+    });
+    </script>
   <script>
   var app = new Vue({
     el: '#app',

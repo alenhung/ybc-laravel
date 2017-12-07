@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Handlers\ImageUploadHandler;
 use App\IndexCover;
 use App\Role;
 use DB;

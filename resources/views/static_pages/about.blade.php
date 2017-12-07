@@ -18,7 +18,7 @@
           @foreach ($abouts as $about)
             <li><a>{{$about->nav_title}}</a></li>
           @endforeach
-          <li><a>關係企業</a></li>
+          <li><a>歷史沿革</a></li>
         </ul>
       </div>
     </div>
@@ -43,32 +43,30 @@
   </section>
 
   @endforeach
-  <section class="m-t-40 about-content">
-    <div class="container">
-      <div class="columns">
-        <div class="column  is-4 is-offset-1 m-r-20 m-l-20 ">
-          <ul>
-            <li><span>1982年</span>成立員邦裝潢工程行</li>
-            <li><span>1984年</span>員邦裝潢更名為員邦企業股份有限公司</li>
-            <li><span>1988年</span>成立中邦工程有限公司（中區分公司）</li>
-            <li><span>1989年</span>成立奇特室內裝修工程有限公司（南區分公司）</li>
-            <li><span>2004年</span>成立英德利室內裝修設計股份有限公司</li>
-            <li><span>2004年</span>搬遷至現址擴大營業</li>
-            <li><span>2006年</span>成立員邦建設股份有限公司</li>
-            <li><span>2007年</span>成立員邦大都會酒店</li>
-            <li><span>2009年</span>成立翡翠灣生技股份有限公司</li>
-            <li><span>2010年</span>成立員邦室內裝修設計股份有限公司</li>
-            <li><span>2011年</span>成立員旺建設股份有限公司</li>
-            <li><span>2016年</span>成立峻佳工程有限公司（輕鋼架）</li>
-            <li><span>2017年</span>成立旺邦營造有限公司</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <section id="cd-timeline" class="cd-container m-t-40 about-content">
+    @foreach ($historys as $history)
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				{{-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg" alt="Picture"> --}}
+			</div> <!-- cd-timeline-img -->
 
-  </section>
-
-
+			<div class="cd-timeline-content">
+				<h2>{{$history->title}}</h2>
+        <hr>
+				{!!$history->description!!}
+        @php
+          if ($history->url ==""){
+            echo "";
+          }else{
+            echo '<a class="button is-ybc-btn is-pulled-right" href="'.$history->url.'">相關連結</a>';
+          }
+        @endphp
+				<span class="cd-date">{{$history->year}}</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+    @endforeach
+	</section> <!-- cd-timeline -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/timeline.css') }}">
 @section('scripts')
 <script>
 var hash= document.location.hash;
@@ -104,6 +102,25 @@ $( document ).ready(function() {
 
         });
       });
+      /**/
+      var $timeline_block = $('.cd-timeline-block');
+
+    	//hide timeline blocks which are outside the viewport
+    	$timeline_block.each(function(){
+    		if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+    			$(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+    		}
+    	});
+
+    	//on scolling, show/animate timeline blocks when enter the viewport
+    	$(window).on('scroll', function(){
+    		$timeline_block.each(function(){
+    			if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+    				$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+    			}
+    		});
+    	});
+      /**/
     });
 </script>
 @endsection

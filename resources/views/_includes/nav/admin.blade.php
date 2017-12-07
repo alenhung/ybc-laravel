@@ -1,7 +1,7 @@
 <nav class="navbar has-shadow">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{ route('index') }}">
+      <a class="navbar-item" href="{{ route('manage.dashboard') }}">
         <h2>{{ config('app.name', 'Laravel') }}-網站管理端</h2>
       </a>
       <div class="navbar-burger burger" v-on:click="openMenu" v-bind:class="{ 'is-active': isActive,'is-active2': isActive2}">
@@ -15,44 +15,121 @@
       @if (Auth::guest())
       @else
         <div class="navbar-item has-dropdown" >
-          <a class="navbar-link">熱銷建案</a>
+          <a class="navbar-link">首頁資訊</a>
           <div class="navbar-dropdown is-left">
-            <a href="{{route('works.create')}}" class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-user-circle-o m-r-5"></i></span>
-              新增建案
+            <a href="{{route('index_info.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              首頁資訊
             </a>
-            <a href="{{route('works.index')}}" class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-bell m-r-5"></i></span>
-              建案列表
+            <a href="{{route('indexCover.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              首頁封面
             </a>
             <hr class="navbar-divider">
-            <div class="navbar-item">
+            <a href="{{route('index')}}" class="navbar-item">
               前往網站頁面
-            </div>
+            </a>
           </div>
         </div>
-        <a class="navbar-item is-tab" href="#">在建工程</a>
-        <a class="navbar-item is-tab" href="#">都市更新</a>
-        <a class="navbar-item is-tab" href="#">客戶服務</a>
+        <div class="navbar-item has-dropdown" >
+          <a class="navbar-link">公司簡介</a>
+          <div class="navbar-dropdown is-left">
+            <a href="{{route('about.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              公司簡介列表
+            </a>
+            <a href="{{route('about.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增公司簡介
+            </a>
+            <a href="{{route('history.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              歷史沿革列表
+            </a>
+            <a href="{{route('history.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增歷史沿革
+            </a>
+            <hr class="navbar-divider">
+            <a href="{{route('about')}}" class="navbar-item">
+              前往網站頁面
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown" >
+          <a class="navbar-link">企業新聞</a>
+          <div class="navbar-dropdown is-left">
+            <a href="{{route('news.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              企業新聞列表
+            </a>
+            <a href="{{route('news.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增企業新聞
+            </a>
+            <hr class="navbar-divider">
+            <a href="{{route('news')}}" class="navbar-item">
+              前往網站頁面
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown" >
+          <a class="navbar-link">熱銷建案</a>
+          <div class="navbar-dropdown is-left">
+            <a href="{{route('works.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              建案列表
+            </a>
+            <a href="{{route('works.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增建案
+            </a>
+            <a href="{{route('workings.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增在建工程圖片
+            </a>
+            <hr class="navbar-divider">
+            <a href="{{route('works')}}" class="navbar-item">
+              前往網站頁面
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown" >
+          <a class="navbar-link">在建工程</a>
+          <div class="navbar-dropdown is-left">
+            <a href="{{route('workings.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              在建工程列表
+            </a>
+            <a href="{{route('workings.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增在建工程
+            </a>
+            <a href="{{route('working_photos.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增在建工程圖片
+            </a>
+            <hr class="navbar-divider">
+            <a href="{{route('workings')}}" class="navbar-item">
+              前往網站頁面
+            </a>
+          </div>
+        </div>
         <div class="navbar-item has-dropdown" >
           <a class="navbar-link">客戶服務</a>
           <div class="navbar-dropdown is-left">
-            <a class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-user-circle-o m-r-5"></i></span>
-              選單
+            <a href="{{route('serviceInfo.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              服務項目列表
             </a>
-            <a class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-bell m-r-5"></i></span>
-              選單
-            </a>
-            <a class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-cog m-r-5"></i></span>
-              選單
+            <a href="{{route('serviceInfo.create')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
+              新增服務項目
             </a>
             <hr class="navbar-divider">
-            <div class="navbar-item">
-              選單三
-            </div>
+            <a href="{{route('contact')}}" class="navbar-item">
+              前往網站頁面
+            </a>
           </div>
         </div>
       @endif
@@ -65,29 +142,14 @@
             @else
             <a class="navbar-link">Hey {{ Auth::user()->name }}</a>
           <div class="navbar-dropdown is-right">
-            <a class="navbar-item">
-              <span class="icon">
-                <i class="fa fa-fw fa-user-circle-o m-r-5"></i>
-                  </span>Profile
-            </a>
-            <a class="navbar-item">
-              <span class="icon">
-                    <i class="fa fa-fw fa-bell m-r-5"></i>
-                  </span>Notifications
-            </a>
-            <a class="navbar-item">
-              <span class="icon">
-                    <i class="fa fa-fw fa-cog m-r-5"></i>
-                  </span>Settings
-            </a>
-            <hr class="navbar-divider">
+
             <div class="navbar-item">
               <a href="{{route('logout')}}" onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
                 <span class="icon">
                   <i class="fa fa-fw fa-sign-out m-r-5"></i>
                 </span>
-                Logout
+                登出
               </a>
             </div>
           </div>

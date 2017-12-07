@@ -53,16 +53,16 @@ class IndexInfoController extends Controller
           'page_url' =>  'required|max:255',
 
         ]);
+        $indexInfo = new IndexInfo();
         if($request->hasFile('info_image')){
             $info_image = $request->file('info_image');
             $filename = 'index_info'.time() . '.' . $info_image->getClientOriginalExtension();
             Image::make($info_image)->save( public_path('/uploads/' . $filename ) );
+            $indexInfo->image = $filename;
         }
-        $indexInfo = new IndexInfo();
         $indexInfo->title = $request->title;
         $indexInfo->slogan = $request->slogan;
         $indexInfo->page_url = $request->page_url;
-        $indexInfo->image = $filename;
         $indexInfo->save();
         Session::flash('success', 'Successfully created the new '. $indexInfo->title . ' role in the database.');
         return redirect()->route('index_info.show', $indexInfo->id);
@@ -139,5 +139,9 @@ class IndexInfoController extends Controller
     public function destroy($id)
     {
         //
+        $indexInfo = IndexInfo::findOrFail($id);
+        $indexInfo->delete();
+        Session::flash('success', '成功刪除了 '. $indexInfo->title);
+        return redirect()->route('index_info.index');
     }
 }

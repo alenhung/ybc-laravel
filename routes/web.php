@@ -38,9 +38,13 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
   Route::resource('/about', 'AboutController');
   Route::resource('/indexCover', 'IndexCoverController');
   Route::resource('/working_photos', 'WorkingPhotosController');
+  Route::resource('/serviceInfo', 'ServiceInfoController');
+  Route::resource('/history', 'HistoryController');
   Route::get('/working_photos/{id?}/{count?}', 'WorkingPhotosController@editDesc')->name('working_photos.editDesc');
   Route::post('news_upload_image', 'NewsController@uploadImage')->name('news.upload_image');
   Route::post('about_upload_image', 'AboutController@uploadImage')->name('about.upload_image');
+  Route::post('serviceInfo_upload_image', 'ServiceInfoController@uploadImage')->name('serviceInfo.upload_image');
+  Route::post('history_upload_image', 'HistoryController@uploadImage')->name('history.upload_image');
 
 });
 

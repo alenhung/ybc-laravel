@@ -34,7 +34,6 @@
           </table>
         </div>
       </div> <!-- end of .card -->
-
       {{$newss->links()}}
     </div>
 

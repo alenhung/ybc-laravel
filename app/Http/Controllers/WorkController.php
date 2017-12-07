@@ -59,14 +59,15 @@ class WorkController extends Controller
           'completion_date' => 'sometimes|max:255',
           'public_ratio' => 'sometimes|max:255',
           'site_url' => 'sometimes|max:255'
-
         ]);
+        $work = new Work();
         if($request->hasFile('project_image')){
             $project_image = $request->file('project_image');
             $filename = 'works-'.time() . '.' . $project_image->getClientOriginalExtension();
             Image::make($project_image)->save( public_path('/uploads/' . $filename ) );
+            $work->project_image = $filename;
         }
-        $work = new Work();
+
         $work->title = $request->title;
         $work->slogan = $request->slogan;
         $work->description = $request->description;
@@ -80,7 +81,6 @@ class WorkController extends Controller
         $work->tall = $request->tall;
         $work->completion_date = $request->completion_date;
         $work->site_url = $request->site_url;
-        $work->project_image = $filename;
         $work->save();
         Session::flash('success', 'Successfully created the new '. $work->title . ' role in the database.');
         return redirect()->route('works.show', $work->id);
@@ -163,7 +163,6 @@ class WorkController extends Controller
         $work->tall = $request->tall;
         $work->site_url = $request->site_url;
         $work->completion_date = $request->completion_date;
-
         $work->save();
         Session::flash('success', '成功建立了 '. $work->title . ' 熱銷建案於資料庫內');
         return redirect()->route('works.show', $work->id);

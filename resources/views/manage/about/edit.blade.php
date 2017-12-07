@@ -7,13 +7,7 @@
       <div class="column">
         <h1 class="title">修改 － 公司簡介</h1>
       </div>
-    <div class="column">
-      <form action="{{ route('about.destroy', $about->id) }}" method="post">
-        {{ csrf_field() }}
-        {{ method_field('DELETE') }}
-        <a class="is-pulled-right" style="width: 250px;"><i class="fa fa-trash"></i>刪除</a>
-      </form>
-    </div>
+
     </div>
     <hr class="m-t-0">
     <form action="{{route('about.update',$about->id)}}" enctype="multipart/form-data" method="POST">
@@ -84,10 +78,19 @@
       <div class="columns">
         <div class="column">
           <hr />
-          <button class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-check-square m-r-10"></i>確認修改</button>
+          <button type="submit" class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-check-square m-r-10"></i>確認修改</button>
         </div>
       </div>
 </form>
+<div class="columns">
+  <div class="column">
+    <form action="{{ route('about.destroy', $about->id) }}" method="POST">
+      {{ csrf_field() }}
+      {{ method_field('DELETE') }}
+      <button type="submit" class="button is-danger is-pulled-left" style="width: 250px;"><i class="fa fa-trash m-r-10 "></i>刪除</button>
+    </form>
+  </div>
+</div>
 
 
   </div> <!-- end of .flex-container -->

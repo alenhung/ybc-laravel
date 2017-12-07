@@ -1,8 +1,8 @@
 @extends('layouts.default')
 @section('content')
-  @foreach ($indexCovers as $indexCover)
+
   <header id="homeHeader" style="background-image: url({{ asset ('uploads').'/'.$indexCover->indexCover }})">
-  @endforeach
+
   {{-- <header id="homeHeader" style="background-image: url({{ asset ('images/index_image4.jpg') }})"> --}}
 @include('_includes.nav.main')
   {{-- <img src="{{ asset ('images/intro-2-L-G.png') }}" class="headerImage is-hidden-touch" alt="" data-aos="zoom-in">
@@ -16,7 +16,9 @@
     <div class="columns is-mobile is-multiline">
       @foreach ($indexInfos as $indexInfo)
         <div class="column introContentBlock p-t-40 is-half-mobile">
-          <img src="{{ asset ('uploads').'/'.$indexInfo->image}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
+          <a href="{{$indexInfo->page_url}}">
+            <img src="{{ asset ('uploads').'/'.$indexInfo->image}}" class="img-circle introContentImage m-b-10" alt="Responsive image" style="width:120px;height:120px;">
+          </a>
             <h5>{{$indexInfo->title}}</h5>
             <hr class="m-t-10 m-b-10">
             <p class="is-hidden-touch">{{$indexInfo->slogan}}</p>

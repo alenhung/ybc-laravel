@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\History;
 use App\About;
 use App\Role;
 use DB;
@@ -52,17 +53,17 @@ class AboutController extends Controller
           'button_text' => 'required|max:255'
 
         ]);
+        $about = new About();
         if($request->hasFile('about_image')){
             $about_image = $request->file('about_image');
             $filename = 'about-'.time() . '.' . $about_image->getClientOriginalExtension();
             Image::make($about_image)->save( public_path('/uploads/' . $filename ) );
+            $about->about_image = $filename;
         }
-        $about = new About();
         $about->nav_title = $request->nav_title;
         $about->title = $request->title;
         $about->description = $request->description;
         $about->button_text = $request->button_text;
-        $about->about_image = $filename;
         $about->save();
         Session::flash('success', 'Successfully created the new '. $about->title . ' role in the database.');
         return redirect()->route('about.show', $about->id);
@@ -141,7 +142,6 @@ class AboutController extends Controller
     {
         //
         $about = About::findOrFail($id);
-
         $about->delete();
         Session::flash('success', '成功刪除了 '. $about->title);
         return redirect()->route('about.index');
@@ -150,7 +150,8 @@ class AboutController extends Controller
     {
         //
         $abouts = About::orderBy('id', 'asc')->paginate(10);
-        return view('static_pages/about')->withAbouts($abouts);
+        $historys = History::orderBy('year', 'asc')->paginate(50);
+        return view('static_pages/about')->withAbouts($abouts)->withHistorys($historys);
     }
     public function uploadImage(Request $request)
     {

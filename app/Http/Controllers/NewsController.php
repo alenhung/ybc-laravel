@@ -19,7 +19,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-      $newss = News::orderBy('id', 'desc')->paginate(5);
+      $newss = News::orderBy('id', 'desc')->paginate(10);
       return view('manage.news.index')->withNewss($newss);
     }
 
@@ -48,15 +48,15 @@ class NewsController extends Controller
         'title' => 'required|max:255',
         'description' => 'sometimes'
       ]);
+      $news = new News();
       if($request->hasFile('news_image')){
           $news_image = $request->file('news_image');
           $filename = 'news-'.time() . '.' . $news_image->getClientOriginalExtension();
           Image::make($news_image)->save( public_path('/uploads/' . $filename ) );
+          $news->news_image = $filename;
       }
-      $news = new News();
       $news->title = $request->title;
       $news->description = $request->description;
-      $news->news_image = $filename;
       $news->save();
       Session::flash('success', 'Successfully created the new '. $news->title . ' role in the database.');
       return redirect()->route('news.show', $news->id);
@@ -113,10 +113,8 @@ class NewsController extends Controller
         }else{
             $news->news_image = $request->old_image;
         }
-
         $news->title = $request->title;
         $news->description = $request->description;
-
         $news->save();
         Session::flash('success', '成功建立了 '. $news->title . ' 熱銷建案於資料庫內');
         return redirect()->route('news.show', $news->id);

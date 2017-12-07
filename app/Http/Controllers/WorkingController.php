@@ -64,12 +64,14 @@ class WorkingController extends Controller
           'builder' => 'sometimes|max:255'
 
         ]);
+        $working = new Working();
         if($request->hasFile('project_image')){
             $project_image = $request->file('project_image');
             $filename = 'workings-'.time() . '.' . $project_image->getClientOriginalExtension();
             Image::make($project_image)->save( public_path('/uploads/' . $filename ) );
+            $working->project_image = $filename;
         }
-        $working = new Working();
+
         $working->title = $request->title;
         $working->slogan = $request->slogan;
         $working->description = $request->description;
@@ -84,7 +86,6 @@ class WorkingController extends Controller
         $working->completion_date = $request->completion_date;
         $working->site_url = $request->site_url;
         $working->builder = $request->builder;
-        $working->project_image = $filename;
         $working->save();
         Session::flash('success', 'Successfully created the new '. $working->title . ' role in the database.');
         return redirect()->route('workings.show', $working->id);

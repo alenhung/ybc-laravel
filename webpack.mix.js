@@ -18,4 +18,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/screen.scss', 'public/css')
    .copyDirectory('resources/assets/editor/js', 'public/js')
    .copyDirectory('resources/assets/editor/css', 'public/css')
+   .copyDirectory('resources/assets/timeline/', 'public/css')
    ;

@@ -7,15 +7,6 @@
       <div class="column">
         <h1 class="title">編輯 － 首頁資訊</h1>
       </div>
-    <div class="column">
-      <form action="{{ route('index_info.destroy', $indexInfo->id) }}" enctype="multipart/form-data" method="post">
-        {{ csrf_field() }}
-        {{--
-        {{ method_field('DELETE') }}
-        <a class="is-pulled-right" style="width: 250px;"><i class="fa fa-trash"></i>刪除</a>
-        --}}
-      </form>
-    </div>
     </div>
     <hr class="m-t-0">
     <form action="{{route('index_info.update',$indexInfo->id)}}" enctype="multipart/form-data" method="POST">
@@ -84,6 +75,16 @@
         </div>
       </div>
 </form>
+
+<div class="columns">
+  <div class="column">
+    <form action="{{ route('index_info.destroy', $indexInfo->id) }}" enctype="multipart/form-data" method="post">
+      {{ csrf_field() }}
+      {{ method_field('DELETE') }}
+      <button type="submit" class="button is-danger is-pulled-left" style="width: 250px;"><i class="fa fa-trash m-r-10 "></i>刪除</button>
+    </form>
+  </div>
+</div>
 
 
   </div> <!-- end of .flex-container -->

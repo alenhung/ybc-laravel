@@ -14,9 +14,9 @@ class StaticPagesController extends Controller
     public function index()
     {
       $indexInfos = IndexInfo::orderBy('id', 'asc')->paginate(8);
-      $indexCovers = IndexCover::orderBy('id', 'asc')->paginate(8);
+      $indexCover = IndexCover::where('id', 1)->first();
       $works = Work::orderBy('id', 'desc')->paginate(8);
-      return view('static_pages/index')->withWorks($works)->withIndexInfos($indexInfos)->withIndexCovers($indexCovers);
+      return view('static_pages/index')->withWorks($works)->withIndexInfos($indexInfos)->withIndexCover($indexCover);
     }
     public function jobs(){
       return view('static_pages/jobs');

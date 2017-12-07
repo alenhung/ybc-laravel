@@ -1,29 +1,39 @@
 @extends('layouts.admin_default')
-
 @section('content')
-
   <div class="flex-container">
     <div class="columns m-t-10">
       <div class="column">
-        <h1 class="title">修改 － 企業新聞</h1>
+        <h1 class="title">建立 － 歷史沿革</h1>
       </div>
     </div>
     <hr class="m-t-0">
-    <form action="{{route('news.update',$news->id)}}" enctype="multipart/form-data" method="POST">
-      {{method_field('PUT')}}
+    <form action="{{route('history.store')}}" enctype="multipart/form-data" method="POST">
       {{csrf_field()}}
       <div class="columns">
-        <div class="column">
+        <div class="column is-two-thirds">
           <div class="field">
-            <label for="title" class="label">新聞標題：</label>
+            <label for="year" class="label">歷史年份</label>
             <p class="control">
-              <input type="text" class="input" name="title" id="title" value="{{$news->title}}">
+              <input type="text" class="input" name="year" id="year" placeholder="請輸入歷史年份：">
             </p>
           </div>
           <div class="field">
-            <label for="description" class="label">新聞內容：</label>
+            <label for="title" class="label">歷史事件標題</label>
             <p class="control">
-              <textarea type="text" class="textarea" name="description" id="editor" rows="5">{{$news->description}}</textarea>
+              <input type="text" class="input" name="title" id="title" placeholder="請輸入歷史事件標題：">
+            </p>
+          </div>
+          <div class="field">
+            <label for="description" class="label">歷史內容：（選填）</label>
+            <p class="control">
+              <textarea type="text" class="textarea" name="description" id="editor" placeholder="歷史內容內容...." rows="5" autofocus></textarea>
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="url" class="label">相關連結：（選填）</label>
+            <p class="control">
+              <input type="text" class="input" name="url" id="url" placeholder="請輸入連結網址：">
             </p>
           </div>
         </div>
@@ -33,26 +43,20 @@
             <div class="column">
               <div class="file file-upload-form is-primary has-name">
                 <label class="file-label">
-                  <input class="file-input " type="file" name="news_image" id="news_image" @change="previewImage" accept="image/*">
+                  <input class="file-input " type="file" name="history_image" id="history_image" @change="previewImage" accept="image/*">
                   <span class="file-cta">
                     <span class="file-icon">
                       <i class="fa fa-upload"></i>
                     </span>
                     <span class="file-label">
-                      請選擇新聞代表圖片
+                      請選擇代表圖片
                     </span>
                   </span>
                 </label>
               </div>
               <div class="image-preview m-t-10" v-if="imageData.length > 0">
-                  <p class="is-small">更新的相片： </p>
                   <img class="preview" :src="imageData">
               </div>
-              <div v-else>
-                <p class="is-small">目前顯示的新聞代表圖： </p>
-                <img src="{{asset ('uploads').'/'.$news->news_image}}" alt="{{$news->news_image}}" class="image preview_image m-t-10">
-              </div>
-              <input type="hidden" name="old_image" value="{{$news->news_image}}" />
 
             </div>
           </div>
@@ -62,24 +66,19 @@
       </div> <!-- end of .column -->
        <!-- end of .columns for forms -->
       <div class="columns">
+
         <div class="column">
           <hr />
-          <button class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-check-square m-r-10"></i>確認修改</button>
-        </div>
-      </form>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <form action="{{ route('news.destroy', $news->id) }}" method="post">
-            {{ csrf_field() }}
-            {{ method_field('DELETE') }}
-              <button class="button is-danger is-pulled-left" style="width: 250px;"><i class="fa fa-trash m-r-10"></i>刪除</button>
-          </form>
+          <button class="button is-primary is-pulled-right" style="width: 250px;"><i class="fa fa-plus-square m-r-10"></i>新增建立</button>
         </div>
       </div>
+    </form>
   </div> <!-- end of .flex-container -->
 
 @endsection
+
+
+
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
 
@@ -90,27 +89,26 @@
     <script type="text/javascript"  src="{{ asset('js/uploader.js') }}"></script>
     <script type="text/javascript"  src="{{ asset('js/simditor.js') }}"></script>
 
-<script>
-$(document).ready(function(){
-  var editor = new Simditor({
-      textarea: $('#editor'),
-      upload: {
-          url: '{{ route('news.upload_image') }}',
-          params: { _token: '{{ csrf_token() }}' },
-          fileKey: 'upload_file',
-          connectionCount: 3,
-          leaveConfirm: '文件上傳中，如果離開會取消上傳'
-      },
-      pasteImage: true,
-  });
-});
-</script>
+    <script>
+    $(document).ready(function(){
+      var editor = new Simditor({
+          textarea: $('#editor'),
+          upload: {
+              url: '{{ route('history.upload_image') }}',
+              params: { _token: '{{ csrf_token() }}' },
+              fileKey: 'upload_file',
+              connectionCount: 3,
+              leaveConfirm: '文件上傳中，關閉會取消上傳。'
+          },
+          pasteImage: true,
+      });
+    });
+    </script>
   <script>
   var app = new Vue({
     el: '#app',
     data: {
-       imageData: "" , // we will store base64 format of image in this string
-       displayOldProjectImage: true
+       imageData: ""  // we will store base64 format of image in this string
    },
    methods: {
        previewImage: function(event) {
