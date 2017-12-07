@@ -17291,6 +17291,11 @@ footer .footCopyright {
   margin-left: 3em;
 }
 
+.redevelopment-intro h5,
+.redevelopment-intro p {
+  text-align: center;
+}
+
 .redevelopment-intro-image {
   margin-top: 40px;
 }
