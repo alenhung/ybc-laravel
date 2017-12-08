@@ -60,7 +60,7 @@ header {
   background: #303e49;
 }
 header h1 {
-  color: #efefef;
+  color: #fffafa;
   font-size: 18px;
   font-size: 1.125rem;
 }
@@ -232,10 +232,10 @@ header h1 {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: #efefef;
+  background: #fffafa;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #f2f2f2;
+  box-shadow: 2px 3px 3px #efefef;
 }
 .cd-timeline-content::after {
   clear: both;
@@ -243,7 +243,12 @@ header h1 {
   display: table;
 }
 .cd-timeline-content h2 {
-  color: #303e49;
+
+}
+.cd-timeline-content hr {
+  width: 20%;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   /*font-size: 13px;*/
@@ -260,7 +265,7 @@ header h1 {
   float: right;
   padding: .8em 1em;
   background: #acb7c0;
-  color: #efefef;
+  color: #fffafa;
   border-radius: 0.25em;
 }
 .no-touch .cd-timeline-content .cd-read-more:hover {
@@ -279,7 +284,7 @@ header h1 {
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid #efefef;
+  border-right: 7px solid #ffffff;
 }
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
@@ -305,7 +310,7 @@ header h1 {
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: #efefef;
+    border-left-color: #ffffff;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
@@ -326,7 +331,7 @@ header h1 {
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: #efefef;
+    border-right-color: #ffffff;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
