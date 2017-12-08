@@ -6,7 +6,7 @@
       <div id="contentHeaderBlock" class="content">
         <h2>都市更新／聯開</h2>
         <hr class=" m-t-10 m-b-10">
-        <p>Redevelopment of YuanBang Land</p>
+        <p>Redevelopment of YuanBang Construction</p>
       </div>
     </div>
   </section>
@@ -14,8 +14,8 @@
     <div class="container">
       <div class="tabs">
         <ul>
-          <li class="is-active"><a>都市更新／聯開</a></li>
-          <li ><a>執行案例</a></li>
+          <li class="is-active"><a href="{{route ('redevelopment')}}">都市更新／聯開</a></li>
+          <li ><a href="{{route ('redevelopmenting')}}">執行案例</a></li>
         </ul>
       </div>
     </div>

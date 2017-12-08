@@ -6,7 +6,7 @@
       <div id="contentHeaderBlock" class="content">
         <h2>熱銷建案</h2>
         <hr>
-        <p>works for YuanBang</p>
+        <p>Hot Case Of YuanBang Construction</p>
       </div>
     </div>
   </section>

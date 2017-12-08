@@ -6,7 +6,7 @@
       <div id="contentHeaderBlock" class="content">
         <h2>關於員邦</h2>
         <hr>
-        <p>company overview of YuanBang Land</p>
+        <p>About YuanBang Construction</p>
       </div>
     </div>
   </section>
@@ -19,6 +19,7 @@
             <li><a>{{$about->nav_title}}</a></li>
           @endforeach
           <li><a>歷史沿革</a></li>
+          <li><a>關係企業</a></li>
         </ul>
       </div>
     </div>
@@ -31,7 +32,7 @@
           <img src="{{asset ('uploads').'/'.$about->about_image}}" class="has-shadow" alt="" data-aos="fade-right">
         </div>
         <div class="column content is-6 is-offset-1 m-r-20 m-l-20" >
-          <h2 class="ybc-title-h2">{{$about->title}}</h2>
+          <h2>{{$about->title}}</h2>
           <hr>
           {!!$about->description!!}
           <br>
@@ -43,7 +44,17 @@
   </section>
 
   @endforeach
-  <section id="cd-timeline" class="cd-container m-t-40 about-content">
+  <section id="cd-timeline" class="cd-container  about-content">
+
+      <div class="columns">
+        <div class="column history-content" style="z-index:100;">
+          <h2>不停淬煉，成就永續</h2>
+          <hr class="m-t-10 m-b-10">
+          <p>員邦建築自三十多年來不斷淬煉演化，自你我身邊最細節的部分開端，早期裝修工程行逐步穩紮成長邁向建築業。</p>
+          <p>十多年來累積多項熱銷建案，我們不以成就自滿，深知一切只是基礎，持續淬煉，永續經營。</p>
+        </div>
+      </div>
+
     @foreach ($historys as $history)
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
@@ -66,6 +77,18 @@
 		</div> <!-- cd-timeline-block -->
     @endforeach
 	</section> <!-- cd-timeline -->
+  <section id="affiliated" class="about-content m-t-40">
+    <div class="container">
+      <div class="columns">
+        <div class="column affiliated-content">
+          <h2>多元佈局，奠定事業版圖</h2>
+          <hr class="m-t-10 m-b-10">
+          <p>員邦集團深耕於建築相關產業，如員邦建築、員旺建設、台佳建設、峻佳工程、旺邦營造、都美機構、員邦室內裝修、普騰預伴混凝土完整一條龍建築產業。</p>
+          <p>集團亦跨足旅遊業－大都會酒店、生技業－翡翠灣生技等各項佈局，</p>
+          <img src="{{ asset ('images/affiliated.jpg') }}" alt="關係企業" style="box-shadow:none; border:0;" class="m-t-50 m-b-50">
+        </div>
+      </div>
+  </section>
 <link rel="stylesheet" type="text/css" href="{{ asset('css/timeline.css') }}">
 @section('scripts')
 <script>

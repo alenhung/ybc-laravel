@@ -94,7 +94,7 @@
             <p class="homeFootContentDesc">Service</p>
           </div>
           <div class="homeFootItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('contact')}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
             <p class="homeFootContentDesc">schedule</p>
           </div>
           <div class="homeFootItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('workings')}}" class="info"></a>
           </div>
         </div>
       </div>

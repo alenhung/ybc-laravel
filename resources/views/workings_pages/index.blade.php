@@ -6,7 +6,7 @@
       <div id="contentHeaderBlock" class="content">
         <h2>在建工程</h2>
         <hr>
-        <p>Construction In Progress for YuanBang</p>
+        <p>Construction In Progress For YuanBang</p>
       </div>
     </div>
   </section>

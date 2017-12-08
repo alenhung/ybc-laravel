@@ -6,7 +6,7 @@
       <div id="contentHeaderBlock" class="content">
         <h2>執行案例</h2>
         <hr class=" m-t-10 m-b-10">
-        <p>Redevelopment of YuanBang Land</p>
+        <p>Urban Renewal Of YuanBang Construction</p>
       </div>
     </div>
   </section>

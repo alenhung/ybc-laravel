@@ -6,7 +6,7 @@
       <div id="contentHeaderBlock" class="content">
         <h2>人才招募</h2>
         <hr class=" m-t-10 m-b-10">
-        <p>Jobs of YuanBang Land</p>
+        <p>Recruitment Of YuanBang Construction</p>
       </div>
     </div>
   </section>

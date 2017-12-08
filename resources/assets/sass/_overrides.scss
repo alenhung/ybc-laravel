@@ -232,6 +232,12 @@ footer{
   a{
     float: right;
   }
+  h2{
+    font-size: 1.5em;
+  }
+  hr{
+    width: 10%;
+  }
 }
 #serviceIntro{
   img{
@@ -349,7 +355,7 @@ footer{
   text-align: right;
 }
 //redevelopment
-.redevelopment-intro{
+.redevelopment-intro,.redevelopmenting-intro{
   h2{
     font-size: 1.5em;
     text-align: center;
@@ -371,6 +377,13 @@ footer{
   h5,p{
     text-align: center;
   }
+  a{
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.redevelopmenting-intro{
+  text-align: center;
 }
 .redevelopment-intro-image{
   margin-top: 40px;
@@ -428,5 +441,24 @@ footer{
     width: 500px;
     margin: 0 auto;
     text-align: left;
+  }
+}
+.history-content, .affiliated-content{
+  background: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  p{
+    font-size: 0.9em;
+    line-height: 30px;
+    text-align: center;
+  }
+  hr{
+    width: 5%;
+    margin: 0 auto;
   }
 }
