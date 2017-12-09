@@ -1,5 +1,6 @@
 @extends('layouts.admin_default')
 @section('content')
+  <div class="container">
   <div class="columns">
     <div class="column is-one-third is-offset-one-third m-t-100">
       <div class="card">
@@ -25,12 +26,13 @@
                 <p class="help is-danger">{{$errors->first('password')}}</p>
               @endif
             </div>
-            <b-checkbox name="remember" class="m-t-20">記得我</b-checkbox>
+            {{-- <b-checkbox name="remember" class="m-t-20">記得我</b-checkbox> --}}
             <button class="button is-link is-outlined is-fullwidth m-t-30">登入</button>
           </form>
         </div> <!-- end of .card-content -->
       </div> <!-- end of .card -->
-      <h5 class="has-text-centered m-t-20"><a href="{{route('password.request')}}" class="is-muted">忘記密碼</a></h5>
+      {{-- <h5 class="has-text-centered m-t-20"><a href="{{route('password.request')}}" class="is-muted">忘記密碼</a></h5> --}}
     </div>
+  </div>
   </div>
 @endsection
