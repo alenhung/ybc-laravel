@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/aboutBackground.jpg') }})">
+  <section id="contentHeader" style="background: url({{ asset ('images/intro/aboutBackground.jpg') }});background-size: cover;">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
@@ -31,21 +31,21 @@
         <div class="column is-4 is-offset-1 m-r-20 m-l-20 ">
           <img src="{{asset ('uploads').'/'.$about->about_image}}" class="has-shadow" alt="" data-aos="fade-right">
         </div>
-        <div class="column content is-6 is-offset-1 m-r-20 m-l-20" >
+        <div class="column content is-7 m-r-20 m-l-20" >
           <h2>{{$about->title}}</h2>
           <hr>
           {!!$about->description!!}
           <br>
           <br>
-          <a class="button is-ybc-brown-btn m-b-20">{{$about->button_text}}</a>
+          <a class="button is-ybc-brown-btn m-b-20 nextBtn">{{$about->button_text}}</a>
         </div>
       </div>
     </div>
   </section>
 
   @endforeach
-  <section id="cd-timeline" class="cd-container  about-content">
-
+  <section id="cd-timeline" class="cd-container about-content m-r-20 m-l-20">
+    <div class="container">
       <div class="columns">
         <div class="column history-content" style="z-index:100;">
           <h2>不停淬煉，成就永續</h2>
@@ -54,7 +54,7 @@
           <p>十多年來累積多項熱銷建案，我們不以成就自滿，深知一切只是基礎，持續淬煉，永續經營。</p>
         </div>
       </div>
-
+    </div>
     @foreach ($historys as $history)
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
@@ -76,8 +76,15 @@
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
     @endforeach
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <a class="button is-ybc-brown-btn m-b-20 nextBtn">我們的關係企業</a>
+        </div>
+      </div>
+    </div>
 	</section> <!-- cd-timeline -->
-  <section id="affiliated" class="about-content m-t-40">
+  <section id="affiliated" class="about-content m-t-40 m-r-20 m-l-20">
     <div class="container">
       <div class="columns">
         <div class="column affiliated-content">
@@ -85,7 +92,13 @@
           <hr class="m-t-10 m-b-10">
           <p>員邦集團深耕於建築相關產業，如員邦建築、員旺建設、台佳建設、峻佳工程、旺邦營造、都美機構、員邦室內裝修、普騰預伴混凝土完整一條龍建築產業。</p>
           <p>集團亦跨足旅遊業－大都會酒店、生技業－翡翠灣生技等各項佈局，</p>
-          <img src="{{ asset ('images/affiliated.jpg') }}" alt="關係企業" style="box-shadow:none; border:0;" class="m-t-50 m-b-50">
+          <img src="{{ asset ('images/affiliated/affiliated-desktop.jpg') }}" alt="關係企業" style="box-shadow:none; border:0;" class="m-t-50 m-b-50 is-hidden-touch">
+          <img src="{{ asset ('images/affiliated/affiliated-mobile.jpg') }}" alt="關係企業" style="box-shadow:none; border:0;" class="m-t-50 m-b-50 is-hidden-desktop">
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <a class="button is-ybc-brown-btn m-b-20 nextBtn">關於我們的公司簡介</a>
         </div>
       </div>
   </section>
@@ -95,13 +108,42 @@
 var hash= document.location.hash;
 console.log( hash );
 $( document ).ready(function() {
+
+  /**/
+  var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+      }
+    };
+  /**/
+  var url = getUrlParameter('url');
+console.log(url);
     // about Page use
       var $pageSelect = $("#pageNav li");
       var $showContent = $(".about-content");
-      var $nextButton = $(".about-content a");
-      $($pageSelect[0]).addClass("is-active");
-      $showContent.hide();
-      $($showContent[0]).fadeIn();
+      var $nextButton = $(".nextBtn");
+      if(url=='history'){
+        $($pageSelect[$pageSelect.length-2]).addClass("is-active");
+        $showContent.hide();
+        $($showContent[$pageSelect.length-2]).fadeIn();
+      }else if (url=='affiliated') {
+        $($pageSelect[$pageSelect.length-1]).addClass("is-active");
+        $showContent.hide();
+        $($showContent[$pageSelect.length-1]).fadeIn();
+      }else{
+        $($pageSelect[$pageSelect.length-$pageSelect.length]).addClass("is-active");
+        $showContent.hide();
+        $($showContent[$pageSelect.length-$pageSelect.length]).fadeIn();
+      }
+
       $pageSelect.each(function(n){
         $(this).click(function(){
           console.log(n);
@@ -115,7 +157,7 @@ $( document ).ready(function() {
         $(this).click(function(){
           $showContent.hide();
           $pageSelect.removeClass();
-          if(i<=2){
+          if(i<=$pageSelect.length-2){
             $($showContent[i+1]).fadeIn();
             $($pageSelect[i+1]).addClass("is-active");
           }else{
@@ -144,6 +186,7 @@ $( document ).ready(function() {
     		});
     	});
       /**/
+
     });
 </script>
 @endsection

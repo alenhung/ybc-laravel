@@ -1,6 +1,7 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/worksBackground3.jpg') }})">
+
+    <section id="contentHeader" style="background: url({{ asset ('images/intro/workBackground.jpg') }});background-size: cover;">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
@@ -134,7 +135,7 @@
             }
         }
 @endphp
-
+@section('scripts')
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8tciuZhAxCTUCXJuCHc8-haAFNQk92Dk&libraries=places"></script>
 <script>
     function init_map() {
@@ -178,4 +179,5 @@
     */
     google.maps.event.addDomListener(window, 'load', init_map);
 </script>
+@endsection
 @stop

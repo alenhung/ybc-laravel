@@ -13,10 +13,9 @@
             <hr class="footHr">
             <ul>
               <li><a href="{{route('about')}}">公司簡介</a></li>
-              <li><a href="#">發展歷程</a></li>
+              <li><a href="{{route('about').'?url=history'}}">發展歷程</a></li>
               <li><a href="{{route('news')}}">企業新聞</a></li>
-              <li><a href="#">住戶心得</a></li>
-              <li><a href="#">關係企業</a></li>
+              <li><a href="{{route('about').'?url=affiliated'}}">關係企業</a></li>
               <li><a href="{{route('jobs')}}">人才招募</a></li>
             </ul>
           </div>
@@ -32,7 +31,8 @@
             <h5>都市更新</h5>
             <hr class="footHr">
             <ul>
-              <li><a href="#">都市更新</a></li>
+              <li><a href="{{route('redevelopment')}}">都更／聯開</a></li>
+              <li><a href="{{route('redevelopmenting')}}">執行案例</a></li>
             </ul>
           </div>
           <div class="column content">
@@ -40,8 +40,6 @@
             <hr class="footHr">
             <ul>
               <li><a href="{{route('contact')}}">聯絡我們</a></li>
-              <li><a href="#">售前服務</a></li>
-              <li><a href="#">售後服務</a></li>
             </ul>
           </div>
         </div>
@@ -50,7 +48,7 @@
   </div>
   <div class="footCopyright p-t-15 p-b-15">
     <div class="container">
-      <div class="content">
+      <div class="content m-r-20 m-l-20">
         <p>© 2017 員邦建設股份有限公司 YuanBang  Construction Co., Ltd. All rights reserved.</p>
       </div>
     </div>

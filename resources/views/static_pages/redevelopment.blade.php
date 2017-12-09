@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/redevelopment/redevelopment-background.jpg') }})">
+  <section id="contentHeader" style="background: url({{ asset ('images/intro/redevelopmentBackground.jpg') }});background-size: cover;">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
@@ -23,7 +23,7 @@
   <section id="redevelopment" class="m-t-35">
     <div class="container">
       <div class="columns">
-        <div class="column redevelopment-intro">
+        <div class="column redevelopment-intro m-l-20 m-r-20">
           <h2>都市更新／聯開</h2>
           <hr class="m-t-10 m-b-10">
           <div class="redevelopment-inro-text">
@@ -41,18 +41,18 @@
           <p>整建與維護即一般所謂建築物立面整修或4、5層樓老舊公寓增設電梯，考量原有建築結構安全良好，尚無拆除重建之必要，惟建築物外觀或既有設施過於老舊，透過該方式能改善居住環境品質及都市景觀。</p>
           </div>
         </div>
-        <div class="column">
+        <div class="column m-l-20 m-r-20">
           <img src="{{asset ('images/redevelopment/architectural.jpg')}}" alt="">
         </div>
       </div>
     </div>
   </section>
 <section style="background: url({{ asset ('images/redevelopment/law.jpg') }};background-size: cover;background-attachment: fixed;background-repeat: no-repeat;background-position: center top;overflow: auto;margin-top: 60px;margin-bottom:60px; ">
-<div class="container redevelopment-intro-image">
+<div class="container redevelopment-intro-image m-l-20 m-r-20">
   <h2>相關法規</h2>
   <hr class="m-t-10 m-b-10">
   <div class="columns">
-    <div class="column law-content">
+    <div class="column law-content ">
       <h3>都市更新相關資料連結</h3>
       <hr class="dark-hr m-t-10 m-b-10">
       <ul>
@@ -87,10 +87,14 @@
 </section>
 <section>
   <div class="container redevelopment-process">
-    <h2>相關法規</h2>
-    <hr class="m-t-10 m-b-10">
-    <div class="redevelopment-block">
-      <p>都市更新推動流程分為劃定都市更新地區及擬定都市更新計畫、擬定都市更新事業計畫、與計劃之執行等三個階段，而權力變化計畫視實際實施方式是否採權利變換方式而定。</p>
+    <div class="columns">
+      <div class="column">
+        <h2>相關法規</h2>
+        <hr class="m-t-10 m-b-10">
+        <div class="redevelopment-block">
+          <p>都市更新推動流程分為劃定都市更新地區及擬定都市更新計畫、擬定都市更新事業計畫、與計劃之執行等三個階段，而權力變化計畫視實際實施方式是否採權利變換方式而定。</p>
+        </div>
+      </div>
     </div>
     <div class="columns">
       <div class="column">

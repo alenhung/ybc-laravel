@@ -15,11 +15,11 @@
         <a class="navbar-item" href="{{route('about')}}">公司簡介</a>
         <a class="navbar-item" href="{{route('works')}}">熱銷建案</a>
         <a class="navbar-item" href="{{route('workings')}}">在建工程</a>
-        <a class="navbar-item" href="{{route('redevelopment')}}">都市更新</a>
+        <a class="navbar-item" href="{{route('redevelopment')}}">都市聯開</a>
         <a class="navbar-item" href="{{route('contact')}}">客戶服務</a>
       </div>
       <div class="navbar-end">
-        <a class="navbar-item" href="{{route('affiliated')}}">關係企業</a>
+        <a class="navbar-item" href="{{route('about').'?url=affiliated'}}">關係企業</a>
         <a class="navbar-item" href="{{route('jobs')}}">人才招募</a>
       </div>
     </div>

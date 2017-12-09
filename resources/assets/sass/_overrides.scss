@@ -21,10 +21,10 @@
   }
 }
 #homeHeader {
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
     text-align: center;
+
     border-bottom: 8px solid $theme-color;
     .headerImage {
         padding-top: 120px;
@@ -68,15 +68,6 @@
   img {
     display: block;
   }
-  .worksContentTitle {
-    p {
-        font-size: 24px;
-    }
-    hr {
-      width: 40%;
-      margin: 0 auto;
-    }
-  }
 }
 /*foot-content*/
 .homeFootItem{
@@ -107,7 +98,6 @@
   }
   .homeFootContentTitle {
       position: relative;
-      margin-top: 40px;
       p {
           font-size: 18px;
           padding-top: 5px;
@@ -271,19 +261,20 @@ footer{
   p,ul,li{
     font-size: 0.9em;
   }
-  .job-inro-text{
-    margin: 0 auto;
-    width: 600px;
-    p{
-      margin-top: 15px;
-      line-height: 35px;
-    }
-  }
+
 }
 
+.job-inro-text,.redevelopment-block{
+  p{
+    margin-top: 15px;
+    line-height: 35px;
+    margin-bottom: 15px;
+  }
+}
 .job-intro{
   h2{
     font-size: 1.5em;
+    text-align: center;
   }
   text-align: center;
   hr{
@@ -384,6 +375,10 @@ footer{
 }
 .redevelopmenting-intro{
   text-align: center;
+  .contactBtn{
+    margin: 0 auto;
+    display: block;
+  }
 }
 .redevelopment-intro-image{
   margin-top: 40px;
@@ -436,11 +431,6 @@ footer{
   hr{
     width: 5%;
     margin: 0 auto;
-  }
-  .redevelopment-block{
-    width: 500px;
-    margin: 0 auto;
-    text-align: left;
   }
 }
 .history-content, .affiliated-content{

@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/workingsBackground1.jpg') }})">
+  <section id="contentHeader" style="background: url({{ asset ('images/intro/workingBackground.jpg') }});background-size: cover;">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
@@ -32,7 +32,7 @@
             <div class="worksItem">
              <img src="{{asset ('uploads').'/'.$working->project_image}}" alt="">
               <div class="worksContentmask">
-                <div class="worksContentTitle m-t-100">
+                <div class="worksContentTitle">
                   <p>{{$working->title}}</p>
                   <hr class="m-t-10 m-b-10">
                 </div>

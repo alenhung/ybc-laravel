@@ -16874,7 +16874,6 @@ label.panel-block:hover {
 }
 
 #homeHeader {
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   text-align: center;
@@ -16932,15 +16931,6 @@ label.panel-block:hover {
   display: block;
 }
 
-.worksItem .worksContentTitle p {
-  font-size: 24px;
-}
-
-.worksItem .worksContentTitle hr {
-  width: 40%;
-  margin: 0 auto;
-}
-
 /*foot-content*/
 
 .homeFootItem {
@@ -16978,7 +16968,6 @@ label.panel-block:hover {
 
 .homeFootItem .homeFootContentTitle {
   position: relative;
-  margin-top: 40px;
 }
 
 .homeFootItem .homeFootContentTitle p {
@@ -17179,14 +17168,11 @@ footer .footCopyright {
   font-size: 0.9em;
 }
 
-#jobs .job-inro-text {
-  margin: 0 auto;
-  width: 600px;
-}
-
-#jobs .job-inro-text p {
+.job-inro-text p,
+.redevelopment-block p {
   margin-top: 15px;
   line-height: 35px;
+  margin-bottom: 15px;
 }
 
 .job-intro {
@@ -17195,6 +17181,7 @@ footer .footCopyright {
 
 .job-intro h2 {
   font-size: 1.5em;
+  text-align: center;
 }
 
 .job-intro hr {
@@ -17324,6 +17311,11 @@ footer .footCopyright {
   text-align: center;
 }
 
+.redevelopmenting-intro .contactBtn {
+  margin: 0 auto;
+  display: block;
+}
+
 .redevelopment-intro-image {
   margin-top: 40px;
 }
@@ -17396,12 +17388,6 @@ footer .footCopyright {
 .redevelopment-process hr {
   width: 5%;
   margin: 0 auto;
-}
-
-.redevelopment-process .redevelopment-block {
-  width: 500px;
-  margin: 0 auto;
-  text-align: left;
 }
 
 .history-content,

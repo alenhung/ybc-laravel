@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-  <header id="homeHeader" style="background-image: url({{ asset ('uploads').'/'.$indexCover->indexCover }})">
+  <header id="homeHeader" style="background-image: url({{ asset ('uploads').'/'.$indexCover->indexCover }});background-size: cover;">
 
   {{-- <header id="homeHeader" style="background-image: url({{ asset ('images/index_image4.jpg') }})"> --}}
 @include('_includes.nav.main')
@@ -9,7 +9,7 @@
   <img src="{{ asset ('images/intro-2-S-G.png') }}" class="headerImage is-hidden-desktop" alt="" data-aos="zoom-in">
 </header>
 
-<seaction>
+<section>
   <div class="container">
     <div class="columns is-mobile is-multiline">
       @foreach ($indexInfos as $indexInfo)
@@ -25,11 +25,11 @@
     </div>
     <div class="colums">
       <div class="column is-12 has-text-centered">
-        <a class="button is-ybc-btn">想要了解更多？請直接聯繫我們</a>
+        <a href="{{route('contact')}}" class="button is-ybc-btn">想要了解更多？請直接聯繫我們</a>
       </div>
     </div>
   </div>
-</seaction>
+</section>
 <section>
   <hr class="separate_lines_gery">
   <div class="container">
@@ -43,7 +43,7 @@
           <div class="worksItem">
            <img src="{{asset ('uploads').'/'.$work->project_image}}" alt="">
             <div class="worksContentmask">
-              <div class="worksContentTitle m-t-100">
+              <div class="worksContentTitle">
                 <p>{{$work->title}}</p>
                 <hr class="m-t-10 m-b-10">
               </div>
@@ -86,13 +86,13 @@
         <img src="{{ asset ('images/footContent2.jpg') }}" class="img-responsive center-block" height="560px" width="320px" alt="">
           <div class="homeFootContentmask">
             <div class="homeFootContentTitle">
-              <p>客戶服務</p>
+              <p>企業歷程</p>
               <hr>
             </div>
             <p class="homeFootContentDesc">Service</p>
           </div>
           <div class="homeFootItemLink">
-            <a href="{{route('contact')}}" class="info"></a>
+            <a href="{{route('about').'?url=history'}}" class="info"></a>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@
             <p class="homeFootContentDesc">contact us</p>
           </div>
           <div class="homeFootItemLink">
-            <a href="#" class="info"></a>
+            <a href="{{route('contact')}}" class="info"></a>
           </div>
         </div>
       </div>

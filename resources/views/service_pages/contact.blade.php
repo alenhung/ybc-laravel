@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/serviceBackground.jpg') }})">
+  <section id="contentHeader" style="background: url({{ asset ('images/intro/serviceBackground.jpg') }});background-size: cover;">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
@@ -15,7 +15,6 @@
       <div class="tabs">
         <ul>
           <li class="is-active"><a>客戶服務</a></li>
-          <li><a>服務流程SOP</a></li>
         </ul>
       </div>
     </div>

@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/redevelopment/redevelopment-background.jpg') }})">
+  <section id="contentHeader" style="background: url({{ asset ('images/intro/redevelopmentBackground.jpg') }});background-size: cover;">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
@@ -28,7 +28,7 @@
           <hr class="m-t-10 m-b-10">
           <h5>多年來我們已完成多件都更/聯開案例，資料正努力整理，請期待頁面更新！</h5>
           <p>如您有相關問題，請直接聯絡我們，我們將立即為您服務！</p>
-          <a href="{{route('contact')}}" class="button is-ybc-brown-btn m-t-20 m-b-20">聯絡我們</a>
+          <a href="{{route('contact')}}" class="button is-ybc-brown-btn contactBtn">聯絡我們</a>
         </div>
 
       </div>

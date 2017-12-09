@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-  <section id="contentHeader" style="background: url({{ asset ('images/worksBackground2.jpg') }})">
+  <section id="contentHeader" style="background: url({{ asset ('images/intro/jobsBackground.jpg') }});background-size: cover;">
     @include('_includes.nav.main')
     <div class="container">
       <div id="contentHeaderBlock" class="content">
@@ -21,7 +21,7 @@
   </section>
   <section id="jobs" class="m-t-35">
     <div class="container">
-      <div class="columns">
+      <div class="columns ">
         <div class="column job-intro">
           <h2>多元化職涯舞台</h2>
           <hr class="m-t-10 m-b-10">
@@ -34,8 +34,8 @@
   </section>
 <section class="intro-image" style="background: url({{ asset ('images/jobs/section-background.jpg') }};background-size: cover;background-attachment: fixed;background-repeat: no-repeat;background-position: center top;overflow: auto;margin-top: 60px;margin-bottom:60px; height:500px;">
 <div class="container">
-  <div class="columns">
-    <div class="column">
+  <div class="columns is-mobile is-multiline">
+    <div class="column is-half-mobile">
       <div class="jobs-card">
         <div class="card-image">
           <figure>
@@ -53,7 +53,7 @@
         </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column is-half-mobile">
       <div class="jobs-card">
         <div class="card-image">
           <figure>
@@ -71,7 +71,7 @@
         </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column is-half-mobile">
       <div class="jobs-card">
         <div class="card-image">
           <figure>
@@ -85,7 +85,7 @@
           </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column is-half-mobile">
       <div class="jobs-card">
         <div class="card-image">
           <figure>
@@ -103,7 +103,7 @@
         </div>
       </div>
     </div>
-    <div class="column">
+    <div class="column is-half-mobile">
       <div class="jobs-card">
         <div class="card-image">
           <figure>
@@ -125,8 +125,8 @@
   </div>
 </section>
 <section id="new-jobs">
-  <div class="container">
-    <div class="columns">
+  <div class="container m-l-20 m-r-20">
+    <div class="columns ">
       <div class="column job-intro m-b-40">
         <h2>目前熱門職缺</h2>
         <hr class="m-t-10 m-b-10">
@@ -273,7 +273,7 @@
           }
       }
 @endphp
-
+@section('scripts')
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8tciuZhAxCTUCXJuCHc8-haAFNQk92Dk&libraries=places"></script>
 <script>
   function init_map() {
@@ -317,7 +317,7 @@
   */
   google.maps.event.addDomListener(window, 'load', init_map);
 </script>
-
+@endsection
 
 
 @stop
