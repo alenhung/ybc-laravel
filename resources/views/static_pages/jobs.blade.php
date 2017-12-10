@@ -125,7 +125,7 @@
   </div>
 </section>
 <section id="new-jobs">
-  <div class="container m-l-20 m-r-20">
+  <div class="container">
     <div class="columns ">
       <div class="column job-intro m-b-40">
         <h2>目前熱門職缺</h2>
@@ -133,7 +133,7 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column content">
+      <div class="column content m-l-20 m-r-20">
         <h4 class="ybc-title-h4">土建工程人員</h4>
         <hr class=" m-t-10 m-b-10">
         <ul>
@@ -153,7 +153,7 @@
           <li>其他條件：具估算、估價能力，無不良記錄者</li>
         </ul>
       </div>
-      <div class="column content">
+      <div class="column content m-l-20 m-r-20">
         <h4 class="ybc-title-h4">工務</h4>
         <hr class=" m-t-10 m-b-10">
         <ul>
@@ -171,7 +171,7 @@
           <li>其他條件：具估算、估價能力，無不良記錄者</li>
         </ul>
       </div>
-      <div class="column content">
+      <div class="column content m-l-20 m-r-20">
         <h4 class="ybc-title-h4">工程鑑定助理</h4>
         <hr class=" m-t-10 m-b-10">
         <ul>
@@ -190,7 +190,7 @@
         </ul>
 
       </div>
-      <div class="column content">
+      <div class="column content m-l-20 m-r-20">
         <h4 class="ybc-title-h4">建築設計助理</h4>
         <hr class=" m-t-10 m-b-10">
         <ul>
@@ -211,7 +211,7 @@
     </div>
     <div class="columns">
       <div class="column">
-        <article class="message">
+        <article class="message m-l-20 m-r-20">
           <div class="message-body hr-message">
             <p>請您下載附件履歷表，填寫完成後寄送至此<a href="mailto:alenhung@gmail.com">hr@yuanbang.com.tw</a>。附件：<a href="{{asset ('file').'/resume.doc'}}" target="_blank">履歷表</a>
           </div>

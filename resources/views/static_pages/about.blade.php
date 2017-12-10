@@ -44,7 +44,7 @@
   </section>
 
   @endforeach
-  <section id="cd-timeline" class="cd-container about-content m-r-20 m-l-20">
+  <section id="cd-timeline" class="cd-container about-content">
     <div class="container">
       <div class="columns">
         <div class="column history-content" style="z-index:100;">

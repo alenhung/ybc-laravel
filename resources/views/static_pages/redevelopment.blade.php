@@ -48,11 +48,11 @@
     </div>
   </section>
 <section style="background: url({{ asset ('images/redevelopment/law.jpg') }};background-size: cover;background-attachment: fixed;background-repeat: no-repeat;background-position: center top;overflow: auto;margin-top: 60px;margin-bottom:60px; ">
-<div class="container redevelopment-intro-image m-l-20 m-r-20">
+<div class="container redevelopment-intro-image">
   <h2>相關法規</h2>
   <hr class="m-t-10 m-b-10">
   <div class="columns">
-    <div class="column law-content ">
+    <div class="column law-content m-l-20 m-r-20">
       <h3>都市更新相關資料連結</h3>
       <hr class="dark-hr m-t-10 m-b-10">
       <ul>
@@ -62,7 +62,7 @@
         <li><i class="fa fa-link m-r-10" aria-hidden="true"></i> <a href="http://www.cpami.gov.tw/最新消息/法規公告/28-都市更新篇/10329-都市更新建築容積獎勵辦法.html" target="_blank"> 都市更新建築容積獎勵辦法</a></li>
       </ul>
     </div>
-    <div class="column law-content">
+    <div class="column law-content m-l-20 m-r-20">
       <h3>台北市相關法規</h3>
       <hr class="dark-hr m-t-10 m-b-10">
       <ul>
@@ -73,7 +73,7 @@
         <li><i class="fa fa-link m-r-10" aria-hidden="true"></i> <a href="http://www.uro.taipei.gov.tw/public/MMO/URO/臺北市政府受理都市更新案審查作業要點.pdf" target="_blank"> 臺北市政府受理都市更新案審查作業要點</a></li>
       </ul>
     </div>
-    <div class="column law-content">
+    <div class="column law-content m-l-20 m-r-20">
       <h3>新北市相關法規</h3>
       <hr class="dark-hr m-t-10 m-b-10">
       <ul>
@@ -89,7 +89,7 @@
   <div class="container redevelopment-process">
     <div class="columns">
       <div class="column">
-        <h2>相關法規</h2>
+        <h2>執行程序</h2>
         <hr class="m-t-10 m-b-10">
         <div class="redevelopment-block">
           <p>都市更新推動流程分為劃定都市更新地區及擬定都市更新計畫、擬定都市更新事業計畫、與計劃之執行等三個階段，而權力變化計畫視實際實施方式是否採權利變換方式而定。</p>
