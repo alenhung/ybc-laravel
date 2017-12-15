@@ -49,7 +49,7 @@
   <div class="footCopyright p-t-15 p-b-15">
     <div class="container">
       <div class="content m-r-20 m-l-20">
-        <p>© 2017 員邦建設股份有限公司 YuanBang  Construction Co., Ltd. All rights reserved.</p>
+        <p>© 2017 員邦建築股份有限公司 YuanBang  Construction Co., Ltd. All rights reserved.</p>
       </div>
     </div>
 

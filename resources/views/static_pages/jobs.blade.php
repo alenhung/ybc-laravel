@@ -26,7 +26,7 @@
           <h2>多元化職涯舞台</h2>
           <hr class="m-t-10 m-b-10">
           <div class="job-inro-text">
-            <p>員邦建設不僅是專注於建築，我們更期待創新了整個產業。多元的背景和想法啟發了我們所做的一切，從令人讚歎的技術到領先業界的環保貢獻，無不閃耀著這樣的創新精神。加入員邦建設，幫我們一起讓世界變得更美好。</p>
+            <p>員邦建築不僅是專注於建築，我們更期待創新了整個產業。多元的背景和想法啟發了我們所做的一切，從令人讚歎的技術到領先業界的環保貢獻，無不閃耀著這樣的創新精神。加入員邦建築，幫我們一起讓世界變得更美好。</p>
           </div>
         </div>
       </div>
@@ -223,7 +223,7 @@
 </section>
 <section class="m-t-40">
   <div class="job-map m-b-40">
-    <h2>員邦建設</h2>
+    <h2>員邦建築</h2>
     <hr class="m-t-10 m-b-10">
     <div class="job-map-text">
       <p>台北市萬華區中華路一段90號 / 鄰近西門捷運站</p>
@@ -232,7 +232,7 @@
   <div id="caseLocationMap" style="height: 350px;"></div>
 </section>
 @php
-      $case_name = "員邦建設";
+      $case_name = "員邦建築";
       $set_address=" 108萬華區中華路一段90號"; //填寫所要的地址，Example地址為勤美綠園道
       $data_array = geocode($set_address);
       $latitude = $data_array[0];
@@ -262,7 +262,7 @@
                       $data_array,
                       $latitude_data, //$data_array[0]
                       $longitude_data, //$data_array[1]
-                      '<b>員邦建設: </b> '.$data_address //$data_array[2]
+                      '<b>員邦建築: </b> '.$data_address //$data_array[2]
                   );
                   return $data_array; //回傳$data_array
               }else{
