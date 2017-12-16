@@ -136,7 +136,7 @@
         }
 @endphp
 @section('scripts')
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfDEsmslFh17o0Dqijw7It2x6p-D6l3WE&libraries=places"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8tciuZhAxCTUCXJuCHc8-haAFNQk92Dk&libraries=places"></script>
 <script>
     function init_map() {
         /*地圖參數相關設定 Start*/
