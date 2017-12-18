@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="keyword" content="員邦建築 員旺建設 台佳建設 都美機構">
-    <meta name="description" content="員邦集團深耕於建築相關產業，如員邦建築、員旺建設、台佳建設、峻佳工程、旺邦營造、都美機構、員邦室內裝修、普騰預伴混凝土完整一條龍建築產業。">
+    <meta name="description" content="員邦集團深耕於建築相關產業，集團內：員邦建築、員旺建設、員邦建設、台佳建設、峻佳工程、旺邦營造、都美機構、員邦室內裝修、普騰預伴混凝土完整一條龍建築產業。">
     <meta name="author" content="員邦建築 員旺建設 台佳建設 都美機構">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -35,6 +35,19 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-111266025-1');
+      </script>
+      <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://ybc.yuanbang.com.tw",
+        "name": "員邦建築 員旺建設.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+886-2-8522-5579",
+          "contactType": "Customer service"
+        }
+      }
       </script>
    </body>
  </html>
