@@ -19,6 +19,15 @@
       </div>
     </div>
   </section>
+  @if(Session::has('flash_message'))
+    <section>
+      <article class="message">
+        <div class="message-body p-t-20 p-b-20">
+          {{Session::get('flash_message')}}
+        </div>
+      </article>
+    </section>
+  @endif
   <section id="serviceIntro" class="m-t-35">
     <div class="container">
       <div class="columns is-mobile is-multiline">
@@ -47,7 +56,8 @@
         <p>通訊地址：台北市中華路一段90號4F</p>
         </div>
         <div class="column is-6 is-offset-1 m-r-20 m-l-20">
-          <form action="POST">
+          <form action="{{route('mailsender')}}" method="POST">
+            {{csrf_field()}}
             <div class="columns">
               <div class="column is-12">
                 <p>請簡述您的相關問題</p>
@@ -56,38 +66,38 @@
             <div class="columns">
               <div class="column is-6">
                 <div class="control">
-                  <input class="input" type="text" placeholder="您的大名">
+                  <input class="input" name="name" type="text" placeholder="您的大名">
                 </div>
               </div>
               <div class="column is-6">
                 <div class="control">
-                  <input class="input" type="text" placeholder="聯絡電話">
+                  <input class="input" name="tel" type="text" placeholder="聯絡電話">
                 </div>
               </div>
             </div>
             <div class="columns is-multiline">
               <div class="column is-12">
                 <div class="control">
-                  <input class="input" type="text" placeholder="電子信箱">
+                  <input class="input" name="email" type="text" placeholder="電子信箱">
                 </div>
               </div>
               <div class="column is-12">
                 <div class="field">
-                <div class="select">
-                  <select>
-                    <option>土地開發</option>
-                    <option>鄰房問題</option>
-                    <option>購屋相關</option>
-                    <option>其他問題</option>
+                <div class="select" >
+                  <select name="question">
+                    <option value="土地開發">土地開發</option>
+                    <option value="鄰房問題">鄰房問題</option>
+                    <option value="購屋相關">購屋相關</option>
+                    <option value="其他問題">其他問題</option>
                   </select>
                 </div>
               </div>
               </div>
               <div class="column is-12">
-                <textarea class="textarea" placeholder="請概要說明您的問題" rows="3"></textarea>
+                <textarea class="textarea" name="msg" placeholder="請概要說明您的問題" rows="3"></textarea>
               </div>
               <div class="column is-12">
-                <a class="button is-ybc-brown-btn is-pulled-right" >問題送出</a>
+                <button class="button is-ybc-brown-btn is-pulled-right" >問題送出</button>
               </div>
             </div>
           </form>

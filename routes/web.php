@@ -24,6 +24,7 @@ Route::get('/works-item/{id?}', 'WorksPagesController@item')->name('works-item/'
 Route::get('/workings', 'WorkingsPagesController@index')->name('workings');
 Route::get('/workings-item/{id?}', 'WorkingsPagesController@item')->name('workings-item/');
 Route::get('/contact', 'ServicePagesController@contact')->name('contact');
+Route::post('/contact', 'ServicePagesController@mailsender')->name('mailsender');
 Auth::routes();
 Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function () {
   Route::get('/', 'ManageController@index');
@@ -45,7 +46,6 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
   Route::post('about_upload_image', 'AboutController@uploadImage')->name('about.upload_image');
   Route::post('serviceInfo_upload_image', 'ServiceInfoController@uploadImage')->name('serviceInfo.upload_image');
   Route::post('history_upload_image', 'HistoryController@uploadImage')->name('history.upload_image');
-
 });
 
 

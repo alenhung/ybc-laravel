@@ -30,5 +30,8 @@ class StaticPagesController extends Controller
     public function affiliated(){
       return view('static_pages/affiliated');
     }
-
+    public function sendMail(Request $request){
+      $adminUser = 'alenhung@gmail.com';
+      Mail::to($adminUser)->send(new ContactForm($request));//未完成
+    }
 }

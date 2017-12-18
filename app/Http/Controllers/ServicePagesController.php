@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ServiceInfo;
 use DB;
 use Image;
+use Illuminate\Support\Facades\Mail;
 
 class ServicePagesController extends Controller
 {
@@ -13,5 +14,31 @@ class ServicePagesController extends Controller
     {
       $serviceInfos = ServiceInfo::orderBy('id', 'asc')->paginate(10);
       return view('service_pages/contact')->withServiceInfos($serviceInfos);
+    }
+
+    public function mailsender(Request $request){
+      // return $request->all();
+      $this->validate($request, [
+        'name' => 'required|max:255',
+        'tel' => 'required|max:255',
+        'email' => 'required|email',
+        'question' => 'required|max:255',
+        'msg' => 'required|max:255'
+      ]);
+      $data = array(
+        'name' => $request->name,
+        'tel' => $request->tel,
+        'email' => $request->email,
+        'question' => $request->question,
+        'msg' => $request->msg
+    );
+    Mail::send('emails.ContactForm', $data, function ($Mailmessage) {
+
+      $Mailmessage->from('alenhung@gmail.com', '員邦建築網站客服信箱');
+
+      $Mailmessage->to('alenhung@gmail.com')->subject('員邦建築網站客服來信！');
+
+  });
+      return redirect()->back()->with('flash_message','我們已收到您的聯絡訊息，將儘快與您聯繫！');
     }
 }

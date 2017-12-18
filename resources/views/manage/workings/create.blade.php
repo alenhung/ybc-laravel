@@ -7,7 +7,7 @@
       </div>
     </div>
     <hr class="m-t-0">
-    <form action="{{route('workings.store')}}" enctype="multipart/form-data" method="POST">
+    <form action="{{route('mailsender')}}" enctype="multipart/form-data" method="POST">
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
