@@ -7,6 +7,7 @@
       首頁資訊－管理端
     </p>
     <ul class="menu-list">
+    <li><a href="{{route('contactInfo.index')}}"><i class="fa fa-list-ul m-r-10" aria-hidden="true"></i>網站聯絡資訊</a></li>
       <li><a href="{{route('index_info.index')}}"><i class="fa fa-list-ul m-r-10" aria-hidden="true"></i>首頁資訊列表</a></li>
       <li><a href="{{route('indexCover.index')}}"><i class="fa fa-list-ul m-r-10" aria-hidden="true"></i>首頁封面</a></li>
     </ul>

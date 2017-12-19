@@ -41,6 +41,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|edito
   Route::resource('/working_photos', 'WorkingPhotosController');
   Route::resource('/serviceInfo', 'ServiceInfoController');
   Route::resource('/history', 'HistoryController');
+  Route::resource('/contactInfo', 'ContactInfoController');
   Route::get('/working_photos/{id?}/{count?}', 'WorkingPhotosController@editDesc')->name('working_photos.editDesc');
   Route::post('news_upload_image', 'NewsController@uploadImage')->name('news.upload_image');
   Route::post('about_upload_image', 'AboutController@uploadImage')->name('about.upload_image');
