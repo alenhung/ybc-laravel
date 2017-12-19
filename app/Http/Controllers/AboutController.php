@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\History;
 use App\About;
+use App\ContactInfo;
 use App\Role;
 use DB;
 use Session;
@@ -151,7 +152,8 @@ class AboutController extends Controller
         //
         $abouts = About::orderBy('id', 'asc')->paginate(10);
         $historys = History::orderBy('year', 'asc')->paginate(50);
-        return view('static_pages/about')->withAbouts($abouts)->withHistorys($historys);
+        $contactInfo = ContactInfo::where('id',1)->first();
+        return view('static_pages/about')->withAbouts($abouts)->withHistorys($historys)->withContactInfo($contactInfo);
     }
     public function uploadImage(Request $request)
     {

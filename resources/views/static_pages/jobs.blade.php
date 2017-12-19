@@ -213,7 +213,7 @@
       <div class="column">
         <article class="message m-l-20 m-r-20">
           <div class="message-body hr-message">
-            <p>請您下載附件履歷表，填寫完成後寄送至此<a href="mailto:alenhung@gmail.com">hr@yuanbang.com.tw</a>。附件：<a href="{{asset ('file').'/resume.doc'}}" target="_blank">履歷表</a>
+            <p>請您下載附件履歷表，填寫完成後寄送至此<a href="mailto:{{$contactInfo->email}}">{{$contactInfo->email}}</a>。附件：<a href="{{asset ('file').'/resume.doc'}}" target="_blank">履歷表</a>
           </div>
         </article>
       </div>

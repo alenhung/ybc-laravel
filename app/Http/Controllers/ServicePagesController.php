@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ServiceInfo;
 use DB;
 use Image;
+use App\ContactInfo;
 use Illuminate\Support\Facades\Mail;
 
 class ServicePagesController extends Controller
@@ -13,7 +14,8 @@ class ServicePagesController extends Controller
     public function contact()
     {
       $serviceInfos = ServiceInfo::orderBy('id', 'asc')->paginate(10);
-      return view('service_pages/contact')->withServiceInfos($serviceInfos);
+      $contactInfo = ContactInfo::where('id',1)->first();
+      return view('service_pages/contact')->withServiceInfos($serviceInfos)->withContactInfo($contactInfo);
     }
 
     public function mailsender(Request $request){

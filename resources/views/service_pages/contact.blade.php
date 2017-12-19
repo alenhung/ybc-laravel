@@ -51,9 +51,9 @@
           <p>永續經營的事業，是永不止息的馬拉松競賽。<p>
         <p>超越競爭者的勝利只在一時，穩定步伐中的挑戰極限、邁向成功，才是真正的贏家！在瞬息萬變的消費者時代，豪宅建案百家爭鳴，但是在員邦全體員工的努力下，始終以居住者的最高舒適度為第一考量，無止盡的努力不懈、堅持用心，所以才能每次推案始終領先群雄，贏得讚美和掌聲。</p>
         <br><br><br>
-        <p>服務電話：+886-2-2381-8666</p>
-        <p>E-MAIL：service@yuanbang.com.tw</p>
-        <p>通訊地址：台北市中華路一段90號4F</p>
+        <p>服務電話：{{$contactInfo->tel}}</p>
+        <p>E-MAIL：{{$contactInfo->email}}</p>
+        <p>通訊地址：{{$contactInfo->address}}</p>
         </div>
         <div class="column is-6 is-offset-1 m-r-20 m-l-20">
           <form action="{{route('mailsender')}}" method="POST">

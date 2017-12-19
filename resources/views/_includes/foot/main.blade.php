@@ -3,8 +3,8 @@
     <div class="columns foot-left-area p-r-20 p-l-20 p-b-20">
     	<div class="column footLogo">
     		<a class="" href="#"><img class="img-responsive " src="{{ asset ('images/companyLogoFoot.png') }}" alt=""></a>
-            <p>4F., No.90, Sec. 1, Zhonghua Rd., Wanhua Dist., Taipei City 108, Taiwan (R.O.C.)</p>
-            <p>TEL: (02)2381-8666 | FAX: (02)2371-5661</p>
+            <p>{{$contactInfo->e_address}}</p>
+            <p>TEL: {{$contactInfo->tel}} | FAX: {{$contactInfo->fax}}</p>
     	</div>
     	<div class="column footRightArea p-r-20 p-l-20 p-b-20">
         <div class="columns is-mobile">
