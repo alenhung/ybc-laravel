@@ -19,6 +19,7 @@
                 <th>建案名稱</th>
                 <th>基地位置</th>
                 <th>建立日期</th>
+                <th>建案狀態</th>
                 <th></th>
               </tr>
             </thead>
@@ -29,6 +30,19 @@
                   <th>{{$work->title}}</th>
                   <td>{{$work->location}}</td>
                   <td>{{$work->created_at->toFormattedDateString()}}</td>
+                  <td>
+
+                    @if ($work->status == 'onSale')
+                        熱銷建案
+                    @elseif ($work->status == 'saleOut')
+                        完銷建案
+                    @elseif ($work->status == 'working')
+                        在建工程
+                    @elseif ($work->status == 'hide')
+                        隱藏
+                    @endif
+
+                  </td>
                   <td class="has-text-right"><a class="button is-outlined m-r-5" href="{{route('works.show', $work->id)}}"><i class="fa fa-eye m-r-10" aria-hidden="true"></i>檢視</a><a class="button is-light is-info" href="{{route('works.edit', $work->id)}}"><i class="fa fa-pencil m-r-10" aria-hidden="true"></i>編輯</a></td>
                 </tr>
               @endforeach

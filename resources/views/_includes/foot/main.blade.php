@@ -23,7 +23,9 @@
             <h5>作品</h5>
             <hr class="footHr">
             <ul>
-              <li><a href="{{route('works')}}">熱銷建案</a></li>
+              <li><a href="{{route('works')}}">經典建案</a></li>
+              <li><a href="{{route('OnSale')}}">熱銷建案</a></li>
+              <li><a href="{{route('SaleOut')}}">完銷建案</a></li>
               <li><a href="{{route('workings')}}">在建工程</a></li>
             </ul>
           </div>

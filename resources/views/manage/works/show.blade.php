@@ -22,6 +22,20 @@
       <div class="column">
         <table class="works-table table is-hoverable is-narrow is-fullwidth">
           <tr>
+            <td>案件狀態</td>
+            <td>
+              @if ($work->status == 'onSale')
+                  <i class="fa fa-asterisk m-r-10"></i>熱銷建案
+              @elseif ($work->status == 'saleOut')
+                  <i class="fa fa-check m-r-10"></i>完銷建案
+              @elseif ($work->status == 'working')
+                  <i class="fa fa-wrench m-r-10"></i>在建工程
+              @elseif ($work->status == 'hide')
+                  <i class="fa fa-close m-r-10"></i>隱藏
+              @endif
+            </td>
+          </tr>
+          <tr>
             <td >建案名稱：</td>
             <td >{{$work->title}}</td>
           </tr>
@@ -68,6 +82,10 @@
           <tr>
             <td >完工日期：</td>
             <td >{{$work->completion_date}}</td>
+          </tr>
+          <tr>
+            <td >起造人：</td>
+            <td >{{$work->builder}}</td>
           </tr>
           <tr>
             <td >代銷網站：</td>

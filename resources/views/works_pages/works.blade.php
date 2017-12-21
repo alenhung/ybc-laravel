@@ -14,7 +14,7 @@
     <div class="container">
       <div class="tabs">
         <ul>
-          <li class="is-active"><a href="{{route('works')}}">經典建案</a></li>
+          <li><a href="{{route('works')}}">經典建案</a></li>
           <li><a href="{{route('OnSale')}}">熱銷建案</a></li>
           <li><a href="{{route('SaleOut')}}">完銷建案</a></li>
           <li><a href="{{route('workings')}}">在建工程</a></li>
@@ -51,4 +51,27 @@
       {{$works->links()}}
     </div>
   </section>
+
+@section('scripts')
+<script>
+$( document ).ready(function() {
+  var $pageSelect = $("#pageNav li");
+  var pageStatus = "{{$work->status}}";
+  console.log(pageStatus);
+  if(pageStatus == 'onSale'){
+    $($pageSelect[$pageSelect.length-3]).addClass("is-active");
+    $("#contentHeaderBlock h2").html('熱銷建案');
+  }else if(pageStatus == 'saleOut'){
+    $($pageSelect[$pageSelect.length-2]).addClass("is-active");
+    $("#contentHeaderBlock h2").html('完銷建案');
+  }else if(pageStatus == 'working'){
+    $($pageSelect[$pageSelect.length-1]).addClass("is-active");
+    $("#contentHeaderBlock h2").html('在建工程');
+    $("#contentHeaderBlock p").html('Construction In Progress For YuanBang')
+  }else{
+    console.log('nothing');
+  }
+});
+</script>
+@endsection
 @stop

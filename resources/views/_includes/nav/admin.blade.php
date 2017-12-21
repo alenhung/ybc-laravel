@@ -2,7 +2,8 @@
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ route('manage.dashboard') }}">
-        <h2>{{ config('app.name', 'Laravel') }}-網站管理端</h2>
+        {{-- <h2>{{ config('app.name', 'Laravel') }}-網站管理端</h2> --}}
+        <h2>員邦建築-網站管理端</h2>
       </a>
       <div class="navbar-burger burger" v-on:click="openMenu" v-bind:class="{ 'is-active': isActive,'is-active2': isActive2}">
         <span></span>
@@ -74,7 +75,7 @@
           </div>
         </div>
         <div class="navbar-item has-dropdown" >
-          <a class="navbar-link">熱銷建案</a>
+          <a class="navbar-link">經典建案</a>
           <div class="navbar-dropdown is-left">
             <a href="{{route('works.index')}}" class="navbar-item">
               <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
@@ -84,33 +85,12 @@
               <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
               新增建案
             </a>
-            <a href="{{route('workings.index')}}" class="navbar-item">
+            {{-- <a href="{{route('workings.index')}}" class="navbar-item">
               <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
               新增在建工程圖片
-            </a>
+            </a> --}}
             <hr class="navbar-divider">
             <a href="{{route('works')}}" class="navbar-item">
-              前往網站頁面
-            </a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown" >
-          <a class="navbar-link">在建工程</a>
-          <div class="navbar-dropdown is-left">
-            <a href="{{route('workings.index')}}" class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
-              在建工程列表
-            </a>
-            <a href="{{route('workings.create')}}" class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
-              新增在建工程
-            </a>
-            <a href="{{route('working_photos.create')}}" class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
-              新增在建工程圖片
-            </a>
-            <hr class="navbar-divider">
-            <a href="{{route('workings')}}" class="navbar-item">
               前往網站頁面
             </a>
           </div>

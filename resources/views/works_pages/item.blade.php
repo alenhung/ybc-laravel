@@ -15,7 +15,9 @@
     <div class="container">
       <div class="tabs">
         <ul>
-          <li class="is-active"><a href="{{route('works')}}">熱銷建案</a></li>
+          <li><a href="{{route('works')}}">經典建案</a></li>
+          <li><a href="{{route('OnSale')}}">熱銷建案</a></li>
+          <li><a href="{{route('SaleOut')}}">完銷建案</a></li>
           <li><a href="{{route('workings')}}">在建工程</a></li>
         </ul>
       </div>
@@ -90,7 +92,7 @@
   </section>
   <section>
     <div class="container">
-      <a href="{{route('works')}}" class="button is-ybc-brown-btn" style="width:100%;">返回熱銷建案</a>
+      <a href="{{route('works')}}" class="button is-ybc-brown-btn" style="width:100%;">返回經典建案</a>
     </div>
   </section>
   @php
@@ -178,6 +180,22 @@
     事件偵聽器(可參閱：https://developers.google.com/maps/documentation/javascript/events)
     */
     google.maps.event.addDomListener(window, 'load', init_map);
+</script>
+<script>
+$( document ).ready(function() {
+  var $pageSelect = $("#pageNav li");
+  var pageStatus = "{{$work->status}}";
+  console.log(pageStatus);
+  if(pageStatus == 'onSale'){
+    $($pageSelect[$pageSelect.length-3]).addClass("is-active");
+  }else if(pageStatus == 'saleOut'){
+    $($pageSelect[$pageSelect.length-2]).addClass("is-active");
+  }else if(pageStatus == 'working'){
+    $($pageSelect[$pageSelect.length-1]).addClass("is-active");
+  }else{
+    console.log('nothing');
+  }
+});
 </script>
 @endsection
 @stop

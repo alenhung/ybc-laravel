@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}-網站管理端</title>
+    {{-- <title>{{ config('app.name', 'Laravel') }}-網站管理端</title> --}}
+    <title>員邦建築-網站管理端</title>
     <!-- Styles -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>

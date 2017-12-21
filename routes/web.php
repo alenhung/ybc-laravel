@@ -19,10 +19,13 @@ Route::get('/redevelopmenting', 'StaticPagesController@redevelopmenting')->name(
 Route::get('/affiliated', 'StaticPagesController@affiliated')->name('affiliated');
 Route::get('/news', 'NewsPagesController@index')->name('news');
 Route::get('/news-item/{id?}', 'NewsPagesController@item')->name('news-item/');
-Route::get('/works', 'WorksPagesController@index')->name('works');
+Route::get('/works', 'WorksPagesController@all')->name('works');
+Route::get('/OnSale', 'WorksPagesController@onSale')->name('OnSale');
+Route::get('/SaleOut', 'WorksPagesController@saleOut')->name('SaleOut');
+Route::get('/workings', 'WorksPagesController@workings')->name('workings');
 Route::get('/works-item/{id?}', 'WorksPagesController@item')->name('works-item/');
-Route::get('/workings', 'WorkingsPagesController@index')->name('workings');
-Route::get('/workings-item/{id?}', 'WorkingsPagesController@item')->name('workings-item/');
+// Route::get('/workings', 'WorkingsPagesController@index')->name('workings');
+// Route::get('/workings-item/{id?}', 'WorkingsPagesController@item')->name('workings-item/');
 Route::get('/contact', 'ServicePagesController@contact')->name('contact');
 Route::post('/contact', 'ServicePagesController@mailsender')->name('mailsender');
 Auth::routes();

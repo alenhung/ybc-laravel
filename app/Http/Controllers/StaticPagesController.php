@@ -16,7 +16,7 @@ class StaticPagesController extends Controller
     {
       $indexInfos = IndexInfo::orderBy('id', 'asc')->paginate(8);
       $indexCover = IndexCover::where('id', 1)->first();
-      $works = Work::orderBy('id', 'desc')->paginate(8);
+      $works = Work::where('status','!=' ,'hide')->where('status','!=' ,'working')->orderBy('id', 'desc')->paginate(8);
       $contactInfo = ContactInfo::where('id',1)->first();
       return view('static_pages/index')->withWorks($works)->withIndexInfos($indexInfos)->withIndexCover($indexCover)->withContactInfo($contactInfo);
     }
@@ -37,7 +37,7 @@ class StaticPagesController extends Controller
       return view('static_pages/affiliated')->withContactInfo($contactInfo);
     }
     public function sendMail(Request $request){
-      
+
       $adminUser = 'alenhung@gmail.com';
       Mail::to($adminUser)->send(new ContactForm($request));//未完成
     }

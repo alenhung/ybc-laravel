@@ -14,6 +14,33 @@
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
+          <label for="title" class="label">案件狀態：</label>
+          <b-field>
+            <b-radio-button v-model="statusRadioButton"
+                native-value="onSale" type="is-primary">
+                <b-icon icon="asterisk"></b-icon>
+                <span>熱銷建案</span>
+            </b-radio-button>
+
+            <b-radio-button v-model="statusRadioButton"
+                native-value="saleOut" type="is-primary">
+                <b-icon icon="check"></b-icon>
+                <span>完銷建案</span>
+            </b-radio-button>
+
+            <b-radio-button v-model="statusRadioButton"
+                native-value="working" type="is-primary">
+                <b-icon icon="wrench"></b-icon>
+                在建工程
+            </b-radio-button>
+
+            <b-radio-button v-model="statusRadioButton"
+                native-value="hide" type="is-danger">
+                <b-icon icon="close"></b-icon>
+                隱藏
+            </b-radio-button>
+          </b-field>
+          <input type="hidden" class="input" name="status" :value="statusRadioButton">
           <div class="field">
             <label for="title" class="label">建案名稱：</label>
             <p class="control">
@@ -116,6 +143,16 @@
               </div>
             </div>
           </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label for="builder" class="label">起造人：</label>
+                <p class="control">
+                  <input type="text" class="input" name="builder" id="builder" value="{{$work->builder}}">
+                </p>
+              </div>
+            </div>
+          </div>
           {{-- image upload --}}
           <div class="columns">
             <div class="column">
@@ -178,7 +215,8 @@
     el: '#app',
     data: {
        imageData: "" , // we will store base64 format of image in this string
-       displayOldProjectImage: true
+       displayOldProjectImage: true,
+       statusRadioButton: '{{$work->status}}'
    },
    methods: {
        previewImage: function(event) {

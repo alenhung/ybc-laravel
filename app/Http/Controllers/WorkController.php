@@ -58,6 +58,8 @@ class WorkController extends Controller
           'tall' => 'sometimes|max:255',
           'completion_date' => 'sometimes|max:255',
           'public_ratio' => 'sometimes|max:255',
+          'builder' => 'sometimes|max:255',
+          'status' => 'sometimes|max:255',
           'site_url' => 'sometimes|max:255'
         ]);
         $work = new Work();
@@ -80,7 +82,9 @@ class WorkController extends Controller
         $work->public_ratio = $request->public_ratio;
         $work->tall = $request->tall;
         $work->completion_date = $request->completion_date;
+        $work->builder = $request->builder;
         $work->site_url = $request->site_url;
+        $work->status = $request->status;
         $work->save();
         Session::flash('success', 'Successfully created the new '. $work->title . ' role in the database.');
         return redirect()->route('works.show', $work->id);
@@ -137,6 +141,8 @@ class WorkController extends Controller
           'tall' => 'sometimes|max:255',
           'completion_date' => 'sometimes|max:255',
           'public_ratio' => 'sometimes|max:255',
+          'builder' => 'sometimes|max:255',
+          'status' => 'sometimes|max:255',
           'site_url' => 'sometimes|max:255'
 
         ]);
@@ -161,7 +167,9 @@ class WorkController extends Controller
         $work->unit_area = $request->unit_area;
         $work->public_ratio = $request->public_ratio;
         $work->tall = $request->tall;
+        $work->builder = $request->builder;
         $work->site_url = $request->site_url;
+        $work->status = $request->status;
         $work->completion_date = $request->completion_date;
         $work->save();
         Session::flash('success', '成功建立了 '. $work->title . ' 熱銷建案於資料庫內');

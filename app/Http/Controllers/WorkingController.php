@@ -61,6 +61,7 @@ class WorkingController extends Controller
           'completion_date' => 'sometimes|max:255',
           'public_ratio' => 'sometimes|max:255',
           'site_url' => 'sometimes|max:255',
+          'status' => 'sometimes|max:255',
           'builder' => 'sometimes|max:255'
 
         ]);
@@ -86,6 +87,7 @@ class WorkingController extends Controller
         $working->completion_date = $request->completion_date;
         $working->site_url = $request->site_url;
         $working->builder = $request->builder;
+        $working->status = $request->status;
         $working->save();
         Session::flash('success', 'Successfully created the new '. $working->title . ' role in the database.');
         return redirect()->route('workings.show', $working->id);
@@ -142,6 +144,7 @@ class WorkingController extends Controller
         'completion_date' => 'sometimes|max:255',
         'public_ratio' => 'sometimes|max:255',
         'site_url' => 'sometimes|max:255',
+        'status' => 'sometimes|max:255',
         'builder' => 'sometimes|max:255'
 
       ]);
@@ -168,6 +171,7 @@ class WorkingController extends Controller
       $working->tall = $request->tall;
       $working->site_url = $request->site_url;
       $working->builder = $request->builder;
+      $working->status = $request->status;
       $working->completion_date = $request->completion_date;
 
       $working->save();
