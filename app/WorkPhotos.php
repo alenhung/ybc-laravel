@@ -5,9 +5,9 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Laratrust\Traits\LaratrustUserTrait;
 
-class WorkingPhotos extends Model
+class WorkPhotos extends Model
 {
     //
     use LaratrustUserTrait;
-    protected $table = 'WorkingPhotos';
+    protected $table = 'WorkPhotos';
 }

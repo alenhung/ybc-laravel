@@ -19,36 +19,20 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
-      <div id="app">
-        @yield('content')
-        @include('_includes.foot.main')
-      </div>
-      <a href="#0" class="cd-top "><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-      <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="{{ asset ('js/app.js') }}"></script>
-      @yield('scripts')
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111266025-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <img src="{{asset ('images/oops.jpg')}}" alt="">
+          </div>
+          <div class="column">
+            <br><br>
+            <h1>糟糕！出現錯誤了！</h1>
+            <p>我們將儘速修正這項錯誤！</p>
+            <br><br>
 
-        gtag('config', 'UA-111266025-1');
-      </script>
-      <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "url": "http://ybc.yuanbang.com.tw",
-        "name": "員邦建築 員旺建設",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+886-2-8522-5579",
-          "contactType": "Customer service"
-        }
-      }
-      </script>
-   </body>
- </html>
+              <img src="{{asset ('images/companyLogoFoot.png')}}" alt="">
+          </div>
+        </div>
+      </div>
+</body>
+</html>

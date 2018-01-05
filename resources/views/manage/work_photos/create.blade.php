@@ -8,7 +8,7 @@
 
     </div>
     <hr class="m-t-0">
-    <form action="{{route('working_photos.store')}}" enctype="multipart/form-data" method="POST">
+    <form action="{{route('work_photos.store')}}" enctype="multipart/form-data" method="POST">
       {{csrf_field()}}
       <div class="columns">
         <div class="column">
@@ -17,8 +17,8 @@
             <div class="control">
               <div class="select is-primary is-fullwidth">
                 <select name="working_id">
-                  @foreach ($workings as $working)
-                  <option value="{{$working->id}}">{{$working->title}}</option>
+                  @foreach ($works as $work)
+                  <option value="{{$work->id}}">{{$work->title}}</option>
                   @endforeach
                 </select>
               </div>

@@ -26,6 +26,10 @@
               <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
               首頁封面
             </a>
+            <a href="{{route('contactInfo.index')}}" class="navbar-item">
+              <span class="icon"><i class="fa fa-fw fa-list-ul m-r-5"></i></span>
+              網站聯絡資訊
+            </a>
             <hr class="navbar-divider">
             <a href="{{route('index')}}" class="navbar-item">
               前往網站頁面
@@ -85,10 +89,6 @@
               <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
               新增建案
             </a>
-            {{-- <a href="{{route('workings.index')}}" class="navbar-item">
-              <span class="icon"><i class="fa fa-fw fa-plus-square m-r-5"></i></span>
-              新增在建工程圖片
-            </a> --}}
             <hr class="navbar-divider">
             <a href="{{route('works')}}" class="navbar-item">
               前往網站頁面

@@ -90,7 +90,7 @@
         <div class="column affiliated-content">
           <h2>多元佈局，奠定事業版圖</h2>
           <hr class="m-t-10 m-b-10">
-          <p>員邦集團深耕於建築相關產業，如員邦建築、員旺建設、台佳建設、峻佳工程、旺邦營造、都美機構、員邦室內裝修、普騰預伴混凝土完整一條龍建築產業。</p>
+          <p>員邦集團深耕於建築相關產業，如員邦建築、員旺建設、峻佳工程、旺邦營造、都美機構、員邦室內裝修、普騰預伴混凝土完整一條龍建築產業。</p>
           <p>集團亦跨足旅遊業－大都會酒店、生技業－翡翠灣生技等各項佈局，</p>
           <img src="{{ asset ('images/affiliated/affiliated-desktop.jpg') }}" alt="關係企業" style="box-shadow:none; border:0;" class="m-t-50 m-b-50 is-hidden-touch">
           <img src="{{ asset ('images/affiliated/affiliated-mobile.jpg') }}" alt="關係企業" style="box-shadow:none; border:0;" class="m-t-50 m-b-50 is-hidden-desktop">
